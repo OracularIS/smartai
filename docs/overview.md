@@ -1,4 +1,7 @@
-# Smart Assistant
+﻿# Overview
+
+## What is Smart Assistant?
+
 Smart Assistant (Smart IS Conversational API Framework) is a low-code platform that turns natural language requests into **secure, validated API calls** against enterprise systems such as WMS, ERP, and CRM platforms.
 
 Instead of building and maintaining many custom screens, static reports, and one-off integrations, Smart Assistant uses:
@@ -17,8 +20,7 @@ Instead of building and maintaining many custom screens, static reports, and one
 
 ## Next pages
 
-- [Getting Started](./docs/getting-started.md)
-- [Architecture](./docs/architecture.md)
-- [Use Cases](./docs/use-cases.md)
-- [FAQ](./docs/faq.md)
-
+- [Getting Started](./getting-started.md)
+- [Architecture](./architecture.md)
+- [Use Cases](./use-cases.md)
+- [FAQ](./faq.md)
