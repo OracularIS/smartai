@@ -17,8 +17,8 @@ Instead of building and maintaining many custom screens, static reports, and one
 
 ## Next pages
 
-- [Getting Started](./getting-started.md)
-- [Architecture](./architecture.md)
-- [Use Cases](./use-cases.md)
-- [FAQ](./faq.md)
+- [Getting Started](./docs/getting-started.md)
+- [Architecture](./docs/architecture.md)
+- [Use Cases](./docs/use-cases.md)
+- [FAQ](./docs/faq.md)
 
