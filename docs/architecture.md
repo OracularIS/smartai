@@ -1,13 +1,13 @@
 # Architecture
 
-## Core building blocks (from the white paper)
+## Core building blocks
 
 ### User channels
 
 Users can interact with the system through:
 
 - **Microsoft Teams bot**
-- **Web agent** (hosted at `smart-is.ai` in the white paper)
+- **Web agent** (hosted at `smart-is.ai`)
 - **Desktop app** (suited for fully firewalled environments)
 
 ### Smart-IS Intelligence Engine
@@ -34,7 +34,7 @@ The Smart-Functions repository stores reusable, pre-approved logic such as:
 - REST endpoint definitions / call templates
 - Cross-system workflows (orchestration across multiple APIs)
 
-## End-to-end request flow (from the white paper)
+## End-to-end request flow
 
 1. **User request:** user types a natural language query (e.g., “Show me detail of order 123”).
 2. **LLM interpretation:** the LLM extracts a function name + parameters (e.g., `get_order_details(order_id=123)`).
@@ -43,13 +43,13 @@ The Smart-Functions repository stores reusable, pre-approved logic such as:
 5. **System invocation:** the appropriate system call is executed (MOCA/REST/etc.) against the target enterprise system.
 6. **Response handling:** results are validated/formatted and returned to the user.
 
-## Security model (from the white paper)
+## Security model
 
 - Keep **sensitive enterprise data** inside the organization’s network.
 - Send only **non-sensitive information** externally for intent extraction.
 - For analytical requests, share only **metadata** and a **small sample** to generate generic processing logic; run full processing internally.
 
-## Deployments (from the white paper)
+## Deployments
 
 ### On-premise deployment
 

@@ -15,7 +15,7 @@ Typical prerequisites:
 Users submit natural language requests through one of the supported channels:
 
 - **Microsoft Teams bot**
-- **Web agent** (hosted at `smart-is.ai` in the white paper)
+- **Web agent** (hosted at `smart-is.ai`)
 - **Desktop app** (suited for fully firewalled environments)
 
 The Intelligence Engine extracts intent + parameters, then executes only **pre-approved functions** through the hook layer.

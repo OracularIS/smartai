@@ -10,7 +10,7 @@ Instead of building and maintaining many custom screens, static reports, and one
 - A **Component Hook Library** that validates requests (authN/authZ, parameter validation) and exposes functions as standardized APIs.
 - A **Smart-IS Intelligence Engine** that uses an LLM to extract *intent + parameters* from user text, then orchestrates only approved function calls.
 
-## Key capabilities (from the white paper)
+## Key capabilities
 
 - **Natural language access:** Users ask questions like “Show open orders for Warehouse B” without learning API syntax.
 - **API-centric (actionable):** Focuses on structured enterprise APIs (not just document Q&A).
