@@ -12,3 +12,8 @@ section.cover .cover-main li {
   color: #ffffff !important;
 }
 
+section.cover .cover-main img[alt="logo"] {
+  width: 350px;
+  height: auto;
+}
+
