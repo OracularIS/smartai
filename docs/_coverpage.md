@@ -1,4 +1,4 @@
-<!-- Cover image/logo intentionally omitted (per request to ignore images for now). -->
+![logo](.attachments/SmartAssitant-09.png)
 
 # Smart Assistant <small>
 
