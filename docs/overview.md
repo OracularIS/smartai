@@ -10,7 +10,7 @@ development required for each integration.
 Instead of building and maintaining custom screens, static reports, and one-off 
 integrations, Smart Assistant uses three core components:
 
-- A **Smart-Functions repository** (Git-managed scripts such as MOCA commands, 
+- A **Smart-Functions repository** (Smart Functions scripts such as MOCA commands, 
   REST call definitions, and cross-system workflows).
 - A **Component Hook Library** that validates requests (authentication, 
   authorization, parameter validation) and exposes functions as standardized APIs.
@@ -24,7 +24,7 @@ integrations, Smart Assistant uses three core components:
 - **API-centric and actionable:** Goes beyond document Q&A — users can trigger 
   real workflows and retrieve live data from connected systems.
 - **Low-code onboarding:** Configure new integrations in hours using JSON and 
-  Git-managed scripts, not weeks of custom development.
+Smart Functions, not weeks of custom development.
 - **Multi-channel:** Available as a Microsoft Teams bot, web agent, and desktop app 
   to fit any environment or security requirement.
 - **Security-first design:** Sensitive enterprise data never leaves the network; 

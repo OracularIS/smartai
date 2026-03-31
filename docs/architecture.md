@@ -24,7 +24,7 @@ The **Component Hook Library** sits between the **Intelligence Engine** and the 
 - **Enforces** authentication and authorization policies to ensure only permitted actions are executed.
 - **Invokes** the approved implementation from the Git-managed repository for the requested function.
 
-### Smart-Functions repository (Git-managed)
+### Smart-Functions
 
 The Smart-Functions repository stores reusable, pre-approved business logic that powers every system call, such as:
 
@@ -37,7 +37,7 @@ The Smart-Functions repository stores reusable, pre-approved business logic that
 1. **User request:** User types a natural language query (e.g., "Show me detail of order 123").
 2. **LLM interpretation:**  The LLM extracts a function name + parameters (e.g., get_order_details(order_id=123)).
 3. **Orchestration:** The Intelligence Engine resolves intent-to-function and orchestrates the API call.
-4. **Validation + lookup:** he hook layer validates the request and consults the Git-managed function repository for the correct system call.
+4. **Validation + lookup:** The hook layer validates the request and consults Smart Functions repository for the correct system call.
 5. **System invocation:** The appropriate protocol (MOCA, REST, etc.) is executed against the target enterprise system.
 6. **Response handling:** Results are validated, formatted, and returned to the user.
 ## Security model

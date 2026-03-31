@@ -9,7 +9,7 @@ no replacement or migration of existing systems required.
 Typical prerequisites:
 
 - Access to the **target system endpoints** (e.g., WMS, ERP, CRM APIs).
-- A **Git repository** to store approved functions (MOCA commands, REST definitions, 
+- A **Smart Functions repository** to store approved functions (MOCA commands, REST definitions, 
   scripts, and cross-system workflows).
 - A defined **security policy** (roles and permissions) controlling who can run 
   which functions.
@@ -24,7 +24,7 @@ Users submit natural language requests through one of the supported channels:
 
 The Intelligence Engine extracts **intent + parameters** from the request, then 
 executes only **pre-approved functions** through the hook layer — 
-no ad-hoc or unauthorized system calls are possible.
+no unauthorized or unapproved system actions are possible.
 
 ## A simple example
 
