@@ -31,7 +31,7 @@ Follow the steps below to configure your Smart Assistant.
 
 Open **www.smart-is.com** and log in using the available authentication options.
 
-![Step 1](.attachments/1.png)
+![Step 1](.attachments/smart_assistant_login.png)
 
 ---
 
@@ -44,7 +44,7 @@ After login, the dashboard appears showing total assistants and a sidebar menu:
 - Smart Chat Dashboard  
 - Settings  
 
-![Step 2](.attachments/2.png)
+![Step 2](.attachments/smart_assistant_dashboard.png)
 
 ---
 
@@ -52,7 +52,7 @@ After login, the dashboard appears showing total assistants and a sidebar menu:
 
 Navigate to **Create Assistant** to view existing assistants or create a new one.
 
-![Step 3](.attachments/3.png)
+![Step 3](.attachments/create_assistant.png)
 
 ---
 
@@ -65,7 +65,7 @@ Click **Create Assistant**, then choose from available assistant types:
 - Enterprise  
 - Smart AI  
 
-![Step 4](.attachments/4.png)
+![Step 4](.attachments/select_assistant.png)
 
 ---
 
@@ -73,7 +73,7 @@ Click **Create Assistant**, then choose from available assistant types:
 
 After selecting an assistant type, the system prompts for a **Smart App Key**.
 
-![Step 5](.attachments/5.png)
+![Step 5](.attachments/insert_smartapps_key.png)
 
 ---
 
@@ -81,7 +81,7 @@ After selecting an assistant type, the system prompts for a **Smart App Key**.
 
 Navigate to the Smart Apps portal to generate a Smart App Key.
 
-![Step 6](.attachments/14.png)
+![Step 6](.attachments/smartapps_login.png)
 
 ---
 
@@ -89,7 +89,7 @@ Navigate to the Smart Apps portal to generate a Smart App Key.
 
 From the Smart Apps dashboard, click **Create New App Key**.
 
-![Step 7](.attachments/15.png)
+![Step 7](.attachments/create_new_appkey.png)
 
 ---
 
@@ -97,7 +97,7 @@ From the Smart Apps dashboard, click **Create New App Key**.
 
 A new window appears — click **Add** to proceed.
 
-![Step 8](.attachments/16.png)
+![Step 8](.attachments/add_new_appkey.png)
 
 ---
 
@@ -105,7 +105,7 @@ A new window appears — click **Add** to proceed.
 
 Enter a description, generate the key, and save it securely for later use.
 
-![Step 9](.attachments/17.png)
+![Step 9](.attachments/generate_new_appkey.png)
 
 ---
 
@@ -113,7 +113,7 @@ Enter a description, generate the key, and save it securely for later use.
 
 Return to Smart Assistant, enter the generated key, and click **Validate**.
 
-![Step 10](.attachments/5.png)
+![Step 10](.attachments/insert_smartapps_key.png)
 
 ---
 
@@ -121,7 +121,7 @@ Return to Smart Assistant, enter the generated key, and click **Validate**.
 
 Provide required credentials such as username, password, and other system details.
 
-![Step 11](.attachments/6.png)
+![Step 11](.attachments/insert_assistant_credentials.png)
 
 ---
 
@@ -135,7 +135,7 @@ Select the desired data exposure level:
 
 Then click **Create Assistant** to complete the setup.
 
-![Step 12](.attachments/7.png)
+![Step 12](.attachments/select_data_exposure.png)
 
 ---
 
@@ -149,7 +149,7 @@ The Smart Assistant allows users to generate insights and build dashboards using
 
 Navigate to the chat section and select the desired assistant from the dropdown.
 
-![Step 1](.attachments/9.png)
+![Step 1](.attachments/choose_assistant.png)
 
 ---
 
@@ -159,7 +159,7 @@ Enter a command like **"Generate pie chart"**.
 Once generated, add it to the dashboard using:  
 **"Add this to dashboard"**
 
-![Step 2](.attachments/10.png)
+![Step 2](.attachments/create_pie_chart.png)
 
 ---
 
@@ -169,7 +169,7 @@ Enter a command like **"Generate bar chart"**.
 Add it to the dashboard using:  
 **"Add this to dashboard"**
 
-![Step 3](.attachments/11.png)
+![Step 3](.attachments/create_bar_chart.png)
 
 ---
 
@@ -179,7 +179,7 @@ Enter a command like **"Generate line chart"**.
 Add it to the dashboard using:  
 **"Add this to dashboard"**
 
-![Step 4](.attachments/12.png)
+![Step 4](.attachments/create_line_chart.png)
 
 ---
 
@@ -187,7 +187,7 @@ Add it to the dashboard using:
 
 All generated charts are consolidated and visible in the dashboard.
 
-![Step 5](.attachments/13.png)
+![Step 5](.attachments/dashboard.png)
 
 ---
 
@@ -202,7 +202,7 @@ All generated charts are consolidated and visible in the dashboard.
 - Executes secure backend call to the Wave / Batch table
 - Returns response (e.g., { "Batch Code": "BAT000000M", "Batch Status": "REL" })
 
-![Example](.attachments/18.png)
+![Example](.attachments/data_analysis.png)
 
 ---
 
