@@ -1,15 +1,24 @@
-﻿# Use Cases
+# Use Cases
 
-## Warehouse agent examples
+## Warehouse operations (examples)
 
-Users can query warehouse data conversationally, for example:
+- **Order detail lookup**: “Show me details of order 123.”
+- **Area information**: “Show me area information for Building 3PSTG.”
+- **Device listing**: “Give me a list of all devices.”
+- **Inventory check**: “How many units of Product X are in Warehouse 5?”
 
-- **Order detail lookup** — "Show me detail of order 123" returns full order information instantly.
-- **Area information** — "Show me area for Building 3PSTG" returns a structured table with short description, expected receipt area, and warehouse ID.
-- **Device listing** — "Give me list of all devices" returns a structured table of device codes, warehouse IDs, and related details.
+## Cross-system workflows (examples)
 
-## Analytics, charts & transparency
+If your organization has approved workflows, Smart AI can help coordinate multiple steps across systems:
 
-- **On-demand charts** — Request a pie, line, bar, stacked, or bubble chart from any previously retrieved dataset with a single follow-up prompt.
-- **Auto-generated dashboard** — The system automatically identifies key fields and data types from the last retrieved dataset and builds an interactive visual summary.
-- **Full transparency** — Ask "What did you do?" to see the exact MOCA command generated behind the scenes from your plain-English query.
+- “Check order status and show related shipment tracking.”
+- “List delayed orders and notify the assigned team.”
+- “Show open orders, then summarize by priority.”
+
+## Analytics, charts, and transparency
+
+- **Charts on demand**: Ask for a pie, line, bar, stacked, or bubble chart from the most recent dataset.
+- **Auto-generated dashboard**: Turn the latest dataset into an interactive summary of key metrics and trends.
+- **Transparency**: Ask “What did you do?” to see what ran behind the scenes (when enabled for your role).
+
+For more examples and feature details, see [Smart Chat](./smart-chat.md).

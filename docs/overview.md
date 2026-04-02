@@ -1,38 +1,36 @@
-﻿# Overview
+# Overview
 
-## What is Smart Assistant?
+## What is Smart AI?
 
-Smart Assistant (Smart IS Conversational API Framework) is a **low-code platform** 
-that turns natural language requests into **secure, validated API calls** against 
-enterprise systems such as WMS, ERP, and CRM platforms — with no custom 
-development required for each integration.
+Smart AI (Smart IS Conversational API Framework) helps teams interact with enterprise systems using plain language.
+You ask questions (or request an action) in chat, and Smart AI turns that request into **secure, validated API calls**
+to systems like WMS, ERP, and CRM—without users needing to learn MOCA, REST details, or system-specific screens.
 
-Instead of building and maintaining custom screens, static reports, and one-off 
-integrations, Smart Assistant uses three core components:
+Smart AI is designed for **live, actionable operations** (real-time data and workflows), not just document Q&A.
 
-- A **Smart-Functions repository** (Smart Functions scripts such as MOCA commands, 
-  REST call definitions, and cross-system workflows).
-- A **Component Hook Library** that validates requests (authentication, 
-  authorization, parameter validation) and exposes functions as standardized APIs.
-- A **Smart-IS Intelligence Engine** that uses an LLM to extract *intent + parameters* 
-  from user text, then orchestrates only **pre-approved** function calls.
+## Smart AI components
+
+Smart AI is organized into three major components:
+
+- **Smart Chat**: The end-user chat experience (Teams, web, or desktop) where you ask questions, follow up, and
+  request charts or summaries.
+- **Enterprise Mesh**: The secure connectivity and governance layer that routes approved requests to the right
+  enterprise system, enforces permissions, and validates parameters before anything runs.
+- **Smart FX**: The admin-facing experience used to manage your Smart AI instance—configure and publish approved
+  functions, permissions, and versions (backed by the Smart Functions Git repository).
 
 ## Key capabilities
 
-- **Natural language access:** Ask questions like *"Show open orders for Warehouse B"* 
-  without learning API syntax or submitting IT tickets.
-- **API-centric and actionable:** Goes beyond document Q&A — users can trigger 
-  real workflows and retrieve live data from connected systems.
-- **Low-code onboarding:** Configure new integrations in hours using JSON and 
-Smart Functions, not weeks of custom development.
-- **Multi-channel:** Available as a Microsoft Teams bot, web agent, and desktop app 
-  to fit any environment or security requirement.
-- **Security-first design:** Sensitive enterprise data never leaves the network; 
-  only minimal intent and metadata are shared with the external LLM.
+- **Natural language → secure system calls**: Ask “Show open orders for Warehouse B” and get live results.
+- **Follow-up questions (context-aware)**: Ask “Now show only the delayed ones” without restating everything.
+- **Transparency when needed**: See what ran behind the scenes (e.g., the MOCA command / API call) when your role allows it.
+- **Charts and dashboards**: Generate visuals from previously returned datasets with a follow-up prompt.
+- **Security-first design**: Only approved functions can run; access is controlled via role-based permissions.
 
 ## Next pages
 
 - [Getting Started](./getting-started.md)
-- [Architecture](./architecture.md)
-- [Use Cases](./use-cases.md)
+- [Smart Chat](./smart-chat.md)
+- [Smart FX](./smart-fx.md)
+- [Enterprise Mesh](./enterprise-mesh.md)
 - [FAQ](./faq.md)

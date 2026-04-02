@@ -1,10 +1,10 @@
 ![logo](.attachments/SmartAssitant-09.png)
 
-# Smart Assistant <small>
+# Smart AI <small>
 
-- **Natural language → secure API calls:** Convert user questions into validated, system-specific API calls (e.g., Blue Yonder MOCA, REST).
-- **Low-code, Smart Functions repository:** Store reusable, pre-approved scripts and workflows in Git; expose them through a standardized hook layer.
-- **Works where users already are:** Microsoft Teams bot, web agent, and desktop app options for different security environments.
+- **Smart Chat:** Ask questions and trigger approved workflows in plain language.
+- **Enterprise Mesh:** Securely validate and execute approved functions across enterprise systems.
+- **Smart FX:** Manage functions, permissions, and versions for your Smart AI instance.
 
 [Documentation](./overview.md)
 

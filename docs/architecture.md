@@ -1,63 +1,61 @@
 # Architecture
 
+This page explains (at a high level) how Smart AI turns a user request into a secure interaction with enterprise systems.
+
 ## Core building blocks
 
-### User channels
+### Smart Chat
 
-Users can interact with the system through three channels:
+Smart Chat is the secure conversational experience where you ask questions and request approved actions in natural language.
+Smart AI is designed so that enterprise data is not exposed to an external LLM for API calling—only the minimum information
+needed to interpret intent and parameters is used, while execution and business data remain inside your controlled environment.
 
-- **Microsoft Teams bot** — native chat interface for quick access within the Teams environment.
-- **Web agent** (smart-is.ai) — browser-based access from anywhere, no installation required.
-- **Desktop app** — fully self-contained, suited for firewalled environments where all data must stay on-premise.
-### Smart-IS Intelligence Engine
+### Smart AI Intelligence Engine
 
 The Intelligence Engine is the orchestration layer that:
 
-- Converts user input into a resolved function call, extracting the correct intent and parameters.
-- Manages session context to support coherent, multi-turn follow-up conversations.
-- Logs and monitors every interaction for auditing, performance tracking, and troubleshooting.
-### Component Hook Library
+- interprets the user request (intent + parameters)
+- maintains conversation context for follow-up questions
+- coordinates execution and formats responses
+- logs activity for auditing and troubleshooting (as configured)
 
-The **Component Hook Library** sits between the **Intelligence Engine** and the **target systems**, acting as a secure validation and invocation layer. It:
+### Enterprise Mesh (unifying siloed systems)
 
-- **Validates** the resolved function name and parameters before any system call is made.
-- **Enforces** authentication and authorization policies to ensure only permitted actions are executed.
-- **Invokes** the approved implementation from the Git-managed repository for the requested function.
+Enterprise Mesh is the secure validation and execution layer that:
 
-### Smart-Functions
+- orchestrates requests across multiple enterprise systems (WMS/ERP/CRM) to solve the “siloed data” problem
+- validates the requested function and parameters
+- enforces authentication and role-based permissions (RBAC)
+- calls the approved integration(s) using the right protocol (REST, MOCA, SQL, etc.)
 
-The Smart-Functions repository stores reusable, pre-approved business logic that powers every system call, such as:
+### Smart Functions (Git repository)
 
-- **Blue Yonder MOCA commands** — proprietary warehouse management queries and operations.
-- **REST endpoint definitions** — call templates for systems like SAP, Manhattan, and Salesforce.
-- **Cross-system workflows** — orchestrated sequences that chain multiple APIs into a single business operation.
+The Smart Functions repository stores the approved implementations that power execution, such as:
+
+- **Blue Yonder MOCA commands**
+- **REST endpoint definitions** (SAP, Manhattan, Salesforce, etc.)
+- **Cross-system workflows** (scripts that chain multiple steps into one operation)
+
+Because Smart Functions are Git-managed, changes can be reviewed, versioned, and rolled out consistently.
+
+### Smart FX
+
+Smart FX is where we can configure and publish functions, parameters, and permissions for a Smart AI instance,
+and synchronize those changes with the Smart Functions repository.
 
 ## End-to-end request flow
 
-1. **User request:** User types a natural language query (e.g., "Show me detail of order 123").
-2. **LLM interpretation:**  The LLM extracts a function name + parameters (e.g., get_order_details(order_id=123)).
-3. **Orchestration:** The Intelligence Engine resolves intent-to-function and orchestrates the API call.
-4. **Validation + lookup:** The hook layer validates the request and consults Smart Functions repository for the correct system call.
-5. **System invocation:** The appropriate protocol (MOCA, REST, etc.) is executed against the target enterprise system.
-6. **Response handling:** Results are validated, formatted, and returned to the user.
-## Security model
+1. **User request:** A user asks a question in Smart Chat (for example: “Show me details of order 123.”).
+2. **Intent extraction:** Smart AI interprets the request into an approved function name and parameters.
+3. **Validation:** Enterprise Mesh validates the request (function exists, parameters are valid, user is authorized).
+4. **Execution:** The approved implementation runs against the target system using the right protocol (MOCA, REST, etc.).
+5. **Response:** Results are formatted and returned to the user (table, summary, chart, etc.).
 
-- **Keep sensitive enterprise data inside the organization's network.**
-All backend execution happens entirely within the enterprise network. Only the final result is delivered to the user's device.
-- **Send only non-sensitive information** externally for intent extraction.
-The LLM receives only the user's query text and function metadata. The actual business data behind it is never shared externally.
-- **For analytical requests**, share only metadata; run full processing internally.
-For visualizations or breakdowns, the **LLM receives only column names** by default — no row data is shared unless the user explicitly chooses to. The full dataset is processed and charted entirely inside the enterprise network.
+## Security model (high level)
 
-## Deployments
-
-### On-premise deployment
-
-- The **Intelligence Engine** and hook layer run inside the internal network, protected by firewall.
-- Sensitive data remains local; only minimal non-sensitive information is shared externally for intent recognition.
-
-### Cloud deployment
-
-- The Intelligence Engine is hosted on **Azure**, accessible from anywhere via **web** or **Microsoft Teams.**
-- Only **non-sensitive inputs** are processed externally, while encryption and controlled API gateways protect sensitive data.
-
+- **Approved functions only:** Smart AI can only run functions that have been published and approved.
+- **Role-based access:** Users can only see and run what their role allows.
+- **Data stays protected:** Execution runs inside your controlled environment; policies determine what is shared for intent recognition.
+- **Analytics are controlled:** By default, **no cell/row data is shared with the LLM**—only column names and other metadata.
+  If your organization enables it, users can choose to share more (for example, a small sample) to help generate generic processing logic,
+  while full processing still runs internally.

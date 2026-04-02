@@ -1,16 +1,16 @@
 # FAQ
 
-## Is Smart Assistant just document search (RAG)?
+## Is Smart AI just document search (RAG)?
 
-No. Smart Assistant is **API-centric**: it calls structured enterprise APIs to 
-retrieve live data and trigger real workflows — not just answer questions from 
+No. Smart AI is **API-centric**: it calls structured enterprise APIs to
+retrieve live data and trigger real workflows, not just answer questions from
 static documents. Unlike RAG, responses are always current and actionable.
 
 ## Does sensitive data get sent to the external LLM?
 
-No. The LLM is used **only for intent extraction** — it receives the user's query 
-text and function metadata, never actual business data. For analytical requests, 
-only **column names** are shared by default to generate generic processing logic; 
+No. The LLM is used primarily for **intent extraction**. It receives the user's query
+text and function metadata, not the underlying business data. For analytical requests,
+only **column names** are shared by default to generate generic processing logic;
 the full dataset is processed entirely inside the enterprise network. 
 Sharing sample rows is **optional and controlled by the user**.
 
@@ -18,12 +18,12 @@ Sharing sample rows is **optional and controlled by the user**.
 
 1. The LLM extracts **intent + parameters** from the user's natural language query.
 2. The **Intelligence Engine** maps that intent to a pre-approved function.
-3. The **Component Hook Library** validates and executes the function against 
-   the target system (e.g., Blue Yonder MOCA, SAP REST, Salesforce).
+3. **Enterprise Mesh** validates and executes the function against the target system
+   (for example: Blue Yonder MOCA, SAP REST, Salesforce).
 
-## What enterprise systems does Smart Assistant connect to?
+## What enterprise systems does Smart AI connect to?
 
-Smart Assistant connects to any system that exposes an API, including:
+Smart AI connects to any system that exposes an API, including:
 - **Blue Yonder WMS** (MOCA and REST)
 - **SAP ERP** (REST)
 - **Manhattan WMS** (REST)
@@ -57,9 +57,9 @@ Yes. The Intelligence Engine maintains **session context** across a conversation
 so follow-up questions are interpreted in light of previous exchanges without 
 needing to repeat context.
 
-## Can Smart Assistant generate charts and dashboards?
+## Can Smart AI generate charts and dashboards?
 
-Yes. Users can request visualizations (pie, line, bar, stacked, bubble) from any 
+Yes. Users can request visualizations (pie, line, bar, stacked, bubble) from any
 previously retrieved dataset with a plain-English follow-up. The system can also 
 **auto-generate an interactive dashboard** from the most recent dataset 
 automatically.
@@ -71,6 +71,6 @@ or API call that was generated and executed in response to their query.
 
 ## Who controls which functions users can access?
 
-Access is governed by a **centralized RBAC (role-based access control)** policy 
-defined in the Component Hook Library. Only pre-approved functions can be 
-invoked, and users see only the data they are authorized to access.
+Access is governed by a **centralized RBAC (role-based access control)** policy.
+Only pre-approved functions can be invoked, and users see only the data they are authorized to access.
+Administrators manage functions and permissions through **Smart FX** (backed by the Smart Functions repository).

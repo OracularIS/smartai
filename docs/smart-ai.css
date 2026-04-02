@@ -1,0 +1,18 @@
+section.cover {
+  background-image: linear-gradient(225deg, #ff057c 0, #8d0b93 50%, #321575 100%) !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+section.cover .cover-main,
+section.cover .cover-main a,
+section.cover .cover-main h1,
+section.cover .cover-main p,
+section.cover .cover-main li {
+  color: #ffffff !important;
+}
+
+section.cover .cover-main img[alt="logo"] {
+  width: 350px;
+  height: auto;
+}
