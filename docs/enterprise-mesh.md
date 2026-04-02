@@ -1,70 +1,166 @@
 # Enterprise Mesh
 
-Enterprise Mesh is the secure connective tissue of Smart AI.
-It connects Smart Chat requests to your approved enterprise system integrations—safely and consistently.
+**Enterprise Mesh is the secure execution layer of Smart AI.**  
+It connects Smart Chat requests to approved enterprise systems and returns a single, trusted answer—safely, consistently, and in real time.
 
-At a high level, Enterprise Mesh is “query-centric”: instead of moving and syncing data between systems, it can
-send the query to the systems and combine the results into one trusted answer (based on what your organization has
-approved and configured).
+At a high level, Enterprise Mesh is **query-centric**: instead of copying or syncing data between systems, it sends the query directly to each system and combines the results into one unified response—based only on what your organization has approved.
+
+---
+
+## Query-Centric Architecture
+
+The diagram below illustrates how Enterprise Mesh queries multiple systems in parallel and combines results into a single answer:
+
+![Query-Centric Architecture](.attachments/query-centric-architecture.png)
+
+---
 
 ## What Enterprise Mesh does
 
-- **Routes requests** to the right system (WMS/ERP/CRM) using the right protocol (REST, MOCA, etc.).
-- **Validates inputs** (required parameters, formats, allowed values) before anything runs.
-- **Enforces permissions (RBAC)** so users can only run what they are allowed to run.
-- **Uses approved implementations** from the Smart Functions Git repository (scripts, MOCA commands, REST definitions, workflows).
-- **Standardizes access** so different systems feel consistent to end users in Smart Chat.
+- **Routes requests** to the correct system (WMS, ERP, CRM) using native protocols (REST, MOCA, SQL, etc.)
+- **Validates inputs** (required parameters, formats, allowed values) before execution
+- **Enforces permissions (RBAC)** so users can only execute approved actions
+- **Executes approved logic** from the Smart Functions Git repository (scripts, MOCA commands, APIs, workflows)
+- **Standardizes access** so different systems behave consistently in Smart Chat
 
-## Why it matters to end users
+### Enterprise Mesh Integration
 
-Enterprise Mesh is what makes Smart AI “actionable”:
+Enterprise Mesh connects to multiple enterprise systems using native protocols and approved integrations:
 
-- results come from live systems (not outdated documents)
-- requests are governed (approved functions only)
-- behavior is consistent across channels (Teams, web, desktop)
+![Enterprise Mesh Integration](.attachments/enterprise-mesh-integration.png)
 
-## Ask once, see everything (common scenarios)
+---
 
-Enterprise Mesh is most helpful when the answer you need is split across systems.
+## Why it matters
+
+Enterprise Mesh makes Smart AI truly **actionable**:
+
+- **Live data, always** — responses come directly from source systems  
+- **Governed execution** — only approved functions can run  
+- **Consistent experience** — same behavior across Teams, web, and desktop  
+- **Faster decisions** — no manual system switching or delays  
+
+---
+
+## Ask once, see everything
+
+Enterprise Mesh is most powerful when information is distributed across systems.
+
+---
 
 ### Where is my order?
 
-Order status can be fragmented across ERP, WMS, and TMS. Enterprise Mesh can:
+Order status is often split across ERP, WMS, and TMS.
 
-1. query relevant systems in parallel
-2. merge the responses into a single standardized dataset
-3. apply configured reducer logic (precedence rules) to return a single definitive status
+Enterprise Mesh:
+1. Queries all relevant systems in parallel  
+2. Merges responses into a unified dataset  
+3. Applies reducer logic (business-defined precedence rules)  
+4. Returns a **single, definitive status**
+
+#### Example: Order Status (Order #12345)
+
+Below is a real-world example of how Enterprise Mesh retrieves and combines order status from multiple systems into a single response:
+
+![Order Status Example](.attachments/order-status-example.png)
+---
 
 ### True inventory for a SKU
 
-A complete inventory picture can include multiple categories (for example: on-hand, in-transit, on-order).
-Enterprise Mesh can query those sources and calculate a single “available-to-promise” style number (if configured).
+Inventory is often spread across multiple categories:
 
-## How answers are produced (simplified)
+- On-hand (WMS)  
+- In-transit (TMS)  
+- On-order (ERP)  
 
-Depending on the function, Enterprise Mesh may perform:
+Enterprise Mesh:
+- Queries all sources in real time  
+- Combines results into one dataset  
+- Calculates a unified **available-to-promise (ATP)** value (if configured)  
 
-- **Federated queries**: parallel requests to multiple systems using native protocols (REST, MOCA, SQL, etc.).
-- **Live aggregation**: merge responses into one unified dataset in real time.
-- **On-the-fly transformation**: filter, group, or calculate fields on the merged dataset to produce the final answer.
-- **Unified API + security**: expose a single secure endpoint to Smart AI, while keeping system-specific complexity hidden.
+---
 
-## Security and data handling (high level)
+## How answers are produced
 
-Smart AI is designed so that sensitive enterprise data remains inside your environment:
+For each request, Enterprise Mesh may perform:
 
-- the LLM is used primarily to interpret user intent and parameters
-- execution happens through approved functions inside your controlled network boundary
-- for analytics/visualizations, only limited metadata (and optionally a small sample) may be used to generate generic logic,
-  while full processing runs internally
+- **Federated queries**  
+  Parallel requests to multiple systems using native protocols  
 
-Your organization’s security policy determines exactly what is enabled and what can be shared.
+- **Live aggregation**  
+  Real-time merging of responses into a single dataset  
 
-## Tracking and auditability (what you may notice)
+- **On-the-fly transformation**  
+  Filtering, grouping, or calculations applied dynamically  
 
-Your organization may enable tracking so administrators can troubleshoot safely without exposing business payloads.
-Depending on configuration, this can include:
+- **Unified API + security layer**  
+  A single secure interface for Smart AI, hiding backend complexity  
 
-- who asked, when, and which approved function ran
-- masked parameters and high-level schema details (for example: column names or row counts)
-- run IDs and step timings for support and audits
+---
+
+## End-to-end flow (simplified)
+
+1. User asks a question in Smart Chat  
+2. LLM identifies intent and parameters  
+3. Enterprise Mesh selects the approved function  
+4. Queries relevant systems in parallel  
+5. Aggregates and transforms results  
+6. Applies business logic (reducer rules)  
+7. Returns a single, trusted answer  
+
+### Solution Architecture
+
+The diagram below shows how Smart AI, Enterprise Mesh, and enterprise systems interact:
+
+![Solution Architecture](.attachments/solution-architecture.png)
+
+---
+
+## Security and data handling
+
+Enterprise Mesh is designed to keep sensitive data **inside your environment**:
+
+- The LLM is used only for **intent interpretation**  
+- Execution happens through **approved functions within your network**  
+- **No raw business data is exposed externally**  
+- Only limited metadata may be used for analytics or visualization  
+
+All behavior is controlled by your organization’s security policies.
+
+---
+
+## Tracking and auditability
+
+Enterprise Mesh supports secure observability for troubleshooting and audits.
+
+Depending on configuration, tracking may include:
+
+- **Who** initiated the request and **when**  
+- **Which approved function** was executed  
+- **Run IDs and execution timings**  
+- **Masked parameters** and high-level schema details (e.g., column names, row counts)  
+
+> Sensitive business data and payloads are never exposed in logs.
+
+---
+
+## What makes Enterprise Mesh different
+
+- No data duplication (no ETL required)  
+- Real-time query execution (not batch-based)  
+- Works with existing systems (no replacement needed)  
+- Built-in security and governance (RBAC + approved functions)  
+- Low-code, Git-driven extensibility  
+
+---
+
+## When to use Enterprise Mesh
+
+Use Enterprise Mesh when:
+
+- Data is spread across multiple systems  
+- Real-time answers are required  
+- Actions must be secure and governed  
+- A unified, user-friendly interface is needed  
+
+---
