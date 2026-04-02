@@ -1,23 +1,28 @@
-# Smart Assistant
-Smart Assistant (Smart IS Conversational API Framework) is a low-code platform that turns natural language requests into **secure, validated API calls** against enterprise systems such as WMS, ERP, and CRM platforms.
+# Smart AI
 
-Instead of building and maintaining many custom screens, static reports, and one-off integrations, Smart Assistant uses:
+Smart AI (Smart IS Conversational API Framework) helps teams interact with enterprise systems using natural language.
+It turns chat requests into **secure, validated API calls** against systems such as WMS, ERP, and CRM.
 
-- A **Smart-Functions repository** (Git-managed scripts such as MOCA commands and REST call definitions).
-- A **Component Hook Library** that validates requests (authN/authZ, parameter validation) and exposes functions as standardized APIs.
-- A **Smart-IS Intelligence Engine** that uses an LLM to extract *intent + parameters* from user text, then orchestrates only approved function calls.
+Instead of building and maintaining many custom screens, static reports, and one-off integrations, Smart AI is organized into three major components:
+
+- **Enterprise Mesh**: secure validation and execution across connected enterprise systems.
+- **Smart Chat**: the end-user conversational experience (Teams, web, desktop).
+- **Smart FX**: the admin experience for managing functions, permissions, and versions (backed by the Smart Functions Git repository).
 
 ## Key capabilities
 
 - **Natural language access:** Users ask questions like “Show open orders for Warehouse B” without learning API syntax.
 - **API-centric (actionable):** Focuses on structured enterprise APIs (not just document Q&A).
-- **Low-code onboarding:** Configure integrations via JSON + Git-managed scripts/workflows.
+- **Low-code onboarding:** Publish approved functions and workflows without rebuilding apps for every integration.
 - **Multi-channel:** Microsoft Teams bot, web agent, and desktop app options.
-- **Security-first design:** Keep sensitive data inside the enterprise network; send only minimal intent/metadata to the external LLM.
+- **Security-first design:** Only approved functions can run; access is governed with role-based permissions.
 
 ## Next pages
 
 - [Getting Started](./docs/getting-started.md)
+- [Smart Chat](./docs/smart-chat.md)
+- [Smart FX](./docs/smart-fx.md)
+- [Enterprise Mesh](./docs/enterprise-mesh.md)
 - [Architecture](./docs/architecture.md)
 - [Use Cases](./docs/use-cases.md)
 - [FAQ](./docs/faq.md)
