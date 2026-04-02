@@ -1,4 +1,4 @@
-![logo](.attachments/SmartAssitant-09.png)
+![logo](.attachments/SmartAI-081.png)
 
 # Smart AI <small>
 
