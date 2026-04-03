@@ -22,11 +22,23 @@ Smart AI is organized into three major components:
 
 ## Key capabilities
 
-- **Natural language → secure system calls**: Ask “Show open orders for Warehouse B” and get live results.
-- **Follow-up questions (context-aware)**: Ask “Now show only the delayed ones” without restating everything.
-- **Transparency when needed**: See what ran behind the scenes (e.g., the MOCA command / API call) when your role allows it.
-- **Charts and dashboards**: Generate visuals from previously returned datasets with a follow-up prompt.
-- **Security-first design**: Only approved functions can run; access is controlled via role-based permissions.
+- **Conversational access (Smart Chat)**  
+  Interact with enterprise systems using natural language—ask questions, request actions, and refine results with context-aware follow-ups.
+
+- **Intent-to-action execution (Smart Chat + Enterprise Mesh)**  
+  Converts user requests into **secure, validated system functions** executed across WMS, ERP, CRM, and more.
+
+- **Unified enterprise layer (Enterprise Mesh)**  
+  Query and operate across multiple systems in real time through a single interface, without switching tools or systems.
+
+- **Security & governance (Enterprise Mesh)**  
+  Enforces role-based access, validates inputs, and ensures only approved functions execute—keeping sensitive data protected.
+
+- **Function management (Smart FX)**  
+  Configure, manage, and version approved functions, workflows, and permissions through a centralized admin experience.
+
+- **Insights & visualization (Smart Chat)**  
+  Instantly generate charts, summaries, and dashboards from live data using simple follow-up prompts.
 
 ## Next pages
 
