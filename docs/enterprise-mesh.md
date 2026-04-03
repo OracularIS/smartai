@@ -15,13 +15,6 @@ approved and configured).
 - **Uses approved implementations** from the Smart Functions Git repository (scripts, MOCA commands, REST definitions, workflows).
 - **Standardizes access** so different systems feel consistent to end users in Smart Chat.
 
-## Why it matters to end users
-
-Enterprise Mesh is what makes Smart AI “actionable”:
-
-- results come from live systems (not outdated documents)
-- requests are governed (approved functions only)
-- behavior is consistent across channels (Teams, web, desktop)
 
 ## Ask once, see everything (common scenarios)
 
