@@ -51,7 +51,7 @@ Depending on your environment, Smart FX may also include:
 - **MCP servers** (generate/store MCP links and browse available tool lists)
 - **Playground** to experiment with tool calling in a chat-like UI (often shows tool calls and steps)
 - **Eval** to test tool selection reliability and export a report (for review/sharing)
-- **Secure Chat** (optional) to access the Smart Chat experience from inside Smart FX (availability depends on your deployment)
+- **Secure Chat**  Smart chat experience to interact with your enterprise systems via natural language.
 - **Help panel** for searchable in-app documentation
 
 ## Common use cases

@@ -31,11 +31,7 @@ Smart AI connects to any system that exposes an API, including:
 - **Snowflake** (SQL)
 - Any other system with a REST or proprietary API endpoint.
 
-## Do users need technical knowledge to use it?
 
-No. Users interact in plain English through Microsoft Teams, a web browser, 
-or a desktop app. No API syntax, MOCA commands, or system-specific knowledge 
-is required.
 
 ## How long does it take to add a new integration?
 
@@ -49,7 +45,7 @@ Two deployment models are supported:
 - **On-premise:** The entire Intelligence Engine and hook layer run inside the 
   internal network. No sensitive data crosses the firewall.
 - **Cloud (Azure):** The Intelligence Engine is hosted on Azure, accessible via 
-  web or Microsoft Teams, with controlled API gateways and encryption.
+  the web app, with controlled API gateways and encryption.
 
 ## Can users follow up on a previous query?
 
