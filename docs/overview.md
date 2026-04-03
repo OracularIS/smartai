@@ -4,41 +4,37 @@
 
 Smart AI is an enterprise AI solutions suite that enables teams to interact with and operate across enterprise systems using natural language.
 
-Rather than being a standalone conversational API framework, Smart AI encompasses multiple components—including conversational interfaces (Smart Chat), intelligent execution engines, and secure integration layers.
+It combines multiple components that work together to deliver **real-time, actionable operations**. Users can ask questions or request actions, and Smart AI transforms them into **secure, validated system operations** across platforms like WMS, ERP, and CRM—without needing to know MOCA, REST APIs, or system-specific interfaces.  
 
-It transforms user requests into **secure, validated, and actionable system operations** across platforms like WMS, ERP, and CRM—without requiring users to understand MOCA, REST APIs, or system-specific interfaces.
+Smart AI is designed to **streamline workflows, accelerate decision-making, and provide live operational insights**, not just document-based answers.
 
-Smart AI is purpose-built for **real-time, operational workflows**, enabling live data access and execution—not just document-based Q&A.
 ## Smart AI components
 
 Smart AI is organized into three major components:
 
-- **Smart Chat**: The end-user chat experience (Teams, web, or desktop) where you ask questions, follow up, and
-  request charts or summaries.
-- **Enterprise Mesh**: The secure connectivity and governance layer that routes approved requests to the right
-  enterprise system, enforces permissions, and validates parameters before anything runs.
-- **Smart FX**: The admin-facing experience used to manage your Smart AI instance—configure and publish approved
-  functions, permissions, and versions (backed by the Smart Functions Git repository).
+- **Smart Chat**: The conversational platform that lets users interact with enterprise systems and trigger approved actions, including follow-ups, queries, and on-demand visualizations.  
+- **Enterprise Mesh**: The secure connectivity and governance layer that routes requests to the correct system, enforces permissions, and validates parameters before execution.  
+- **Smart FX**: The admin platform for managing Smart AI—configure and publish approved functions, workflows, and permissions, with full version control backed by a Git repository.
 
 ## Key capabilities
 
 - **Conversational access (Smart Chat)**  
-  Interact with enterprise systems using natural language—ask questions, request actions, and refine results with context-aware follow-ups.
+  Interact with enterprise systems using natural language and context-aware follow-ups.
 
 - **Intent-to-action execution (Smart Chat + Enterprise Mesh)**  
   Converts user requests into **secure, validated system functions** executed across WMS, ERP, CRM, and more.
 
 - **Unified enterprise layer (Enterprise Mesh)**  
-  Query and operate across multiple systems in real time through a single interface, without switching tools or systems.
+  Query and operate across multiple systems in real time through a single interface.
 
 - **Security & governance (Enterprise Mesh)**  
-  Enforces role-based access, validates inputs, and ensures only approved functions execute—keeping sensitive data protected.
+  Role-based access control, parameter validation, and execution approval ensure data remains secure.
 
 - **Function management (Smart FX)**  
   Configure, manage, and version approved functions, workflows, and permissions through a centralized admin experience.
 
 - **Insights & visualization (Smart Chat)**  
-  Instantly generate charts, summaries, and dashboards from live data using simple follow-up prompts.
+  Generate charts, summaries, and dashboards instantly from live operational data.
 
 ## Next pages
 
