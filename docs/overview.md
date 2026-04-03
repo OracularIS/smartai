@@ -2,9 +2,9 @@
 
 ## What is Smart AI?
 
-Smart AI (Smart IS Conversational API Framework) helps teams interact with enterprise systems using plain language.
-You ask questions (or request an action) in chat, and Smart AI turns that request into **secure, validated API calls**
-to systems like WMS, ERP, and CRM—without users needing to learn MOCA, REST details, or system-specific screens.
+Smart AI (Smart IS Conversational API Framework) helps teams get answers and complete routine work across enterprise systems using plain language.
+You ask a question (or request an approved action) in chat, and Smart AI turns that request into **secure, validated calls**
+to systems like WMS, ERP, and CRM—without needing to learn system-specific screens or API details.
 
 Smart AI is designed for **live, actionable operations** (real-time data and workflows), not just document Q&A.
 
@@ -13,11 +13,16 @@ Smart AI is designed for **live, actionable operations** (real-time data and wor
 Smart AI is organized into three major components:
 
 - **Smart Chat**: The end-user chat experience (Teams, web, or desktop) where you ask questions, follow up, and
-  request charts or summaries.
-- **Enterprise Mesh**: The secure connectivity and governance layer that routes approved requests to the right
-  enterprise system, enforces permissions, and validates parameters before anything runs.
-- **Smart FX**: The admin-facing experience used to manage your Smart AI instance—configure and publish approved
-  functions, permissions, and versions (backed by the Smart Functions Git repository).
+  request summaries, tables, charts, or approved actions.
+- **Enterprise Mesh**: The security and connectivity layer that checks permissions, validates inputs, and routes approved requests
+  to the right enterprise system before anything runs.
+- **Smart FX (SmartFX Studio)**: The builder/admin workspace where your team manages the **Smart Functions** that Smart AI can use.
+  This is where you define what each function does, what inputs it needs, and what it returns—then move changes through review
+  using a Git-based workflow (diffs, revert, commits, and pull requests). Some deployments also include Connections, MCP, Playground, and Eval.
+
+Most end users spend their time in **Smart Chat**. Smart FX is typically used by builders, admins, QA, and integration teams.
+
+> Depending on your deployment, Smart Chat may be available inside Smart FX as **Secure Chat** (a built-in chat page that provides the same Smart Chat experience).
 
 ## Key capabilities
 
