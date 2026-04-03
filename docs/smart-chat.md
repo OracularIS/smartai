@@ -3,6 +3,8 @@
 Smart Chat is where end users interact with Smart AI using natural language (Teams, web, or desktop).
 It is built for **live operational data and workflows**—not just static document answers.
 
+mart Chat is built inside **Smart FX** as **Secure Chat**. If you see a “Secure Chat” page, it’s the same Smart Chat experience—just accessed from within Smart FX.
+
 ## What you can do in Smart Chat
 
 - Ask questions that return real-time data from connected systems (WMS/ERP/CRM).
