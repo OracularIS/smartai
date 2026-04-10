@@ -88,30 +88,25 @@ Watch the video:
 </video>
 
 - Select a function (e.g., get_user_information)  
-
 Inside the Code Editor, you can:
-
-- Modify function logic (code)
+  - Modify function logic (code)
 
 Update metadata:
-- Description
-- Inputs (arguments)
-- Outputs (responses)
+  - Description
+  - Inputs (arguments)
+  - Outputs (responses)
 
 Tips:
+  - Keep descriptions clear (AI uses them)
+  - Update inputs/outputs carefully to avoid errors s
 
-- Keep descriptions clear (AI uses them)
-- Update inputs/outputs carefully to avoid errors 
-
-- Use Dev Console to connect to a system and run your function for instant results  
+Use Dev Console to connect to a system and run your function for instant results  
 
 After making changes:
-
-- Save your updates
-- Add a commit message
-- Push changes to your repository
-- (Optional) Create a Pull Request
-
+  - Save your updates
+  - Add a commit message
+  - Push changes to your repository
+  - (Optional) Create a Pull Request
 ---
 
 ### 5.2 Tags
