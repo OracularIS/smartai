@@ -1,25 +1,17 @@
 ﻿# Getting Started with Smart AI
 
-Welcome! Smart AI allows you to interact with enterprise systems using simple, natural language — no technical expertise required.
+Smart AI is an intelligent platform that allows you to connect to enterprise systems, add and manage your business logic, and interact with your data using simple, natural language. You can trigger business workflows, retrieve insights, and leverage AI-powered analysis through easy, conversational commands—making complex operations simple and accessible.
 
 ---
 
-## What You Can Do
+## Prerequisties
 
-- Ask questions in plain English  
-- Retrieve data from multiple systems  
-- Generate charts instantly (pie, bar, line)  
-- Customize how your system works  
-- Save and manage results on your dashboard  
+Before getting started, make sure you have:
 
----
+1. A valid account (SSO / Email login)
+2. A Git repository URL containing Smart Functions
+3. A Personal Access Token (PAT) with repo access
 
-## How It Works
-
-1. Create a project  
-2. Open your project workspace  
-3. Configure functions and data  
-4. Connect and start querying  
 
 ---
 
@@ -68,6 +60,8 @@ Here, you will see a list of all your projects.
 - Locate your project in the list  
 - Double-click on the project to open it  
 
+![Add Your Project](.attachments/view_projects.png)
+
 ---
 
 ## Step 5: Work Inside Your Project
@@ -81,6 +75,8 @@ Once you open a project, the **Project Workspace** appears. This workspace inclu
 - Eval  
 - Try It  
 
+![Project Page](.attachments/projects_page.png)
+
 ---
 
 ### 5.1 Code Editor (Smart Functions)
@@ -92,15 +88,29 @@ Watch the video:
 </video>
 
 - Select a function (e.g., get_user_information)  
-- Update:
-  - Function name  
-  - Description  
-  - Documentation  
 
-- Save your changes  
-- Push changes to your repository with a commit message  
+Inside the Code Editor, you can:
+
+- Modify function logic (code)
+
+Update metadata:
+- Description
+- Inputs (arguments)
+- Outputs (responses)
+
+Tips:
+
+- Keep descriptions clear (AI uses them)
+- Update inputs/outputs carefully to avoid errors 
 
 - Use Dev Console to connect to a system and run your function for instant results  
+
+After making changes:
+
+- Save your updates
+- Add a commit message
+- Push changes to your repository
+- (Optional) Create a Pull Request
 
 ---
 
@@ -189,7 +199,48 @@ This ensures that all your functions are properly configured and ready for use w
 
 ---
 
-## Step 6: Secure Chat
+## Step 6: Connect to External Systems
+
+The Connections section allows you to link Smart AI with external systems so your functions can retrieve and send data.
+
+How to Create a Connection
+1. Open the Connections Page
+  - Navigate to the Connections section
+  - Click the New Connection button
+![Connection Page](.attachments/connections_page.png)
+2. Select a Platform
+  - Choose the platform or system you want to connect to
+  - Available options depend on your organization setup
+
+![Connection select](.attachments/connection_select.png)
+3. Enter Basic Details
+  - Provide required details such as:
+  - Connection name
+  - Environment (e.g., Dev, QA, Prod)
+
+![Connection details](.attachments/connection_details.png)
+
+4. Configure Connection Settings
+  - Enter the required configuration details, such as:
+  - API endpoints / URLs
+  - Username and password
+  - Authentication keys (if required)
+![Connection configure](.attachments/configure_connection.png)
+
+---
+## Step 6: Add and Manage Credentials
+1. Click on Add Credentials button to Add/Update your credentials for your system
+![Connection configure](.attachments/add_manage_credentials_page.png)
+
+2. Select your connection from the drop down menu and Add/update your credential details.
+![Connection configure](.attachments/select_connection_and_update_add_credentials.png)
+
+---
+## Step 7: Configure MCP Server for your Functions
+
+
+---
+## Step 8: Secure Chat
 
 Watch the demo:
 
