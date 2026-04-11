@@ -1,5 +1,6 @@
 section.cover {
-  background-image: linear-gradient(225deg, #ff057c 0, #8d0b93 50%, #321575 100%) !important;
+  /* Transitioning from a deep charcoal/black to a rich brand orange */
+  background-image: linear-gradient(180deg, #1a1a1b 0%, #2d2e30 40%, #f26522 100%) !important;
   background-size: cover !important;
   background-position: center !important;
 }
@@ -10,6 +11,8 @@ section.cover .cover-main h1,
 section.cover .cover-main p,
 section.cover .cover-main li {
   color: #ffffff !important;
+  /* Adding a slight text shadow helps readability against the orange gradient */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 section.cover .cover-main img[alt="logo"] {
