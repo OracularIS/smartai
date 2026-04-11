@@ -16,28 +16,11 @@ Smart AI is organized into three major components:
 - **Enterprise Mesh**: The secure connectivity and governance layer that routes requests to the correct system, enforces permissions, and validates parameters before execution.  
 - **Smart FX**: The admin platform for managing Smart AI—configure and publish approved functions, workflows, and permissions, with full version control backed by a Git repository.
 
-## Key capabilities
-
-- **Conversational access (Smart Chat)**  
-  Interact with enterprise systems using natural language and context-aware follow-ups.
-
-- **Intent-to-action execution (Smart Chat + Enterprise Mesh)**  
-  Converts user requests into **secure, validated system functions** executed across WMS, ERP, CRM, and more.
-
-- **Unified enterprise layer (Enterprise Mesh)**  
-  Query and operate across multiple systems in real time through a single interface.
-
-- **Security & governance (Enterprise Mesh)**  
-  Role-based access control, parameter validation, and execution approval ensure data remains secure.
-
-- **Function management (Smart FX)**  
-  Configure, manage, and version approved functions, workflows, and permissions through a centralized admin experience.
-
-- **Insights & visualization (Smart Chat)**  
-  Generate charts, summaries, and dashboards instantly from live operational data.
+Key capabilities have been moved to: [Why Smart AI](./why-smart-ai.md)
 
 ## Next pages
 
+- [Why Smart AI](./why-smart-ai.md)
 - [Getting Started](./getting-started.md)
 - [Smart Chat](./smart-chat.md)
 - [Smart FX](./smart-fx.md)
