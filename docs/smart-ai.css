@@ -1,7 +1,7 @@
 section.cover {
   /* Radial glow from bottom-center to mimic the semi-circle orange shape */
   background: 
-    radial-gradient(ellipse 110% 80%  at 50% 100%, #f26522 0%, #c4501a 30%, transparent 70%),
+    radial-gradient(ellipse 110% 100%  at 50% 100%, #f26522 0%, #c4501a 30%, transparent 70%),
     #1a1a1b !important;
   background-size: cover !important;
   background-position: center !important;
