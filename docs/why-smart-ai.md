@@ -24,8 +24,8 @@ Smart AI is an enterprise AI solutions suite that enables teams to interact with
 
 ## Core Components
 
-The system is built on the following key components:
+The system comprises on the following key components:
 
 - [Smart FX](./smart-fx.md)  
 - [Enterprise Mesh](./enterprise-mesh.md)  
-- [Architecture](./architecture.md)
+- [Smart Chat](./smart-chat.md)

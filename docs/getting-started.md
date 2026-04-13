@@ -231,42 +231,60 @@ How to Create a Connection
 ![Connection configure](.attachments/select_connection_and_update_add_credentials.png)
 
 ---
-## Step 7: Configure MCP Server for your Functions
+## Step 7: Configure MCP Server for Your Functions  
 
-Watch the demo:
-
+### Demo Walkthrough  
 <video controls width="800">
   <source src=".attachments/mcp_server.mp4" type="video/mp4">
 </video>
 
-### Steps
+---
 
-1. Navigate to the **MCP Servers** section in the application.
+## Configuration Steps  
 
-2. Click on **Generate New MCP Server Link**.
+### 1. Access MCP Servers  
+Navigate to the **MCP Servers** section within the application.
 
-3. Select the system (e.g., **Enterprise**) for which you want to create the MCP server.
+### 2. Generate a New Server Link  
+Click on **Generate New MCP Server Link** to begin setup.
 
-4. Enter a **Server Name**.
+### 3. Select Target System  
+Choose the desired system (e.g., **Enterprise**) for which the MCP server will be configured.
 
-5. Click on **Generate Link**.
+### 4. Provide Server Details  
+Enter a meaningful and identifiable **Server Name**.
 
-6. Once generated, a **server link** will appear on the right-hand side.
+### 5. Generate the Link  
+Click **Generate Link** to create your MCP server endpoint.
 
-7. Click on the generated link to open the MCP Server details page.
+### 6. View Generated Link  
+The system will display a **server link** on the right-hand panel.
 
-8. On the MCP Server page, you can:
-   - Copy the **MCP Server URL**
-   - View all configured **connections**
-   - Explore available **MCP tools**, such as:
-     - Get Work Items
-     - Get User Information
-     - Other system-specific tools
+### 7. Open Server Details  
+Click the generated link to navigate to the **MCP Server Details** page.
 
-9. Use the copied MCP Server URL to integrate with your functions or external systems.
+### 8. Review & Utilize Server Information  
+On the MCP Server page, you can:
+
+- Copy the **MCP Server URL**  
+- View all configured **connections**  
+- Explore available **MCP tools**, including:
+  - Get Work Items  
+  - Get User Information  
+  - Additional system-specific tools  
+
+### 9. Integration  
+Use the copied **MCP Server URL** to integrate with your functions or external systems.
 
 ---
 
+## Multi-Client Configuration  
+
+Users can also:
+
+- Select different **clients**  
+- Access their respective configurations  
+- Follow client-specific setup steps directly from the **Export** section  
 
 
 ---
