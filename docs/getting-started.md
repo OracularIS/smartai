@@ -37,7 +37,7 @@ Login using:
 
 ---
 
-## Step 3: Create Your Project
+## Step 3: Create Your Project/Repository
 
 After logging in:
 
@@ -232,6 +232,41 @@ How to Create a Connection
 
 ---
 ## Step 7: Configure MCP Server for your Functions
+
+Watch the demo:
+
+<video controls width="800">
+  <source src=".attachments/mcp_server.mp4" type="video/mp4">
+</video>
+
+### Steps
+
+1. Navigate to the **MCP Servers** section in the application.
+
+2. Click on **Generate New MCP Server Link**.
+
+3. Select the system (e.g., **Enterprise**) for which you want to create the MCP server.
+
+4. Enter a **Server Name**.
+
+5. Click on **Generate Link**.
+
+6. Once generated, a **server link** will appear on the right-hand side.
+
+7. Click on the generated link to open the MCP Server details page.
+
+8. On the MCP Server page, you can:
+   - Copy the **MCP Server URL**
+   - View all configured **connections**
+   - Explore available **MCP tools**, such as:
+     - Get Work Items
+     - Get User Information
+     - Other system-specific tools
+
+9. Use the copied MCP Server URL to integrate with your functions or external systems.
+
+---
+
 
 
 ---

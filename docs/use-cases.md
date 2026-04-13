@@ -21,4 +21,3 @@ If your organization has approved workflows, Smart AI can help coordinate multip
 - **Auto-generated dashboard**: Turn the latest dataset into an interactive summary of key metrics and trends.
 - **Transparency**: Ask “What did you do?” to see what ran behind the scenes (when enabled for your role).
 
-For more examples and feature details, see [Smart Chat](./smart-chat.md).

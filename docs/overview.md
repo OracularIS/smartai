@@ -16,12 +16,3 @@ Smart AI is organized into three major components:
 - **Enterprise Mesh**: The secure connectivity and governance layer that routes requests to the correct system, enforces permissions, and validates parameters before execution.  
 - **Smart FX**: The admin platform for managing Smart AI—configure and publish approved functions, workflows, and permissions, with full version control backed by a Git repository.
 
-
-## Next pages
-
-- [Why Smart AI](./why-smart-ai.md)
-- [Getting Started](./getting-started.md)
-- [Smart Chat](./smart-chat.md)
-- [Smart FX](./smart-fx.md)
-- [Enterprise Mesh](./enterprise-mesh.md)
-- [FAQ](./faq.md)
