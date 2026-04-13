@@ -2,25 +2,31 @@
 
 Smart AI is an enterprise AI solutions suite that enables teams to interact with and operate across enterprise systems using natural language.
 
-## Key capabilities
+## Key Capabilities
 
-- **Conversational access**  
-  Interact with enterprise systems using natural language and context-aware follow-ups.
+- **Conversational System Access**  
+  Interact with enterprise systems using natural language with context-aware understanding and follow-up execution.
 
-- **Intent-to-action execution**  
-  Converts user requests into **secure, validated system functions** executed across WMS, ERP, CRM, and more.
+- **Intent-to-Action Automation**  
+  Convert user intent directly into secure, validated actions across ERP, WMS, CRM, and other enterprise systems.
 
-- **Unified enterprise layer**  
-  Query and operate across multiple systems in real time through a single interface.
+- **Smart Functions Editor (DSL-Based)**  
+  Build complex business logic using a purpose-built DSL with real-time validation, syntax highlighting, and testing environments.
 
-- **Security & governance**  
-  Role-based access control, parameter validation, and execution approval ensure data remains secure.
+- **Git-Native Version Control**  
+  Manage business logic like code with full support for branching, merging, pull requests, and audit history.
 
-- **Function management**  
-  Configure, manage, and version approved functions, workflows, and permissions through a centralized admin experience.
+- **Instant Global Deployment**  
+  Deploy functions and workflows in seconds through a globally distributed edge infrastructure for low-latency execution.
 
-- **Insights & visualization**  
-  Generate charts, summaries, and dashboards instantly from live operational data.
+- **Unified Integration Ecosystem**  
+  Connect and manage all enterprise systems and external platforms from a single centralized control dashboard.
+
+- **Security & Governance Layer**  
+  Enforce enterprise-grade security with role-based access control, parameter validation, and approval workflows.
+
+- **Insights & Real-Time Visualization**  
+  Generate dashboards, reports, and operational insights instantly from live system and business data.
 
 ## Core Components
 
