@@ -37,7 +37,7 @@ Login using:
 
 ---
 
-## Step 3: Create Your Project
+## Step 3: Create Your Project/Repository
 
 After logging in:
 
@@ -231,7 +231,62 @@ How to Create a Connection
 ![Connection configure](.attachments/select_connection_and_update_add_credentials.png)
 
 ---
-## Step 7: Configure MCP Server for your Functions
+## Step 7: Configure MCP Server for Your Functions
+
+ MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
+ 
+### Demo Walkthrough  
+<video controls width="800">
+  <source src=".attachments/mcp_server.mp4" type="video/mp4">
+</video>
+
+---
+
+## Configuration Steps  
+
+### 1. Access MCP Servers  
+Navigate to the **MCP Servers** section within the application.
+
+### 2. Generate a New Server Link  
+Click on **Generate New MCP Server Link** to begin setup.
+
+### 3. Select Target System  
+Choose the desired system (e.g., **Enterprise**) for which the MCP server will be configured.
+
+### 4. Provide Server Details  
+Enter a meaningful and identifiable **Server Name**.
+
+### 5. Generate the Link  
+Click **Generate Link** to create your MCP server endpoint.
+
+### 6. View Generated Link  
+The system will display a **server link** on the right-hand panel.
+
+### 7. Open Server Details  
+Click the generated link to navigate to the **MCP Server Details** page.
+
+### 8. Review & Utilize Server Information  
+On the MCP Server page, you can:
+
+- Copy the **MCP Server URL**  
+- View all configured **connections**  
+- Explore available **MCP tools**, including:
+  - Get Work Items  
+  - Get User Information  
+  - Additional system-specific tools  
+
+### 9. Integration  
+Use the copied **MCP Server URL** to integrate with your functions or external systems.
+
+---
+
+## Multi-Client Configuration  
+
+Users can also:
+
+- Select different **clients**  
+- Access their respective configurations  
+- Follow client-specific setup steps directly from the **Export** section  
 
 
 ---
