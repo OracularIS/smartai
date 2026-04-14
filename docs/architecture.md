@@ -2,60 +2,71 @@
 
 This page explains (at a high level) how Smart AI turns a user request into a secure interaction with enterprise systems.
 
-## Core building blocks
+---
 
-### Smart Chat
+## Core components
 
-Smart Chat is the secure conversational experience where you ask questions and request approved actions in natural language.
-Smart AI is designed so that enterprise data is not exposed to an external LLM for API calling—only the minimum information
-needed to interpret intent and parameters is used, while execution and business data remain inside your controlled environment.
+### [Smart FX](./smart-fx.md)
 
-### Smart AI Intelligence Engine
+**Smart FX is the Smart Functions workbench where your team builds and maintains the approved capabilities that Smart AI can execute.**
 
-The Intelligence Engine is the orchestration layer that:
+In simple terms, Smart FX defines **what Smart AI is allowed to do** and ensures those capabilities are **clear, consistent, reviewable, and safely deployed through your existing release process**.
 
-- interprets the user request (intent + parameters)
-- maintains conversation context for follow-up questions
-- coordinates execution and formats responses
-- logs activity for auditing and troubleshooting (as configured)
+If you only use Smart Chat to ask questions or run approved actions, you typically don’t interact with Smart FX directly.
 
-### Enterprise Mesh (unifying siloed systems)
+---
 
-Enterprise Mesh is the secure validation and execution layer that:
+### [Enterprise Mesh](./enterprise-mesh.md)
 
-- orchestrates requests across multiple enterprise systems (WMS/ERP/CRM) to solve the “siloed data” problem
-- validates the requested function and parameters
-- enforces authentication and role-based permissions (RBAC)
-- calls the approved integration(s) using the right protocol (REST, MOCA, SQL, etc.)
+Enterprise Mesh is the **secure execution layer of Smart AI**.
 
-### Smart Functions (Git repository)
+It connects Smart Chat requests to approved enterprise systems and ensures every operation is **validated, governed, and executed in real time**.
 
-The Smart Functions repository stores the approved implementations that power execution, such as:
+At a high level, Enterprise Mesh is **query-centric**: instead of copying or syncing data, it sends queries directly to enterprise systems and merges results into a **single, unified response based only on approved functions and permissions**.
 
-- **Blue Yonder MOCA commands**
-- **REST endpoint definitions** (SAP, Manhattan, Salesforce, etc.)
-- **Cross-system workflows** (scripts that chain multiple steps into one operation)
+It:
 
-Because Smart Functions are Git-managed, changes can be reviewed, versioned, and rolled out consistently.
+- orchestrates requests across enterprise systems (WMS, ERP, CRM)  
+- validates inputs and enforces permissions (RBAC) before execution  
+- executes approved logic from Smart Functions  
+- aggregates and transforms results into a single, trusted response  
 
-### Smart FX
+---
 
-Smart FX is where we can configure and publish functions, parameters, and permissions for a Smart AI instance,
-and synchronize those changes with the Smart Functions repository.
+### [Smart Chat](./smart-chat.md)
+
+Smart Chat is the **secure conversational interface of Smart AI**.
+
+It allows users to interact with enterprise systems using natural language while ensuring only **approved functions, actions, and data access** are executed.
+
+Smart Chat:
+
+- translates natural language into approved Smart Functions (secure API calls)  
+- retrieves live operational data from connected enterprise systems  
+- supports follow-up questions with full conversation context  
+- formats results as tables, summaries, charts, or dashboards  
+
+Smart Chat is designed for **execution, not just document search**, enabling real-time operational queries and approved workflows.
+
+---
 
 ## End-to-end request flow
 
-1. **User request:** A user asks a question in Smart Chat (for example: “Show me details of order 123.”).
-2. **Intent extraction:** Smart AI interprets the request into an approved function name and parameters.
-3. **Validation:** Enterprise Mesh validates the request (function exists, parameters are valid, user is authorized).
-4. **Execution:** The approved implementation runs against the target system using the right protocol (MOCA, REST, etc.).
-5. **Response:** Results are formatted and returned to the user (table, summary, chart, etc.).
+1. **User request:** A user asks a question in Smart Chat (e.g., “Show me details of order 123”)
+2. **Intent extraction:** Smart AI interprets the request into a Smart Function + parameters
+3. **Validation:** Enterprise Mesh validates function existence, inputs, and user permissions
+4. **Execution:** Approved logic runs against enterprise systems (MOCA, REST, SQL, etc.)
+5. **Aggregation:** Results from multiple systems are merged if needed
+6. **Response:** Smart Chat returns a formatted output (table, summary, chart, or dashboard)
+
+---
 
 ## Security model (high level)
 
-- **Approved functions only:** Smart AI can only run functions that have been published and approved.
-- **Role-based access:** Users can only see and run what their role allows.
-- **Data stays protected:** Execution runs inside your controlled environment; policies determine what is shared for intent recognition.
-- **Analytics are controlled:** By default, **no cell/row data is shared with the LLM**—only column names and other metadata.
-  If your organization enables it, users can choose to share more (for example, a small sample) to help generate generic processing logic,
-  while full processing still runs internally.
+- **Approved functions only:** Only published Smart Functions can be executed
+- **Role-based access (RBAC):** Users only access what their role allows
+- **Data protection:** Execution stays inside your controlled environment
+- **Minimal LLM exposure:** Only intent-related metadata is used for interpretation
+- **Controlled analytics:** Full business data is not exposed externally; only governed metadata or optional samples (if enabled) are used for summarization
+
+---
