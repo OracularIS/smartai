@@ -14,13 +14,13 @@ Smart AI is an enterprise AI solutions suite that enables teams to interact with
   Query and operate across all enterprise systems from one interface with a unified, real-time operational view.
 
 - **MCP Server Integration**  
-  MCP is the core engine of our platform, designed to seamlessly bridge the gap between your applications and external systems. It empowers you to integrate, call, and manage all your essential tools from a single, unified interface.
+  MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
 
 - **Workflow & Logic Management**  
   Design, Evaluate, and manage business logic using a low-code approach with built-in version control.
 
 - **Live Analytics & Interactive Dashboards**  
-  Transform raw data into immediate impact with real-time visualizations and interactive dashboards that empower your team to make smarter, faster decisions.
+  Transform raw data into immediate impact with real-time visualizations and interactive dashboards.
 
 - **Enterprise Security & Governance**  
   Ensure secure operations with strict access control, data protection, and approved workflows.
@@ -30,7 +30,7 @@ Smart AI is an enterprise AI solutions suite that enables teams to interact with
 
 ## Core Components
 
-The Smart AI ecosystem is powered by three integrated layers that transform complex enterprise data into actionable insights. Smart FX serves as the developer's workbench for building and managing approved functions, while Enterprise Mesh acts as the secure execution engine that queries your systems in real-time. Finally, Smart Chat provides the intuitive, natural-language interface where users can ask questions, run workflows, and visualize live operational data.
+The Smart AI ecosystem combines Smart FX, Enterprise Mesh, and Smart Chat into a unified system that enables building functions, executing secure real-time operations, and interacting with enterprise data through natural language.
 
 - [Smart FX](./smart-fx.md)  
 - [Enterprise Mesh](./enterprise-mesh.md)  

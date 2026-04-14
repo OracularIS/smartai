@@ -233,8 +233,8 @@ How to Create a Connection
 ---
 ## Step 7: Configure MCP Server for Your Functions
 
-MCP (Model Context Protocol) is a core feature of our platform that simplifies how your application connects with external systems and tools. It allows you to access data, trigger actions, and manage everything effortlessly from one centralized interface.
-
+ MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
+ 
 ### Demo Walkthrough  
 <video controls width="800">
   <source src=".attachments/mcp_server.mp4" type="video/mp4">
