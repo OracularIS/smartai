@@ -2,31 +2,31 @@
 
 Smart AI is an enterprise AI solutions suite that enables teams to interact with and operate across enterprise systems using natural language.
 
-## Key Capabilities
+## Key Capabilities  
 
-- **Conversational System Access**  
-  Interact with enterprise systems using natural language with context-aware understanding and follow-up execution.
+- **Smart Conversational Operations**  
+  Interact with enterprise systems using natural language and instantly perform real business operations with context-aware understanding.
 
-- **Intent-to-Action Automation**  
-  Convert user intent directly into secure, validated actions across ERP, WMS, CRM, and other enterprise systems.
+- **Intent-to-Execution Automation**  
+  Seamlessly convert user requests into secure, validated actions across ERP, WMS, TMS, and other enterprise systems in real time.
 
-- **Smart Functions Editor (DSL-Based)**  
-  Build complex business logic using a purpose-built DSL with real-time validation, syntax highlighting, and testing environments.
+- **Unified Enterprise Connectivity**  
+  Connect and query multiple systems through a single interface, eliminating silos and delivering a consolidated, real-time view.
 
-- **Git-Native Version Control**  
-  Manage business logic like code with full support for branching, merging, pull requests, and audit history.
+- **MCP Server Integration**  
+  Integrate external systems and workflows through a unified MCP layer, enabling secure orchestration and execution from one place.
 
-- **Instant Global Deployment**  
-  Deploy functions and workflows in seconds through a globally distributed edge infrastructure for low-latency execution.
+- **Workflow & Logic Management**  
+  Design, test, and manage business logic using a low-code approach with built-in version control and reusable workflows.
 
-- **Unified Integration Ecosystem**  
-  Connect and manage all enterprise systems and external platforms from a single centralized control dashboard.
+- **Live Analytics & Interactive Dashboards**  
+  Instantly generate real-time reports, visualizations, and dashboards for faster, data-driven decisions.
 
-- **Security & Governance Layer**  
-  Enforce enterprise-grade security with role-based access control, parameter validation, and approval workflows.
+- **Enterprise Security & Governance**  
+  Ensure secure operations with strict access control, data protection, and approval workflows.
 
-- **Insights & Real-Time Visualization**  
-  Generate dashboards, reports, and operational insights instantly from live system and business data.
+- **Observability & Traceability**  
+  Track every interaction end-to-end with detailed logs, execution history, and full visibility for monitoring and audits.
 
 ## Core Components
 

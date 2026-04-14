@@ -231,7 +231,9 @@ How to Create a Connection
 ![Connection configure](.attachments/select_connection_and_update_add_credentials.png)
 
 ---
-## Step 7: Configure MCP Server for Your Functions  
+## Step 7: Configure MCP Server for Your Functions
+
+MCP (Model Context Protocol) is a core feature of our platform that simplifies how your application connects with external systems and tools. It allows you to access data, trigger actions, and manage everything effortlessly from one centralized interface.
 
 ### Demo Walkthrough  
 <video controls width="800">
