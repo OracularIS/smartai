@@ -1,71 +1,73 @@
 # Smart FX (SmartFX Studio)
 
-Smart FX is where your team **builds and maintains the Smart Functions** that power Smart AI.
-In simple terms: Smart FX is the “workbench” used to define what Smart AI is allowed to do, keep those capabilities consistent, and move changes through review.
-
-If you only use **Smart Chat** to ask questions and run approved actions, you usually don’t need Smart FX.
+Smart FX is the studio where your team **builds and maintains Smart Functions** (tools) that power Smart AI.
+In simple terms: Smart FX is the workbench used to define what the AI is allowed to do, keep those capabilities consistent, and validate that tool calling stays reliable as things evolve.
 
 ## What is a Smart Function?
 
-A Smart Function is an approved capability that Smart AI can use during a chat, such as:
+A Smart Function is an approved capability that Smart AI can use at runtime, such as:
 
 - Looking up operational data (orders, inventory, shipments, devices, etc.)
 - Running an approved action or workflow (when allowed)
 - Calling an enterprise integration (API, command, or script) behind the scenes
 
-Smart FX helps you keep these functions clear for end users and safe for production systems.
+In Smart FX, a function is treated as a combination of:
 
-## What you can do in Smart FX
+- **Implementation** (the code or script that runs)
+- **Metadata** (the description, typed inputs, and expected output shape that the AI uses to choose and call it)
 
-### Organize work with projects and systems
+## Concept
 
-- Create/open projects connected to a Smart Functions Git repository
-- Pick a “system” (a top-level folder) and browse the functions inside it
+Smart FX focuses on a few core areas:
 
-### Edit a function (details + implementation)
+- **Functions**: define and maintain tool behavior (metadata + implementation).
+- **Metadata**: keep function definitions understandable and callable (arguments/response shape, descriptions).
+- **Tags + domains**: standardize vocabulary (tags) and field schemas (domains) across many functions.
+- **Connections**: bind functions to real external systems/environments without embedding credentials in code.
+- **Eval**: measure whether the AI selects the right tools and arguments after changes.
+- **Dev console**: troubleshoot builder and tool-calling behavior.
 
-- Write or improve descriptions so users know what the function does
-- Define inputs (what Smart AI needs to ask for) and outputs (what the function returns)
-- Update the underlying implementation when needed (the app typically supports common script types used in your environment)
+## Features (Smart FX scope)
 
-### Reuse shared building blocks
+### Functions (metadata + implementation)
 
-Smart FX commonly supports shared definitions so you don’t have to repeat yourself across many functions, such as:
+- Browse projects/systems and find functions quickly.
+- Edit a function’s metadata: description, inputs (arguments), and outputs (response shape).
+- Edit the function implementation (script/API wrapper/etc.), depending on what your environment supports.
 
-- Tags (grouping and discovery)
-- Domain fields (reusable “field” definitions like type, required/optional, and allowed values)
-- Reusable input/output collections (common sets of fields used in many functions)
+### Metadata building blocks (tags + domains)
 
-### Review changes with a Git-friendly workflow
+- **Tags**: categorize functions for discovery and routing (what the tool is “about”).
+- **Domain fields**: reusable field definitions (type, required/optional, enums, descriptions) used by many functions.
+- **Reusable collections**: shared argument/response groups used to keep schemas consistent across tools.
 
-- See what changed, view diffs, and revert files when something doesn’t look right
-- Create a branch, commit, push, and open a pull request (depending on your deployment)
+### Connections
 
-> Note: Making changes available in Smart Chat typically follows your normal release process (for example: PR review → merge → deployment). Smart FX helps you produce reviewable changes; it doesn’t replace your release controls.
+- View/manage connection records for external systems (per system/environment).
+- Use connections to keep credentials/config out of function code while still enabling real integrations.
 
-### Use connections and testing tools (if enabled)
+### Eval (tool selection validation)
 
-Depending on your environment, Smart FX may also include:
+- Run evaluations across selected functions/tools.
+- Review results to confirm the AI chose the right tool and filled the right arguments.
+- Export/share an evaluation report for review.
 
-- **Connections & credentials** to external systems (managed through an integrations backend)
-- **MCP servers** (generate/store MCP links and browse available tool lists)
-- **Playground** to experiment with tool calling in a chat-like UI (often shows tool calls and steps)
-- **Eval** to test tool selection reliability and export a report (for review/sharing)
-- **Secure Chat**  Smart chat experience to interact with your enterprise systems via natural language.
-- **Help panel** for searchable in-app documentation
+### Dev console (debugging)
+
+- Inspect troubleshooting details for builder workflows and tool-calling flows (for example: request/session context and debug views).
 
 ## Common use cases
 
-- **Developers/builders**: update a function and open a PR for review
-- **Platform owners**: keep shared tags/domains/collections consistent across teams
-- **QA/test teams**: run Eval to validate tool selection after changes
-- **Integrations engineers**: manage connections and generate MCP server links
-- **Product/demo teams**: use Playground to show “what the AI is doing” (tools used, steps, plan)
+- **Developers/builders**: create or update Smart Functions (metadata + implementation).
+- **Platform owners**: keep tags/domains/collections consistent across teams.
+- **Integrations engineers**: manage connections used by functions.
+- **QA/test teams**: run Eval to validate tool selection after changes.
 
 ## Typical workflow
 
 1. Open a project (connect Smart FX to your Smart Functions repository).
-2. Select a system and choose a function to update.
-3. Update the function details (description, inputs/outputs) and implementation if needed.
-4. Review changes and test in Playground/Eval (if available).
-5. Commit, push, and open a pull request for review.
+2. Select a system and choose a function to create/update.
+3. Update the function metadata (description, arguments, response) and implementation as needed.
+4. Update tags/domains/collections if your change introduces new fields or categories.
+5. Ensure the function is wired to the correct connection (if it calls external systems).
+6. Run Eval to validate tool selection and argument filling before releasing the change.
