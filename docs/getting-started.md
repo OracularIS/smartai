@@ -263,7 +263,7 @@ Evaluation runs fully on the server — you can safely navigate away and return 
 
 ---
 
-## Step 8: Configure MCP Server for Your Functions (optional)
+## Step 7: Configure MCP Server for Your Functions (optional)
 
 MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
  
