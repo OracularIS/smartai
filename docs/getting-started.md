@@ -143,44 +143,7 @@ Connections act as the bridge between your functions and real systems, handling 
 
 Each function must be linked to a connection so it knows which system and environment to execute against.
 
-### 6.1 Create (or reuse) a connection
-
-If a connection for your system/environment already exists, you can reuse it. Otherwise:
-
-1. Go to Connections → New Connection
-
-2. Select the target system/platform
-
-3. Provide basic details:
-   - Connection Name (e.g., enterprise-dev)
-   - Environment (Dev / QA / Prod)
-
-4. Configure system-specific settings:
-   - Base URL / Endpoint
-   - Authentication type (API Key, OAuth, etc.)
-   - Any required headers or config fields
-
-5. Save the connection
-
-![Connection Page](.attachments/connections_page.png)
-
-### 6.2 Add credentials to your connection
-
-Connections define where to connect. Credentials define how to securely access it.
-
-Credentials are stored securely in the platform and never committed to your Git repository.
-
-1. Go to Credentials → Add Credentials
-2. Select your connection
-3. Enter authentication details:
-    - API Keys / Tokens
-    - Username / Password
-    - OAuth configuration (if applicable)
-4. Save credentials
-
-![Add Credentials](.attachments/add_manage_credentials_page.png)
-
-### 6.3 Create (or edit) a function and bind it to your connection
+### 6.1 Create (or edit) a function and bind it to your connection
 
 1. In the **Code Editor**, create a new function or open an existing one
 2. In the top-right **Implementation** dropdown, select your system connection (this binds the function to that connection)
@@ -195,7 +158,7 @@ Use these if you want a UI walkthrough of each area.
 </video>
 
 
-### 6.4 Tags
+### 6.2 Tags
 
 - Help builders find and organize tools in Smart FX
 - Help Smart AI route and select tools more reliably (especially when tools overlap)
@@ -216,7 +179,7 @@ Watch the video:
 </video>
 
 
-### 6.5 Input & Output Collections
+### 6.3 Input & Output Collections
 
 Collections let you define reusable input and output schemas once and share them across all your functions. This eliminates duplicate definitions, ensures consistency, and means you only need to update fields in one place when requirements change.
 
@@ -234,7 +197,7 @@ Here you can:
 
 Use collections to reuse consistent argument/response groups across many functions (for example, a shared `order_id` input definition or a common “order header” output shape).
 
-### 6.6 Domains
+### 6.4 Domains
 
 Domains are your global data dictionary. They define standard field types, validation rules, allowed values and descriptions that apply everywhere across your system. This guarantees that fields like `customer_id` work exactly the same way in every function, report and dashboard.
 
@@ -253,7 +216,7 @@ In the Domains section, you can:
 
 Domains help you standardize field definitions across tools (type, required/optional, allowed values, descriptions). This improves consistency and makes downstream charts/dashboards more reliable.
 
-### 6.7 Eval
+### 6.5 Eval
  
 Eval validates that your functions will be correctly identified and called by AI models. It simulates real-world tool selection under load, detects overlapping descriptions, missing arguments and ambiguous definitions before users encounter them. This is the final quality check before deploying functions to production chat.
 
@@ -276,7 +239,7 @@ Steps:
    - Choose one or more functions to evaluate. The system will automatically load *all* functions in your system during testing to detect real-world overlap.
 
 4. **AI Testing**  
-   GPT-4.1 automatically generates 10 natural language test questions per function, then attempts to call each function using standard OpenAI tool calling with your full tool catalog loaded.
+   The LLM automatically generates 10 natural language test questions per function, then attempts to call each function using standard OpenAI tool calling with your full tool catalog loaded.
 
 5. **Scored Results**  
    You will receive a detailed report scored on:
@@ -290,7 +253,62 @@ Evaluation runs fully on the server — you can safely navigate away and return 
 
 ---
 
-## Step 7: Configure MCP Server for Your Functions (optional)
+## Step 7: Create (or reuse) a connection
+
+If a connection for your system/environment already exists, you can reuse it. Otherwise:
+
+1.  Go to Connections → New Connection
+
+    You will see the main Connections overview page.
+
+    ![Connections Overview Page](.attachments/connections_page.png)
+
+2.  Select the target system/platform from the available list
+
+    ![Select System Connection Type](.attachments/connection_select.png)
+
+3.  Provide basic details:
+    - Connection Name (e.g., `enterprise-dev`)
+    - Environment (Dev / QA / Prod)
+
+    ![Enter Connection Basic Details](.attachments/connection_details.png)
+
+4.  Configure system-specific settings:
+    - Base URL / Endpoint
+    - Authentication type (API Key, OAuth, etc.)
+    - Any required headers or config fields
+
+    ![Configure Connection Settings](.attachments/configure_connection.png)
+
+5.  Save the connection
+
+---
+
+### Step 8: Add credentials to your connection
+
+Connections define where to connect. Credentials define how to securely access it.
+
+Credentials are stored securely in the platform and never committed to your Git repository.
+
+1.  Go to Credentials → Add Credentials
+
+    You will see the credentials management overview page.
+
+    ![Credentials Management Page](.attachments/add_manage_credentials_page.png)
+
+2.  Select your existing connection from the dropdown list
+    - Enter authentication details:
+      - API Keys / Tokens
+      - Username / Password
+      - OAuth configuration (if applicable)
+
+    ![Select Connection and Add Credentials](.attachments/select_connection_and_update_add_credentials.png)
+
+3.  Save credentials
+
+---
+
+## Step 9: Configure MCP Server for Your Functions (optional)
 
 MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
  
@@ -352,7 +370,7 @@ For a full MCP page (including Claude Desktop setup + testing), see:
 - [MCP (Model Context Protocol)](./mcp.md)
 
 ---
-## Step 9: Secure Chat
+## Step 10: Secure Chat
 
 Smart Chat is the secure conversational chat interface of Smart AI that helps you interact with connected enterprise systems securely without exposing the actual data values to LLM.
 
