@@ -83,7 +83,7 @@ Once you open a project, the **Project Workspace** appears. This workspace inclu
 
 Watch the video:
 
-<video controls width="800">
+<video controls width="1725">
   <source src=".attachments/projects.mp4" type="video/mp4">
 </video>
 
@@ -113,7 +113,7 @@ After making changes:
 
 Watch the video:
 
-<video controls width="800">
+<video controls width="1725">
   <source src=".attachments/tags.mp4" type="video/mp4">
 </video>
 
@@ -129,7 +129,7 @@ In the Tags section, you can:
 
 Watch the video:
 
-<video controls width="800">
+<video controls width="1725">
   <source src=".attachments/input_output.mp4" type="video/mp4">
 </video>
 
@@ -147,7 +147,7 @@ These define how your data is structured.
 
 Watch the video:
 
-<video controls width="800">
+<video controls width="1725">
   <source src=".attachments/domain.mp4" type="video/mp4">
 </video>
 
@@ -164,7 +164,7 @@ In the Domains section, you can:
 
 Watch the video:
 
-<video controls width="800">
+<video controls width="1725">
   <source src=".attachments/eval.mp4" type="video/mp4">
 </video>
 
@@ -236,7 +236,7 @@ How to Create a Connection
  MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
  
 ### Demo Walkthrough  
-<video controls width="800">
+<video controls width="1725">
   <source src=".attachments/mcp_server.mp4" type="video/mp4">
 </video>
 
@@ -294,7 +294,7 @@ Users can also:
 
 Watch the demo:
 
-<video controls width="800">
+<video controls width="1725">
   <source src=".attachments/getting_started.mp4" type="video/mp4">
 </video>
 
