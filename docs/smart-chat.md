@@ -1,7 +1,6 @@
 # Smart Chat
 
 Smart Chat is the secure conversational chat interface of Smart AI that helps you interact with connected enterprise systems.
-It converts plain-language requests into **approved, secure API calls** and returns live answers from those systems.
 
 ## What you can do in Smart Chat
 

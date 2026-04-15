@@ -4,14 +4,47 @@ Smart AI is an intelligent platform that allows you to connect to enterprise sys
 
 ---
 
-## Prerequisties
+## Prerequisites
 
 Before getting started, make sure you have:
 
 1. A valid account (SSO / Email login)
-2. A Git repository URL containing Smart Functions
-3. A Personal Access Token (PAT) with repo access
+2. A Git repository URL for your Smart Functions (your tool catalog)
+3. A Personal Access Token (PAT) with repo access (if required by your Git provider)
 
+---
+
+## What you will accomplish in this guide
+
+By the end, you will have:
+
+- A Smart FX project connected to your Git repository
+- A working connection + credentials for a target system/environment (Dev/QA/Prod)
+- At least one function you can run in Dev Console (with validated inputs/outputs)
+- An Eval run that checks tool-calling readiness
+- A verified run in Secure Chat
+- (Optional) An MCP server you can export and use in an external client
+
+---
+
+## Step 0: Prepare your Smart Functions repository
+
+Before you add a project in Smart FX, create a Git repository (Azure DevOps/GitHub/etc.) that will store your Smart Functions.
+
+1. **Create a new Git repository** on your chosen platform (Azure DevOps, GitHub, etc.)
+2. **Pick a system name** you will build for first (e.g., Enterprise, Snowflake, Bugzilla). You will use it consistently in your project and connection naming.
+3. **Create an initial folder structure** in your repository (recommended for first-time setup):
+   - Create a top-level folder for your system
+   - Inside it, create a `base` folder
+   
+   ```
+   System_Name/
+   └── base/
+   ```
+
+4. **Push your initial repository** to the remote Git platform
+
+**Why this matters:** Many deployments expect functions to live under a consistent base folder so the platform can discover them reliably. If your organization uses a different structure/template, follow your internal standard.
 
 ---
 
@@ -39,7 +72,15 @@ Login using:
 
 ## Step 3: Create Your Project/Repository
 
-After logging in:
+Add your commands repository to SmartFX.
+
+**What “adding a project” does (and why):**
+
+- Connects Smart FX to a **Git repository** that becomes the source of truth for your tools
+- Enables **version control and review** (commit messages, PRs, rollback)
+- Makes your functions reusable across **Smart Chat, Eval, and MCP**
+
+After logging in, create a project by providing:
 
 - Enter Project Name  
 - Add Repository Link  
@@ -60,7 +101,7 @@ Here, you will see a list of all your projects.
 - Locate your project in the list  
 - Double-click on the project to open it  
 
-![Add Your Project](.attachments/view_projects.png)
+![View Your Project](.attachments/view_projects.png)
 
 ---
 
@@ -69,47 +110,72 @@ Here, you will see a list of all your projects.
 Once you open a project, the **Project Workspace** appears. This workspace includes:
 
 - Code Editor (Smart Functions)  
+- Meta (function description + inputs/outputs)  
 - Tags  
 - Input & Output Collections  
 - Domains  
+- Connections + credentials (system wiring)  
 - Eval  
-- Try It  
+- Dev Console / Try It (test runs)  
+- MCP Servers (optional export to external clients)  
 
 ![Project Page](.attachments/projects_page.png)
 
 ---
 
-### 5.1 Code Editor (Smart Functions)
+## Step 6: Quick Start Flow (Connection → Function → Test)
 
-Watch the video:
+This is the shortest path to a working tool you can run in Dev Console and Secure Chat.
+
+### 6.1 Create (or reuse) a connection
+
+If you already have a connection for the system/environment you want (Dev/QA/Prod), skip to **Step 6.3**.
+
+1. Open **Connections** → **New Connection**
+2. Select the platform/system (options depend on your org setup)
+3. Enter basics (Connection name, Environment)
+4. Configure settings (Endpoints/URLs, auth method, any system-specific fields)
+
+![Connection Page](.attachments/connections_page.png)
+
+### 6.2 Add credentials to your connection
+
+Credentials are stored in the platform so they are **not committed to Git**.
+
+1. Open **Credentials** → **Add Credentials**
+2. Select your connection from the dropdown
+3. Add/update your credential details
+
+![Add Credentials](.attachments/add_manage_credentials_page.png)
+
+### 6.3 Create (or edit) a function and bind it to your connection
+
+1. In the **Code Editor**, create a new function or open an existing one
+2. In the top-right **Implementation** dropdown, select your system connection (this binds the function to that connection)
+3. Keep Meta minimal but complete (description + tags + inputs/outputs)
+4. Save → commit message → push to your repository (and PR if your workflow requires it)
+
+### 6.4 Test in Dev Console / Try It
+
+Run the function with real parameters against your connected environment (try a few parameter sets to validate edge cases).
+
+### 6.5 Validate tool-calling with Eval
+
+Use **Eval** to check that your function definitions are tool-calling ready (select system → create evaluation → select functions → review results).
+
+---
+
+## Step 7: Workspace Tour (Videos)
+
+Use these if you want a UI walkthrough of each area.
+
+### 7.1 Code Editor (Smart Functions)
 
 <video controls width="800">
   <source src=".attachments/projects.mp4" type="video/mp4">
 </video>
 
-- Select a function (e.g., get_user_information)  
-Inside the Code Editor, you can:
-  - Modify function logic (code)
-
-Update metadata:
-  - Description
-  - Inputs (arguments)
-  - Outputs (responses)
-
-Tips:
-  - Keep descriptions clear (AI uses them)
-  - Update inputs/outputs carefully to avoid errors s
-
-Use Dev Console to connect to a system and run your function for instant results  
-
-After making changes:
-  - Save your updates
-  - Add a commit message
-  - Push changes to your repository
-  - (Optional) Create a Pull Request
----
-
-### 5.2 Tags
+### 7.2 Tags
 
 Watch the video:
 
@@ -117,15 +183,23 @@ Watch the video:
   <source src=".attachments/tags.mp4" type="video/mp4">
 </video>
 
+**What tags are for (and why they matter):**
+
+- Help builders find and organize tools in Smart FX
+- Help Smart AI route and select tools more reliably (especially when tools overlap)
+- Provide a consistent vocabulary across teams (“orders”, “inventory”, “shipping”)
+
 In the Tags section, you can:
 
 - Create categories, subcategories, and topics  
 - Edit or delete tags  
 - Activate or deactivate them  
 
+**Creating new tags can change behavior.** New or inconsistent tags can make tool selection worse (duplicates, near-synonyms) and can affect governance workflows in some orgs. Prefer existing tags when possible.
+
 ---
 
-### 5.3 Input & Output Collections
+### 7.3 Input & Output Collections
 
 Watch the video:
 
@@ -139,11 +213,11 @@ Here you can:
 - Edit existing ones  
 - Delete collections  
 
-These define how your data is structured.
+Use collections to reuse consistent argument/response groups across many functions (for example, a shared `order_id` input definition or a common “order header” output shape).
 
 ---
 
-### 5.4 Domains
+### 7.4 Domains
 
 Watch the video:
 
@@ -158,9 +232,11 @@ In the Domains section, you can:
 - Delete domains  
 - Import domains using a .json file  
 
+Domains help you standardize field definitions across tools (type, required/optional, allowed values, descriptions). This improves consistency and makes downstream charts/dashboards more reliable.
+
 ---
 
-### 5.5 Eval
+### 7.5 Eval
 
 Watch the video:
 
@@ -194,46 +270,9 @@ This ensures that all your functions are properly configured and ready for use w
 
 ---
 
-## Step 6: Connect to External Systems
+## Step 8: Configure MCP Server for Your Functions (optional)
 
-The Connections section allows you to link Smart AI with external systems so your functions can retrieve and send data.
-
-How to Create a Connection
-1. Open the Connections Page
-  - Navigate to the Connections section
-  - Click the New Connection button
-![Connection Page](.attachments/connections_page.png)
-2. Select a Platform
-  - Choose the platform or system you want to connect to
-  - Available options depend on your organization setup
-
-![Connection select](.attachments/connection_select.png)
-3. Enter Basic Details
-  - Provide required details such as:
-  - Connection name
-  - Environment (e.g., Dev, QA, Prod)
-
-![Connection details](.attachments/connection_details.png)
-
-4. Configure Connection Settings
-  - Enter the required configuration details, such as:
-  - API endpoints / URLs
-  - Username and password
-  - Authentication keys (if required)
-![Connection configure](.attachments/configure_connection.png)
-
----
-## Step 6: Add and Manage Credentials
-1. Click on Add Credentials button to Add/Update your credentials for your system
-![Connection configure](.attachments/add_manage_credentials_page.png)
-
-2. Select your connection from the drop down menu and Add/update your credential details.
-![Connection configure](.attachments/select_connection_and_update_add_credentials.png)
-
----
-## Step 7: Configure MCP Server for Your Functions
-
- MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
+MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
  
 ### Demo Walkthrough  
 <video controls width="800">
@@ -242,7 +281,7 @@ How to Create a Connection
 
 ---
 
-## Configuration Steps  
+## Configuration steps  
 
 ### 1. Access MCP Servers  
 Navigate to the **MCP Servers** section within the application.
@@ -288,9 +327,20 @@ Users can also:
 - Access their respective configurations  
 - Follow client-specific setup steps directly from the **Export** section  
 
+For a full MCP page (including Claude Desktop setup + testing), see:
+
+- [MCP (Model Context Protocol)](./mcp.md)
 
 ---
-## Step 8: Secure Chat
+## Step 9: Secure Chat
+
+Smart Chat is the secure conversational chat interface of Smart AI that helps you interact with connected enterprise systems securely without exposing the actual data values to LLM.
+
+- Smart Chat allows you to execute your function operations via natural language, schedule workflows, and perform analysis on your data.
+
+- It employs a code generation strategy for analysis and operations that runs in an isolated environment. Only the meta data is shared with the LLM that helps it to generate code for insights such as bar charts, line charts, filtering data etc.
+
+- Users can generate live charts via natural commands and see the actual command that the LLM invoked behind the scenes for observability. 
 
 Watch the demo:
 
