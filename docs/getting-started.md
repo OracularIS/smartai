@@ -159,34 +159,16 @@ Credentials are stored in the platform so they are **not committed to Git**.
 2. In the top-right **Implementation** dropdown, select your system connection (this binds the function to that connection)
 3. Keep Meta minimal but complete (description + tags + inputs/outputs)
 4. Save → commit message → push to your repository (and PR if your workflow requires it)
-
-### 6.4 Test in Dev Console / Try It
-
-Run the function with real parameters against your connected environment (try a few parameter sets to validate edge cases).
-
-### 6.5 Validate tool-calling with Eval
-
-Use **Eval** to check that your function definitions are tool-calling ready (select system → create evaluation → select functions → review results).
-
----
-
-## Step 7: Workspace Tour (Videos)
+5. Run the function with real parameters against your connected environment (try a few parameter sets to validate edge cases).
 
 Use these if you want a UI walkthrough of each area.
 
-### 7.1 Code Editor (Smart Functions)
-
-<video controls width="1725">
+<video controls width="800">
   <source src=".attachments/projects.mp4" type="video/mp4">
 </video>
 
-### 7.2 Tags
 
-Watch the video:
-
-<video controls width="1725">
-  <source src=".attachments/tags.mp4" type="video/mp4">
-</video>
+### 6.4 Tags
 
 **What tags are for (and why they matter):**
 
@@ -202,13 +184,21 @@ In the Tags section, you can:
 
 **Creating new tags can change behavior.** New or inconsistent tags can make tool selection worse (duplicates, near-synonyms) and can affect governance workflows in some orgs. Prefer existing tags when possible.
 
----
+Watch the video:
 
-### 7.3 Input & Output Collections
+<video controls width="800">
+  <source src=".attachments/tags.mp4" type="video/mp4">
+</video>
+
+
+### 6.5 Input & Output Collections
+
+**What they do (and why they matter):**  
+Collections let you define reusable input and output schemas once and share them across all your functions. This eliminates duplicate definitions, ensures consistency, and means you only need to update fields in one place when requirements change.
 
 Watch the video:
 
-<video controls width="1725">
+<video controls width="800">
   <source src=".attachments/input_output.mp4" type="video/mp4">
 </video>
 
@@ -220,13 +210,14 @@ Here you can:
 
 Use collections to reuse consistent argument/response groups across many functions (for example, a shared `order_id` input definition or a common “order header” output shape).
 
----
+### 6.6 Domains
 
-### 7.4 Domains
+**What Domains do (and why they matter):**  
+Domains are your global data dictionary. They define standard field types, validation rules, allowed values and descriptions that apply everywhere across your system. This guarantees that fields like `customer_id` work exactly the same way in every function, report and dashboard.
 
 Watch the video:
 
-<video controls width="1725">
+<video controls width="800">
   <source src=".attachments/domain.mp4" type="video/mp4">
 </video>
 
@@ -239,17 +230,16 @@ In the Domains section, you can:
 
 Domains help you standardize field definitions across tools (type, required/optional, allowed values, descriptions). This improves consistency and makes downstream charts/dashboards more reliable.
 
----
+### 6.7 Eval
 
-### 7.5 Eval
+**What Eval does (and why it matters):**  
+Eval validates that your functions will be correctly identified and called by AI models. It simulates real-world tool selection under load, detects overlapping descriptions, missing arguments and ambiguous definitions before users encounter them. This is the final quality check before deploying functions to production chat.
 
 Watch the video:
 
-<video controls width="1725">
+<video controls width="800">
   <source src=".attachments/eval.mp4" type="video/mp4">
 </video>
-
-The **Eval** section allows you to validate your Smart Functions against AI models to ensure they are configured correctly.  
 
 Steps:
 
@@ -258,29 +248,32 @@ Steps:
 
 2. **Create Evaluation**  
    - Click **Create Evaluation** to start the process.  
-   - All available functions for the selected system will appear.
+   - Changed or newly created functions are highlighted at the top with badges.
 
 3. **Select Functions**  
-   - Choose one or more functions to evaluate.
+   - Choose one or more functions to evaluate. The system will automatically load *all* functions in your system during testing to detect real-world overlap.
 
-4. **AI Model Evaluation**  
-   - The system evaluates function definitions against AI models.  
-   - It checks for issues such as tool-calling errors or configuration problems.
+4. **AI Testing**  
+   GPT-4.1 automatically generates 10 natural language test questions per function, then attempts to call each function using standard OpenAI tool calling with your full tool catalog loaded.
 
-5. **View Results**  
-   - Evaluation results are displayed in the interface.  
-   - You can download the results or export them to your repository as a PDF.
+5. **Scored Results**  
+   You will receive a detailed report scored on:
+   - 50% Correct function selection
+   - 30% Required argument extraction
+   - 20% Relevant optional arguments
 
-This ensures that all your functions are properly configured and ready for use with Smart AI.
+   Results include full request/response traces. Reports are automatically saved to your repository in both JSON and PDF format for team review.
+
+Evaluation runs fully on the server — you can safely navigate away and return later.
 
 ---
 
-## Step 8: Configure MCP Server for Your Functions (optional)
+## Step 7: Configure MCP Server for Your Functions (optional)
 
 MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
  
 ### Demo Walkthrough  
-<video controls width="1725">
+<video controls width="800">
   <source src=".attachments/mcp_server.mp4" type="video/mp4">
 </video>
 
@@ -349,7 +342,7 @@ Smart Chat is the secure conversational chat interface of Smart AI that helps yo
 
 Watch the demo:
 
-<video controls width="1725">
+<video controls width="800">
   <source src=".attachments/getting_started.mp4" type="video/mp4">
 </video>
 

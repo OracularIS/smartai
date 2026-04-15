@@ -1,29 +1,37 @@
 # Smart AI
 
-Smart AI (Smart IS Conversational API Framework) helps teams interact with enterprise systems using natural language.
-It turns chat requests into **secure, validated API calls** against systems such as WMS, ERP, and CRM.
+**Smart IS Conversational API Framework**
 
-Instead of building and maintaining many custom screens, static reports, and one-off integrations, Smart AI is organized into three major components:
+Smart AI enables teams to securely interact with enterprise systems using natural language. It converts conversational requests into validated, permission-controlled API calls across WMS, ERP, CRM and other operational systems.
 
-- **Enterprise Mesh**: secure validation and execution across connected enterprise systems.
-- **Smart Chat**: the end-user conversational experience (Teams, web, desktop).
-- **Smart FX**: the admin experience for managing functions, permissions, and versions (backed by the Smart Functions Git repository).
+Replace custom screens, static reports and one-off integrations with a single unified interface built on three core components:
+
+## Smart FX (SmartFX Studio)
+
+Smart FX is the admin workbench for building, maintaining and validating approved Smart Functions that define what the AI is allowed to execute.
+
+## Enterprise Mesh
+
+Enterprise Mesh is the secure execution layer that routes requests, enforces permissions and runs approved functions against connected enterprise systems in real time.
+
+## Smart Chat
+
+Smart Chat is the end-user conversational interface that turns natural language questions into secure API calls and returns actionable live results.
 
 ## Key capabilities
 
-- **Natural language access:** Users ask questions like “Show open orders for Warehouse B” without learning API syntax.
-- **API-centric (actionable):** Focuses on structured enterprise APIs (not just document Q&A).
-- **Low-code onboarding:** Publish approved functions and workflows without rebuilding apps for every integration.
-- **Multi-channel:** Microsoft Teams bot, web agent, and desktop app options.
-- **Security-first design:** Only approved functions can run; access is governed with role-based permissions.
+- **Natural language interface:** Ask plain language questions about orders, inventory and operations without needing to know system APIs.
+- **Real-time execution:** Runs live queries directly against source systems with no data replication or stale cached results.
+- **Cross-system answers:** Automatically queries multiple systems in parallel and merges results into a single unified response.
+- **Security & governance:** All operations run only against approved functions with strict role based access controls.
+- **Low-code extensibility:** Teams publish and manage capabilities through Git workflow without custom application changes.
 
 ## Next pages
 
-- [Getting Started](./docs/getting-started.md)
-- [Smart Chat](./docs/smart-chat.md)
-- [Smart FX](./docs/smart-fx.md)
-- [Enterprise Mesh](./docs/enterprise-mesh.md)
-- [Architecture](./docs/architecture.md)
-- [Use Cases](./docs/use-cases.md)
-- [FAQ](./docs/faq.md)
+- [Overview](./overview.md)
+- [Why Smart AI](./why-smart-ai.md)
+- [Getting Started](./getting-started.md)
+- [Architecture](./architecture.md)
+- [Use Cases](./use-cases.md)
+- [FAQ](./faq.md)
 
