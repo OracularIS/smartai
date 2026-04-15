@@ -128,20 +128,17 @@ Once you open a project, the **Project Workspace** appears. This workspace inclu
 
 ---
 
-## Step 6: Connections Setup
+## Step 6: Configure Your Project Workspace
 
-Connections define how Smart AI communicates with your external systems (e.g., Enterprise, BlueYonder).
+Inside your project you will configure all components required to build and run your functions. This section covers all workspace configuration features:
 
-A system represents the platform itself, while a connection represents a specific environment or instance of that system (such as Dev, QA, or Production).
+- Function implementation & connection binding
+- Tag organization for better tool discovery
+- Reusable input/output schemas
+- Standardized domain definitions
+- AI validation through Eval testing
 
-Each system can have one or more connections, allowing you to work across multiple environments securely.
-
-Connections act as the bridge between your functions and real systems, handling both:
-
-- Where to send requests (endpoint/environment)
-- How to authenticate (credentials)
-
-Each function must be linked to a connection so it knows which system and environment to execute against.
+These components work together to ensure your functions are reliable, consistent, and ready for production use.
 
 ### 6.1 Create (or edit) a function and bind it to your connection
 
@@ -253,7 +250,20 @@ Evaluation runs fully on the server — you can safely navigate away and return 
 
 ---
 
-## Step 7: Create (or reuse) a connection
+## Step 7: Connections Setup
+
+Connections define how Smart AI communicates with your external systems (e.g., Enterprise, BlueYonder).
+
+A system represents the platform itself, while a connection represents a specific environment or instance of that system (such as Dev, QA, or Production).
+
+Each system can have one or more connections, allowing you to work across multiple environments securely.
+
+Connections act as the bridge between your functions and real systems, handling both:
+
+- Where to send requests (endpoint/environment)
+- How to authenticate (credentials)
+
+Each function must be linked to a connection so it knows which system and environment to execute against.
 
 If a connection for your system/environment already exists, you can reuse it. Otherwise:
 
