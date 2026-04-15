@@ -32,14 +32,19 @@ By the end, you will have:
 Before you add a project in Smart FX, create a Git repository (Azure DevOps/GitHub/etc.) that will store your Smart Functions.
 
 1. **Create a new Git repository** on your chosen platform (Azure DevOps, GitHub, etc.)
-2. **Pick a system name** you will build for first (e.g., Enterprise, Snowflake, Bugzilla). You will use it consistently in your project and connection naming.
+2. **Pick a system name** you will build for first (e.g., Enterprise, Snowflake, Bugzilla). The folder name you create in the repository **is** the system name — Smart FX uses it to discover and identify the system.
 3. **Create an initial folder structure** in your repository (recommended for first-time setup):
-   - Create a top-level folder for your system
+   - Create a top-level folder named after your system
    - Inside it, create a `base` folder
+   - You can have multiple systems in the same repository, each as their own top-level folder
    
    ```
-   System_Name/
-   └── base/
+    Enterprise/
+    └── base/
+    Snowflake/
+    └── base/
+    Bugzilla/
+    └── base/
    ```
 
 4. **Push your initial repository** to the remote Git platform
@@ -123,28 +128,55 @@ Once you open a project, the **Project Workspace** appears. This workspace inclu
 
 ---
 
-## Step 6: Quick Start Flow (Connection → Function → Test)
+## Step 6: Connections Setup
 
-This is the shortest path to a working tool you can run in Dev Console and Secure Chat.
+Connections define how Smart AI communicates with your external systems (e.g., Enterprise, BlueYonder).
+
+A system represents the platform itself, while a connection represents a specific environment or instance of that system (such as Dev, QA, or Production).
+
+Each system can have one or more connections, allowing you to work across multiple environments securely.
+
+Connections act as the bridge between your functions and real systems, handling both:
+
+- Where to send requests (endpoint/environment)
+- How to authenticate (credentials)
+
+Each function must be linked to a connection so it knows which system and environment to execute against.
 
 ### 6.1 Create (or reuse) a connection
 
-If you already have a connection for the system/environment you want (Dev/QA/Prod), skip to **Step 6.3**.
+If a connection for your system/environment already exists, you can reuse it. Otherwise:
 
-1. Open **Connections** → **New Connection**
-2. Select the platform/system (options depend on your org setup)
-3. Enter basics (Connection name, Environment)
-4. Configure settings (Endpoints/URLs, auth method, any system-specific fields)
+1. Go to Connections → New Connection
+
+2. Select the target system/platform
+
+3. Provide basic details:
+   - Connection Name (e.g., enterprise-dev)
+   - Environment (Dev / QA / Prod)
+
+4. Configure system-specific settings:
+   - Base URL / Endpoint
+   - Authentication type (API Key, OAuth, etc.)
+   - Any required headers or config fields
+
+5. Save the connection
 
 ![Connection Page](.attachments/connections_page.png)
 
 ### 6.2 Add credentials to your connection
 
-Credentials are stored in the platform so they are **not committed to Git**.
+Connections define where to connect. Credentials define how to securely access it.
 
-1. Open **Credentials** → **Add Credentials**
-2. Select your connection from the dropdown
-3. Add/update your credential details
+Credentials are stored securely in the platform and never committed to your Git repository.
+
+1. Go to Credentials → Add Credentials
+2. Select your connection
+3. Enter authentication details:
+    - API Keys / Tokens
+    - Username / Password
+    - OAuth configuration (if applicable)
+4. Save credentials
 
 ![Add Credentials](.attachments/add_manage_credentials_page.png)
 
@@ -164,8 +196,6 @@ Use these if you want a UI walkthrough of each area.
 
 
 ### 6.4 Tags
-
-**What tags are for (and why they matter):**
 
 - Help builders find and organize tools in Smart FX
 - Help Smart AI route and select tools more reliably (especially when tools overlap)
@@ -188,7 +218,6 @@ Watch the video:
 
 ### 6.5 Input & Output Collections
 
-**What they do (and why they matter):**  
 Collections let you define reusable input and output schemas once and share them across all your functions. This eliminates duplicate definitions, ensures consistency, and means you only need to update fields in one place when requirements change.
 
 Watch the video:
@@ -207,7 +236,6 @@ Use collections to reuse consistent argument/response groups across many functio
 
 ### 6.6 Domains
 
-**What Domains do (and why they matter):**  
 Domains are your global data dictionary. They define standard field types, validation rules, allowed values and descriptions that apply everywhere across your system. This guarantees that fields like `customer_id` work exactly the same way in every function, report and dashboard.
 
 Watch the video:
@@ -226,8 +254,7 @@ In the Domains section, you can:
 Domains help you standardize field definitions across tools (type, required/optional, allowed values, descriptions). This improves consistency and makes downstream charts/dashboards more reliable.
 
 ### 6.7 Eval
-
-**What Eval does (and why it matters):**  
+ 
 Eval validates that your functions will be correctly identified and called by AI models. It simulates real-world tool selection under load, detects overlapping descriptions, missing arguments and ambiguous definitions before users encounter them. This is the final quality check before deploying functions to production chat.
 
 Watch the video:
