@@ -32,14 +32,19 @@ By the end, you will have:
 Before you add a project in Smart FX, create a Git repository (Azure DevOps/GitHub/etc.) that will store your Smart Functions.
 
 1. **Create a new Git repository** on your chosen platform (Azure DevOps, GitHub, etc.)
-2. **Pick a system name** you will build for first (e.g., Enterprise, Snowflake, Bugzilla). You will use it consistently in your project and connection naming.
+2. **Pick a system name** you will build for first (e.g., Enterprise, Snowflake, Bugzilla). The folder name you create in the repository **is** the system name — Smart FX uses it to discover and identify the system.
 3. **Create an initial folder structure** in your repository (recommended for first-time setup):
-   - Create a top-level folder for your system
+   - Create a top-level folder named after your system
    - Inside it, create a `base` folder
+   - You can have multiple systems in the same repository, each as their own top-level folder
    
    ```
-   System_Name/
-   └── base/
+    Enterprise/
+    └── base/
+    Snowflake/
+    └── base/
+    Bugzilla/
+    └── base/
    ```
 
 4. **Push your initial repository** to the remote Git platform
