@@ -106,9 +106,9 @@ When enabled, Smart AI will show you **exactly what code was generated and execu
 <img src=".attachments/code.png" alt="Generated Execution Code" width="750">
 
 This lets you:
-✅ Verify the exact command that ran
-✅ Troubleshoot results
-✅ Understand how your question translated to system code
+- Verify the exact command that ran
+- Troubleshoot results
+- Understand how your question translated to system code
 
 ## Security (what end users should know)
 
