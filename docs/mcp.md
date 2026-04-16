@@ -12,6 +12,21 @@ This page stays intentionally short on “what is MCP” and focuses on **what i
 
 ---
 
+## Architecture
+
+![MCP Architecture Diagram](.attachments/mcp_architecture.png)
+
+MCP acts as a standard protocol layer between external AI clients and Smart AI's governed enterprise functions:
+
+1.  **Discovery**: AI clients automatically discover available tools with complete schema metadata
+2.  **Validation**: All tool calls pass through Smart AI's existing governance, permissions, and validation layers
+3.  **Execution**: MCP routes requests to the appropriate Smart Function with configured connections
+4.  **Response**: Structured results are returned in a standardized format compatible with all MCP clients
+
+All existing enterprise controls, audit logging, and security policies apply identically to MCP calls.
+
+---
+
 ## When you should use MCP with Smart AI
 
 Use MCP when you want Smart AI’s governed enterprise tools to be available **outside** the Smart AI UI:
@@ -65,11 +80,6 @@ This is the contract external clients will see. Tools appear here only if they a
 - Approved/published (depending on your org’s governance settings)
 - Valid enough to be exposed (metadata and schema are required)
 
-### Connections
-
-Tools can fail even when schemas look correct if the server is pointing to the wrong connection/environment.
-Treat “connections shown here” as the **runtime wiring** for MCP calls.
-
 ### Export
 
 The **Export** section is the safest source of truth for client setup. It typically provides:
@@ -80,77 +90,20 @@ The **Export** section is the safest source of truth for client setup. It typica
 
 ---
 
-## Add the server to Claude Desktop (example)
+## Setup via custom connector (Claude example)
 
-Claude Desktop supports MCP servers via a local configuration file (Windows/macOS/Linux paths vary).
+1.  Open **claude.ai** → Profile → **Settings** → **Connectors**
+2.  Click **Add custom connector** at the bottom
+3.  Paste your generated MCP Server URL
+4.  Click **Add** and complete authentication if prompted
 
-1. In Smart FX → your MCP server → **Export**, choose **Claude Desktop**
-2. Copy the generated configuration snippet
-3. Paste it into Claude Desktop’s config file
-4. Restart Claude Desktop
-5. Verify the tools appear and run a test call
+✅ Once connected, server tools appear in the chat attachment menu (paperclip icon).you can also manage permissions from Connectors settings.
 
-### Example config shape (Claude Desktop)
+> 🎥 Full video walkthrough with connection demo
 
-Your exported snippet may differ (auth headers, naming, transport). This is the general pattern Claude uses:
-
-```json
-{
-  "mcpServers": {
-    "smartai-enterprise-dev": {
-      "type": "http",
-      "url": "https://YOUR_SMARTAI_MCP_SERVER_URL",
-      "headers": {
-        "Authorization": "Bearer YOUR_TOKEN_IF_REQUIRED"
-      }
-    }
-  }
-}
-```
-
-If your export uses a different transport (for example `sse` or `stdio`), keep the exported values as-is.
-
-Reference: Claude MCP configuration docs:
-`https://docs.claude.com/claude-code/mcp`
+<video controls width="800">
+  <source src=".attachments/mcp_example.mp4" type="video/mp4">
+</video>
 
 ---
 
-## Test the MCP server end-to-end
-
-Once Claude Desktop is restarted:
-
-1. Ask Claude to **list available tools** (or open the tools panel)
-2. Pick one tool (for example, an order lookup function)
-3. Run it with a real parameter value
-4. Confirm:
-   - The tool call succeeds
-   - Results match what you see in Smart FX Dev Console
-   - The function’s output shape is usable (columns/fields are meaningful)
-
-If a tool is hard to use from Claude, it usually means the **function metadata** needs work (descriptions, input schema, or output naming).
-
----
-
-## Troubleshooting
-
-- **No tools appear**
-  - Confirm you selected the correct project/system when generating the server.
-  - Confirm functions are approved/published and have valid metadata.
-- **Tools appear but fail**
-  - Confirm the MCP server details show the correct connection/environment.
-  - Confirm credentials exist for that connection.
-- **Tool calls require extra parameters**
-  - Improve metadata: add required inputs, enums, and clear descriptions.
-  - Use Dev Console to test multiple parameter combinations before exposing via MCP.
-- **Multiple clients / multiple environments**
-  - Use separate MCP servers per environment (`dev`, `qa`, `prod`) and name them accordingly.
-
----
-
-## Enterprise setups: one server, many tools (and many files)
-
-In larger orgs, it’s common for one MCP server to represent a **single tool catalog** (for example: “Enterprise / Dev”) that aggregates tools implemented across many files in your Smart Functions repository.
-
-For details on repository patterns (including “one manifest/meta file referencing many function files”), see:
-
-- [Smart Functions repository structure](./smart-functions-repository.md)
