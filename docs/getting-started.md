@@ -217,47 +217,31 @@ Eval validates that your functions will be correctly identified and called by AI
   <source src=".attachments/eval.mp4" type="video/mp4">
 </video>
 
-Steps:
+  #### Evaluation Steps
 
-1. **Select a System**  
-   - Choose the system you want to evaluate functions for (e.g., Enterprise).
 
-2. **Create Evaluation**  
-   - Click **Create Evaluation** to start the process.  
-   - Changed or newly created functions are highlighted at the top with badges.
+  1. Select the system you want to evaluate (e.g., Enterprise)
 
-3. **Select Functions**  
-   - Choose one or more functions to evaluate. The system will automatically load *all* functions in your system during testing to detect real-world overlap.
+  2. Click **Create Evaluation** to start. New or updated functions are highlighted automatically
 
-4. **AI Testing**  
-   The LLM automatically generates 10 natural language test questions per function, then attempts to call each function using standard OpenAI tool calling with your full tool catalog loaded.
+  3. Select one or more functions to evaluate (all system functions are included during testing to detect overlaps)
 
-5. **Scored Results**  
-   You will receive a detailed report scored on:
-   - 50% Correct function selection
-   - 30% Required argument extraction
-   - 20% Relevant optional arguments
+  4. The AI generates 10 natural language test questions per function and attempts to call them using your full function catalog
 
-   Results include full request/response traces. Reports are automatically saved to your repository in both JSON and PDF format for team review.
+  5. Review results scored on:
+    - Function selection accuracy (50%)
+    - Required input extraction (30%)
+    - Optional input usage (20%)
 
-Evaluation runs fully on the server — you can safely navigate away and return later.
+  Reports include full request/response traces and are saved as **JSON + PDF** in your repository.
+
+  Evaluation runs on the server, so you can safely leave and return later.
 
 ---
 
 ## Connections Setup
 
-Connections define how Smart AI communicates with your external systems (e.g., Enterprise, BlueYonder).
-
-A system represents the platform itself, while a connection represents a specific environment or instance of that system (such as Dev, QA, or Production).
-
-Each system can have one or more connections, allowing you to work across multiple environments securely.
-
-Connections act as the bridge between your functions and real systems, handling both:
-
-- Where to send requests (endpoint/environment)
-- How to authenticate (credentials)
-
-Each function must be linked to a connection so it knows which system and environment to execute against.
+A connection tells Smart AI where to send requests and how to authenticate for a given environment (Dev, QA, or Prod). Each function must be linked to one so it knows which system and environment to run against.
 
 If a connection for your system/environment already exists, you can reuse it. Otherwise:
 
@@ -328,41 +312,12 @@ MCP (Model Context Protocol) allows your business functions to be used across ex
 
 ## Configuration steps  
 
-### 1. Access MCP Servers  
-Navigate to the **MCP Servers** section within the application.
-
-### 2. Generate a New Server Link  
-Click on **Generate New MCP Server Link** to begin setup.
-
-### 3. Select Target System  
-Choose the desired system (e.g., **Enterprise**) for which the MCP server will be configured.
-
-### 4. Provide Server Details  
-Enter a meaningful and identifiable **Server Name**.
-
-### 5. Generate the Link  
-Click **Generate Link** to create your MCP server endpoint.
-
-### 6. View Generated Link  
-The system will display a **server link** on the right-hand panel.
-
-### 7. Open Server Details  
-Click the generated link to navigate to the **MCP Server Details** page.
-
-### 8. Review & Utilize Server Information  
-On the MCP Server page, you can:
-
-- Copy the **MCP Server URL**  
-- View all configured **connections**  
-- Explore available **MCP tools**, including:
-  - Get Work Items  
-  - Get User Information  
-  - Additional system-specific tools  
-
-### 9. Integration  
-Use the copied **MCP Server URL** to integrate with your functions or external systems.
-
-- The export option gives you guide on how to set up your MCP server on that platform such as Copilot, claude, OpenAI etc.
+1. Go to the **MCP Servers** section and click **Generate New MCP Server Link**.
+2. Select your target system (e.g., Enterprise) and enter a **Server Name**.
+3. Click **Generate Link** — the server URL will appear in the right-hand panel.
+4. Click the link to open the MCP Server Details page, where you can copy the URL and view available tools.
+5. Use the copied URL to integrate with your external client.
+6. Click the **Export** option to see how you can integrate the URL on multiple platform such as Copilot, Claude, OpenAI.
 
 ---
 ## Secure Chat
