@@ -28,7 +28,7 @@ Smart Chat is the secure conversational chat interface of Smart AI that helps yo
 
 Smart Chat is designed for operations and execution. Instead of only searching documents (PDFs, wikis, emails), it focuses on **structured, actionable integrations** (approved APIs/commands/workflows). That means you can get live, up-to-date results—and perform approved actions—without needing to know the underlying system details.
 
-<img src=".attachments/approach.png" alt="Smart Chat Approach Diagram" width="750">
+<img src=".attachments/approach.png" alt="Smart Chat Approach Diagram">
 
 Unlike traditional document chat systems:
 | Feature | Document Chat | Smart Chat |
