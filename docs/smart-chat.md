@@ -48,13 +48,15 @@ After Smart AI returns a table or dataset, you can refine it:
 - "Show totals by warehouse."
 - "Export this."
 
-## Charts on a previous response
+## Generate Charts using Natural Language
 
 If the last response returned a dataset, you can request a visualization:
 
 - “Create a pie chart from this.”
 - “Show a bar chart by order type.”
 - “Make a time-series chart by ship date.”
+
+<img src=".attachments/chart.png" alt="Generated Chart Example" width="750">
 
 Supported chart types typically include **pie, line, bar, stacked, and bubble** (availability may depend on your deployment).
 
@@ -63,7 +65,7 @@ Supported chart types typically include **pie, line, bar, stacked, and bubble** 
 You can ask Smart AI to turn the latest dataset into an interactive dashboard.
 Smart AI identifies key fields and data types and generates charts/metrics to highlight trends.
 
-<img src=".attachments/chart.png" alt="Auto-generated Dashboard Example" width="750">
+<img src=".attachments/auto_dashboard.png" alt="Auto-generated Dashboard Example" width="750">
 
 Dashboards are created automatically without any manual configuration, with intelligent chart type selection based on your data patterns. You get:
 - Automatic trend detection
@@ -78,10 +80,10 @@ Smart Chat doesn't just answer questions — you can create repeatable automated
 <img src=".attachments/workflow.png" alt="Automated Workflow Example" width="750">
 
 Supported workflow actions:
-✅ Schedule recurring reports (daily/weekly shipment reports, inventory summaries)
-✅ Set up threshold alerts (notify when stock levels drop below limits)
-✅ Email datasets or analysis results directly from chat
-✅ Manage existing workflows: list, pause, resume, or cancel
+- Schedule recurring reports (daily/weekly shipment reports, inventory summaries)
+- Set up threshold alerts (notify when stock levels drop below limits)
+- Email datasets or analysis results directly from chat
+- Manage existing workflows: list, pause, resume, or cancel
 
 Workflows run securely inside your environment with full audit history and role-based access controls.
 
