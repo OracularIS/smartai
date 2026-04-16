@@ -27,16 +27,24 @@ By the end, you will have:
 
 ---
 
+## What is a Smart Function?
+
+A Smart Function is a named, documented capability that tells Smart AI what your enterprise system can do. Think of it as a card that says: "Here's what this action is called, what it needs as input, and what it returns."
+
+Your functions live in a Git repository — that's what you'll set up next. Once connected, Smart AI can discover and call them through natural language in Secure Chat.
+
+---
+
 ## Prepare your Smart Functions repository
 
-Before you add a project in Smart FX, create a Git repository (Azure DevOps/GitHub/etc.) that will store your Smart Functions.
+Before adding a project in Smart FX, set up a Git repository to store your Smart Functions.
 
-1. **Create a new Git repository** on your chosen platform (Azure DevOps, GitHub, etc.)
-2. **Pick a system name** you will build for first (e.g., Enterprise, Snowflake, Bugzilla). The folder name you create in the repository **is** the system name — Smart FX uses it to discover and identify the system.
-3. **Create an initial folder structure** in your repository (recommended for first-time setup):
-   - Create a top-level folder named after your system
-   - Inside it, create a `base` folder
-   - You can have multiple systems in the same repository, each as their own top-level folder
+## Quick Setup
+
+1. Create a new Git repository (Azure DevOps, GitHub, etc.)
+2. Create a folder for your system (e.g., `Enterprise`, `Snowflake`, `Bugzilla`)  
+   - This folder name becomes your system name in Smart FX
+3. Inside it, add a `base` folder
    
    ```
     Enterprise/
@@ -77,21 +85,14 @@ Login using:
 
 ## Create Your Project/Repository
 
-Add your commands repository to SmartFX.
-
-**What “adding a project” does (and why):**
-
-- Connects Smart FX to a **Git repository** that becomes the source of truth for your tools
-- Enables **version control and review** (commit messages, PRs, rollback)
-- Makes your functions reusable across **Smart Chat, Eval, and MCP**
-
-After logging in, create a project by providing:
-
-- Enter Project Name  
-- Add Repository Link  
-- Provide Personal Access Token (PAT)  
-
-Click **Clone & Create Project**.
+A project connects Smart FX to your Git repository — this is where your functions live, get versioned, and become available across Smart Chat, Eval, and MCP. Once linked, any changes you push to the repo are automatically reflected in the platform.
+ 
+After logging in, fill in your:
+ 
+- Project Name  
+- Repository Link  
+- Personal Access Token (PAT)  
+Then click **Clone & Create Project**.
 
 ![Add Your Project](.attachments/03_add-your_project.png)
 
@@ -112,54 +113,43 @@ Here, you will see a list of all your projects.
 
 ## Work Inside Your Project
 
-Once you open a project, the **Project Workspace** appears. This workspace includes:
-
-- Code Editor (Smart Functions)  
-- Meta (function description + inputs/outputs)  
-- Tags  
-- Input & Output Collections  
-- Domains  
-- Connections + credentials (system wiring)  
-- Eval  
-- Dev Console / Try It (test runs)  
-- MCP Servers (optional export to external clients)  
-
-![Project Page](.attachments/projects_page.png)
-
+Once you open a project, the **Project Workspace** appears. Work through the sections below in order — each one builds on the last.
 ---
 
 ## Configure Your Project Workspace
 
-Inside your project you will configure all components required to build and run your functions. This section covers all workspace configuration features:
+### 1. Smart Function Editor
+ 
+A Smart Function is an enterprise intent — a named, documented capability that tells the AI what your system can do and how to do it. Each function includes a plain-English description, defined inputs, and defined outputs.
 
-- Function implementation & connection binding
-- Tag organization for better tool discovery
-- Reusable input/output schemas
-- Standardized domain definitions
-- AI validation through Eval testing
+Smart FX provides an integrated environment to define, document, and publish these intents, regardless of implementation. Under the hood, functions are built using Python, SQL, or MOCA.
 
-These components work together to ensure your functions are reliable, consistent, and ready for production use.
-
-### Create (or edit) a function and bind it to your connection
-
+All functions are stored in your Git repository, giving you version control, pull requests, rollback, and auditability out of the box.
+ 
+**To create or edit a function:**
+ 
 1. In the **Code Editor**, create a new function or open an existing one
-2. In the top-right **Implementation** dropdown, select your system connection (this binds the function to that connection)
-3. Keep Meta minimal but complete (description + tags + inputs/outputs)
-4. Save → commit message → push to your repository (and PR if your workflow requires it)
-5. Run the function with real parameters against your connected environment (try a few parameter sets to validate edge cases).
+2. In the top-right **Implementation** dropdown, select your system connection (this binds the function to that environment)
+3. Fill in Meta: a clear description, tags, and input/output definitions
+4. Add the code logic for what your function will do in the code section.
+5. Save → add a commit message → push to your repository (create a PR if your workflow requires it)
+6. Run the function in Dev Console with real parameters to confirm it works
 
-Use these if you want a UI walkthrough of each area.
+![Project Page](.attachments/projects_page.png)
+ 
+ --- 
 
+> _Walk through creating a function in the Code Editor, binding it to a connection, filling in Meta, testing via Dev Console, and pushing it to your repository._
+ 
 <video controls width="800">
   <source src=".attachments/projects.mp4" type="video/mp4">
 </video>
 
+---
 
-### Tags
+### 2. Tags
 
-- Help builders find and organize tools in Smart FX
-- Help Smart AI route and select tools more reliably (especially when tools overlap)
-- Provide a consistent vocabulary across teams (“orders”, “inventory”, “shipping”)
+Tags help Smart AI choose the right function when similar tools exist, preventing misrouting (like returning shipping data for an orders query). They also create a consistent shared vocabulary as your catalog grows.
 
 In the Tags section, you can:
 
@@ -167,20 +157,21 @@ In the Tags section, you can:
 - Edit or delete tags  
 - Activate or deactivate them  
 
-**Creating new tags can change behavior.** New or inconsistent tags can make tool selection worse (duplicates, near-synonyms) and can affect governance workflows in some orgs. Prefer existing tags when possible.
+Every function, domain, and collection supports this tagging framework, making it straightforward to manage and discover objects across your entire catalog as it grows.
 
-Watch the video:
+
+> _See below how to create tag categories and assign them to functions to improve tool discovery and AI routing accuracy._
 
 <video controls width="800">
   <source src=".attachments/tags.mp4" type="video/mp4">
 </video>
 
 
-### Input & Output Collections
+### 3. Input & Output Collections
 
-Collections let you define reusable input and output schemas once and share them across all your functions. This eliminates duplicate definitions, ensures consistency, and means you only need to update fields in one place when requirements change.
+Collections let you define reusable input and output schemas once and share them across functions, improving consistency and eliminating duplication. Updates happen in one place, making changes easier to manage.
 
-Watch the video:
+> _Learn how to define a reusable input or output schema once and reference it across multiple functions._
 
 <video controls width="800">
   <source src=".attachments/input_output.mp4" type="video/mp4">
@@ -194,11 +185,13 @@ Here you can:
 
 Use collections to reuse consistent argument/response groups across many functions (for example, a shared `order_id` input definition or a common “order header” output shape).
 
-### Domains
+### 4. Domains
 
-Domains are your global data dictionary. They define standard field types, validation rules, allowed values and descriptions that apply everywhere across your system. This guarantees that fields like `customer_id` work exactly the same way in every function, report and dashboard.
+Domains are your *enterprise shared vocabulary* — the same way humans think about orders, waves, inventory, and statuses. They define standard field types, validation rules, allowed values, and descriptions used across your system, ensuring fields like customer_id behave consistently in every function, report, and dashboard.
 
-Watch the video:
+Domains also support enums — predefined lists of allowed values — allowing users to query and filter using natural terms instead of system codes.
+
+> _Set up shared field definitions — including enums — so that field types and allowed values stay consistent across all your functions._
 
 <video controls width="800">
   <source src=".attachments/domain.mp4" type="video/mp4">
@@ -213,11 +206,11 @@ In the Domains section, you can:
 
 Domains help you standardize field definitions across tools (type, required/optional, allowed values, descriptions). This improves consistency and makes downstream charts/dashboards more reliable.
 
-### Eval
+### 5. Evaluate your Function
  
 Eval validates that your functions will be correctly identified and called by AI models. It simulates real-world tool selection under load, detects overlapping descriptions, missing arguments and ambiguous definitions before users encounter them. This is the final quality check before deploying functions to production chat.
 
-Watch the video:
+> _Watch a full evaluation run: selecting functions, reviewing AI-generated test questions, and reading the scored results report._
 
 <video controls width="800">
   <source src=".attachments/eval.mp4" type="video/mp4">
@@ -323,6 +316,9 @@ Credentials are stored securely in the platform and never committed to your Git 
 MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
  
 ### Demo Walkthrough  
+
+> _See how to generate an MCP Server URL and integrate your functions with external clients like Claude or Copilot._
+
 <video controls width="800">
   <source src=".attachments/mcp_server.mp4" type="video/mp4">
 </video>
@@ -365,32 +361,19 @@ On the MCP Server page, you can:
 ### 9. Integration  
 Use the copied **MCP Server URL** to integrate with your functions or external systems.
 
----
-
-## Multi-Client Configuration  
-
-Users can also:
-
-- Select different **clients**  
-- Access their respective configurations  
-- Follow client-specific setup steps directly from the **Export** section  
-
-For a full MCP page (including Claude Desktop setup + testing), see:
-
-- [MCP (Model Context Protocol)](./mcp.md)
+- The export option gives you guide on how to set up your MCP server on that platform such as Copilot, claude, OpenAI etc.
 
 ---
 ## Secure Chat
 
-Smart Chat is the secure conversational chat interface of Smart AI that helps you interact with connected enterprise systems securely without exposing the actual data values to LLM.
+Smart Chat is the secure conversational interface of Smart AI, letting you interact with enterprise systems without exposing actual data to the LLM.
 
-- Smart Chat allows you to execute your function operations via natural language, schedule workflows, and perform analysis on your data.
+- Execute functions, schedule workflows, and analyze data using natural language
+- Uses code generation in an isolated environment, sharing only metadata for insights (charts, filtering, etc.)
+- Generate and customize live charts, and view the commands invoked for full observability
 
-- It employs a code generation strategy for analysis and operations that runs in an isolated environment. Only the meta data is shared with the LLM that helps it to generate code for insights such as bar charts, line charts, filtering data etc.
 
-- Users can generate live charts via natural commands and see the actual command that the LLM invoked behind the scenes for observability. 
-
-Watch the demo:
+> _A live demo of querying a connected enterprise system in natural language and receiving instant results and visualisations._
 
 <video controls width="800">
   <source src=".attachments/getting_started.mp4" type="video/mp4">
@@ -414,16 +397,3 @@ You will receive:
 This is the primary way to interact with your system using natural language outside the project configuration.
 
 ---
-
-## Notes
-
-- All actions are secure and controlled  
-- Only approved functions can run  
-- No direct system access is allowed  
-- Keep your Smart App Keys secure  
-
----
-
-## You're Ready
-
-You can now start exploring and using Smart AI effectively.
