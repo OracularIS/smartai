@@ -28,6 +28,17 @@ Smart Chat is the secure conversational chat interface of Smart AI that helps yo
 
 Smart Chat is designed for operations and execution. Instead of only searching documents (PDFs, wikis, emails), it focuses on **structured, actionable integrations** (approved APIs/commands/workflows). That means you can get live, up-to-date results—and perform approved actions—without needing to know the underlying system details.
 
+<img src=".attachments/approach.png" alt="Smart Chat Approach Diagram" width="750">
+
+Unlike traditional document chat systems:
+| Feature | Document Chat | Smart Chat |
+|---------|---------------|------------|
+| Data Source | Static unstructured documents | Live enterprise systems |
+| Actionability | Only answers questions | Can run approved workflows |
+| Data Freshness | Outdated when documents are old | Real-time live data |
+| Accuracy | Dependent on document quality | 100% accurate system data |
+| Capabilities | Information only | Read + Write operations |
+
 ## Follow-up questions (context-aware)
 
 After Smart AI returns a table or dataset, you can refine it:
@@ -52,6 +63,28 @@ Supported chart types typically include **pie, line, bar, stacked, and bubble** 
 You can ask Smart AI to turn the latest dataset into an interactive dashboard.
 Smart AI identifies key fields and data types and generates charts/metrics to highlight trends.
 
+<img src=".attachments/chart.png" alt="Auto-generated Dashboard Example" width="750">
+
+Dashboards are created automatically without any manual configuration, with intelligent chart type selection based on your data patterns. You get:
+- Automatic trend detection
+- Relevant metric cards
+- Filterable interactive views
+- Multiple visualization types in single view
+
+## Automated Workflows
+
+Smart Chat doesn't just answer questions — you can create repeatable automated workflows directly from your chat conversation:
+
+<img src=".attachments/workflow.png" alt="Automated Workflow Example" width="750">
+
+Supported workflow actions:
+✅ Schedule recurring reports (daily/weekly shipment reports, inventory summaries)
+✅ Set up threshold alerts (notify when stock levels drop below limits)
+✅ Email datasets or analysis results directly from chat
+✅ Manage existing workflows: list, pause, resume, or cancel
+
+Workflows run securely inside your environment with full audit history and role-based access controls.
+
 ## What happens behind the scenes (simplified)
 
 When you ask something in Smart Chat, Smart AI typically:
@@ -64,19 +97,23 @@ When you ask something in Smart Chat, Smart AI typically:
 
 For questions that span multiple systems, Smart AI can query systems in parallel and merge results into a single answer (so you don’t have to check multiple screens).
 
-## “What did you do?” (transparency)
+## Transparency
 
-When enabled, Smart AI can show what it executed behind the scenes (for example, the MOCA command or API call).
-This is useful for:
+When enabled, Smart AI will show you **exactly what code was generated and executed** for your request:
 
-- validating the result
-- troubleshooting unexpected answers
-- learning how a request maps to an approved function
+<img src=".attachments/code.png" alt="Generated Execution Code" width="750">
 
-If you do not see this feature, your role may not have access to execution details.
+This lets you:
+✅ Verify the exact command that ran
+✅ Troubleshoot results
+✅ Understand how your question translated to system code
 
 ## Security (what end users should know)
 
-- Smart AI runs **approved functions only**. If something is not approved, it won’t run.
-- Access is controlled by your role (you only see and run what you’re allowed to).
-- For analytics (charts/dashboards), Smart AI can use a controlled approach: it may use column names (and sometimes a small sample) to understand how to summarize the data, while keeping full datasets protected inside your environment (depending on your organization’s settings).
+<img src=".attachments/security_architecture.png" alt="Smart Chat Security Architecture" width="750">
+
+- Smart AI runs **approved functions only**. If something is not approved, it won’t run. No arbitrary code execution.
+- Access is controlled by your existing enterprise role permissions (you only see and run what you’re allowed to).
+- All sensitive data stays inside your network boundaries
+- For analytics (charts/dashboards), Smart AI uses a controlled approach: it only sends column names and small data samples to understand how to summarize results, while keeping full datasets 100% protected inside your environment.
+- No raw business data is ever sent to external language models. Only the user's question text is processed externally for intent recognition.
