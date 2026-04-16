@@ -114,6 +114,7 @@ Here, you will see a list of all your projects.
 ## Work Inside Your Project
 
 Once you open a project, the **Project Workspace** appears. Work through the sections below in order — each one builds on the last.
+
 ---
 
 ## Configure Your Project Workspace
