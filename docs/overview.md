@@ -12,11 +12,10 @@ Smart AI is designed to **streamline workflows, accelerate decision-making, and 
 
 Smart AI is organized into three major components:
 
-- **Smart Chat**: The conversational platform that lets users interact with enterprise systems and trigger approved actions, including follow-ups, queries, and on-demand visualizations.  
-- **Enterprise Mesh**: The secure connectivity and governance layer that routes requests to the correct system, enforces permissions, and validates parameters before execution.  
 - **Smart FX**: The admin platform for managing Smart AI—configure and publish approved functions, workflows, and permissions, with full version control backed by a Git repository.
 
-# Next Page
+- **Enterprise Mesh**: The secure connectivity and governance layer that routes requests to the correct system, enforces permissions, and validates parameters before execution.  
 
-- [Why Smart AI](./why-smart-ai.md)
+- **Smart Chat**: The conversational platform that lets users interact with enterprise systems and trigger approved actions, including follow-ups, queries, and on-demand visualizations.  
+
 

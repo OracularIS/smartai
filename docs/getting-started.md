@@ -27,7 +27,7 @@ By the end, you will have:
 
 ---
 
-## Step 0: Prepare your Smart Functions repository
+## Prepare your Smart Functions repository
 
 Before you add a project in Smart FX, create a Git repository (Azure DevOps/GitHub/etc.) that will store your Smart Functions.
 
@@ -53,7 +53,7 @@ Before you add a project in Smart FX, create a Git repository (Azure DevOps/GitH
 
 ---
 
-## Step 1: Access the Portal
+## Access the Portal
 
 Go to: https://smartfunctions.smart-is.com/
 
@@ -63,7 +63,7 @@ Click **Get Started Free** or **Sign In**.
 
 ---
 
-## Step 2: Sign In
+## Sign In
 
 Login using:
 
@@ -75,7 +75,7 @@ Login using:
 
 ---
 
-## Step 3: Create Your Project/Repository
+## Create Your Project/Repository
 
 Add your commands repository to SmartFX.
 
@@ -97,7 +97,7 @@ Click **Clone & Create Project**.
 
 ---
 
-## Step 4: View Your Projects
+## View Your Projects
 
 After creating your project, you will be taken to the Projects section.
 
@@ -110,7 +110,7 @@ Here, you will see a list of all your projects.
 
 ---
 
-## Step 5: Work Inside Your Project
+## Work Inside Your Project
 
 Once you open a project, the **Project Workspace** appears. This workspace includes:
 
@@ -128,7 +128,7 @@ Once you open a project, the **Project Workspace** appears. This workspace inclu
 
 ---
 
-## Step 6: Configure Your Project Workspace
+## Configure Your Project Workspace
 
 Inside your project you will configure all components required to build and run your functions. This section covers all workspace configuration features:
 
@@ -140,7 +140,7 @@ Inside your project you will configure all components required to build and run 
 
 These components work together to ensure your functions are reliable, consistent, and ready for production use.
 
-### 6.1 Create (or edit) a function and bind it to your connection
+### Create (or edit) a function and bind it to your connection
 
 1. In the **Code Editor**, create a new function or open an existing one
 2. In the top-right **Implementation** dropdown, select your system connection (this binds the function to that connection)
@@ -155,7 +155,7 @@ Use these if you want a UI walkthrough of each area.
 </video>
 
 
-### 6.2 Tags
+### Tags
 
 - Help builders find and organize tools in Smart FX
 - Help Smart AI route and select tools more reliably (especially when tools overlap)
@@ -176,7 +176,7 @@ Watch the video:
 </video>
 
 
-### 6.3 Input & Output Collections
+### Input & Output Collections
 
 Collections let you define reusable input and output schemas once and share them across all your functions. This eliminates duplicate definitions, ensures consistency, and means you only need to update fields in one place when requirements change.
 
@@ -194,7 +194,7 @@ Here you can:
 
 Use collections to reuse consistent argument/response groups across many functions (for example, a shared `order_id` input definition or a common “order header” output shape).
 
-### 6.4 Domains
+### Domains
 
 Domains are your global data dictionary. They define standard field types, validation rules, allowed values and descriptions that apply everywhere across your system. This guarantees that fields like `customer_id` work exactly the same way in every function, report and dashboard.
 
@@ -213,7 +213,7 @@ In the Domains section, you can:
 
 Domains help you standardize field definitions across tools (type, required/optional, allowed values, descriptions). This improves consistency and makes downstream charts/dashboards more reliable.
 
-### 6.5 Eval
+### Eval
  
 Eval validates that your functions will be correctly identified and called by AI models. It simulates real-world tool selection under load, detects overlapping descriptions, missing arguments and ambiguous definitions before users encounter them. This is the final quality check before deploying functions to production chat.
 
@@ -250,7 +250,7 @@ Evaluation runs fully on the server — you can safely navigate away and return 
 
 ---
 
-## Step 7: Connections Setup
+## Connections Setup
 
 Connections define how Smart AI communicates with your external systems (e.g., Enterprise, BlueYonder).
 
@@ -294,7 +294,7 @@ If a connection for your system/environment already exists, you can reuse it. Ot
 
 ---
 
-### Step 8: Add credentials to your connection
+## Add credentials to your connection
 
 Connections define where to connect. Credentials define how to securely access it.
 
@@ -318,7 +318,7 @@ Credentials are stored securely in the platform and never committed to your Git 
 
 ---
 
-## Step 9: Configure MCP Server for Your Functions (optional)
+## Configure MCP Server for Your Functions (optional)
 
 MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
  
@@ -380,7 +380,7 @@ For a full MCP page (including Claude Desktop setup + testing), see:
 - [MCP (Model Context Protocol)](./mcp.md)
 
 ---
-## Step 10: Secure Chat
+## Secure Chat
 
 Smart Chat is the secure conversational chat interface of Smart AI that helps you interact with connected enterprise systems securely without exposing the actual data values to LLM.
 
