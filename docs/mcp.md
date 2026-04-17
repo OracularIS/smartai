@@ -14,7 +14,7 @@ This page stays intentionally short on “what is MCP” and focuses on **what i
 
 ## Architecture
 
-![MCP Architecture Diagram](.attachments/mcp_architecture.png)
+<img src=".attachments/mcp_architecture.png" width="400" height="200"/>
 
 MCP acts as a standard protocol layer between external AI clients and Smart AI's governed enterprise functions:
 
