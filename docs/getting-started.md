@@ -117,6 +117,63 @@ Once you open a project, the **Project Workspace** appears. Work through the sec
 
 ---
 
+## Connections Setup
+
+A connection tells Smart AI where to send requests and how to authenticate for a given environment (Dev, QA, or Prod). Each function must be linked to one so it knows which system and environment to run against.
+
+If a connection for your system/environment already exists, you can reuse it. Otherwise:
+
+1.  Go to Connections → New Connection
+
+    You will see the main Connections overview page.
+
+    ![Connections Overview Page](.attachments/connections_page.png)
+
+2.  Select the target system/platform from the available list
+
+    ![Select System Connection Type](.attachments/connection_select.png)
+
+3.  Provide basic details:
+    - Connection Name (e.g., `BUGZILLA_CONN_1`)
+    - Environment (Dev / QA / Prod)
+
+    ![Enter Connection Basic Details](.attachments/connection_details.png)
+
+4.  Configure system-specific settings:
+    - Base URL / Endpoint
+    - Authentication type (API Key, OAuth, etc.)
+    - Any required headers or config fields
+
+    ![Configure Connection Settings](.attachments/configure_connection.png)
+
+5.  Save the connection
+
+---
+
+## Add credentials to your connection
+
+Connections define where to connect. Credentials define how to securely access it.
+
+Credentials are stored securely in the platform and never committed to your Git repository.
+
+1.  Go to Credentials → Add Credentials
+
+    You will see the credentials management overview page.
+
+    ![Credentials Management Page](.attachments/add_manage_credentials_page.png)
+
+2.  Select your existing connection from the dropdown list
+    - Enter authentication details:
+      - API Keys / Tokens
+      - Username / Password
+      - OAuth configuration (if applicable)
+
+    ![Select Connection and Add Credentials](.attachments/select_connection_and_update_add_credentials.png)
+
+3.  Save credentials
+
+---
+
 ## Configure Your Project Workspace
 
 ### 1. Smart Function Editor
@@ -136,7 +193,7 @@ All functions are stored in your Git repository, giving you version control, pul
 5. Save → add a commit message → push to your repository (create a PR if your workflow requires it)
 6. Run the function in Dev Console with real parameters to confirm it works
 
-![Project Page](.attachments/projects_page.png)
+<!-- ![Project Page](.attachments/projects_page.png) -->
  
  --- 
 
@@ -239,63 +296,6 @@ Eval validates that your functions will be correctly identified and called by AI
 
 ---
 
-## Connections Setup
-
-A connection tells Smart AI where to send requests and how to authenticate for a given environment (Dev, QA, or Prod). Each function must be linked to one so it knows which system and environment to run against.
-
-If a connection for your system/environment already exists, you can reuse it. Otherwise:
-
-1.  Go to Connections → New Connection
-
-    You will see the main Connections overview page.
-
-    ![Connections Overview Page](.attachments/connections_page.png)
-
-2.  Select the target system/platform from the available list
-
-    ![Select System Connection Type](.attachments/connection_select.png)
-
-3.  Provide basic details:
-    - Connection Name (e.g., `enterprise-dev`)
-    - Environment (Dev / QA / Prod)
-
-    ![Enter Connection Basic Details](.attachments/connection_details.png)
-
-4.  Configure system-specific settings:
-    - Base URL / Endpoint
-    - Authentication type (API Key, OAuth, etc.)
-    - Any required headers or config fields
-
-    ![Configure Connection Settings](.attachments/configure_connection.png)
-
-5.  Save the connection
-
----
-
-## Add credentials to your connection
-
-Connections define where to connect. Credentials define how to securely access it.
-
-Credentials are stored securely in the platform and never committed to your Git repository.
-
-1.  Go to Credentials → Add Credentials
-
-    You will see the credentials management overview page.
-
-    ![Credentials Management Page](.attachments/add_manage_credentials_page.png)
-
-2.  Select your existing connection from the dropdown list
-    - Enter authentication details:
-      - API Keys / Tokens
-      - Username / Password
-      - OAuth configuration (if applicable)
-
-    ![Select Connection and Add Credentials](.attachments/select_connection_and_update_add_credentials.png)
-
-3.  Save credentials
-
----
-
 ## Configure MCP Server for Your Functions (optional)
 
 MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.
@@ -317,7 +317,7 @@ MCP (Model Context Protocol) allows your business functions to be used across ex
 3. Click **Generate Link** — the server URL will appear in the right-hand panel.
 4. Click the link to open the MCP Server Details page, where you can copy the URL and view available tools.
 5. Use the copied URL to integrate with your external client.
-6. Click the **Export** option to see how you can integrate the URL on multiple platform such as Copilot, Claude, OpenAI.
+6. Click the **Export** option to see how you can integrate the URL on multiple platform such as Copilot, Claude, OpenAI. [More Info on MCP](./mcp.md)
 
 ---
 ## Secure Chat
