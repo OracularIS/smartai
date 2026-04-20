@@ -2,6 +2,10 @@
 
 This page provides a high-level overview of how Smart AI transforms a user-defined business intent—created in SmartFX—into actionable outcomes. It shows how the Enterprise Mesh acts as a data orchestration layer, unifying and coordinating data across systems, and how users can then interact with this intelligence through natural language chat or via tools exposed through an MCP server.
 
+> _Build approved functions in Smart FX → execute securely via Enterprise Mesh → deliver results in Smart Chat or via MCP._
+
+![Smart AI architecture overview](.attachments/architecture.png)
+
 ---
 
 ## Core components
