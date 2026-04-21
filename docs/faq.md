@@ -1,72 +1,215 @@
 # FAQ
 
-## Is Smart AI just document search (RAG)?
+## What is Enterprise Mesh?
 
-No. Smart AI is **API-centric**: it calls structured enterprise APIs to
-retrieve live data and trigger real workflows, not just answer questions from
-static documents. Unlike RAG, responses are always current and actionable.
+Enterprise Mesh is the **secure execution layer of Smart AI**.  
+It connects Smart Chat requests to approved enterprise systems, executes them in real time, and returns a **single, trusted answer**.
 
-## Does sensitive data get sent to the external LLM?
+---
 
-No. The LLM is used primarily for **intent extraction**. It receives the user's query
-text and function metadata, not the underlying business data. For analytical requests,
-only **column names** are shared by default to generate generic processing logic;
-the full dataset is processed entirely inside the enterprise network. 
-Sharing sample rows is **optional and controlled by the user**.
+## How is Enterprise Mesh different from traditional integrations?
 
-## How does it translate a user question into an API call?
+Traditional integrations rely on data replication (ETL) and point-to-point connections.
 
-1. The LLM extracts **intent + parameters** from the user's natural language query.
-2. The **Intelligence Engine** maps that intent to a pre-approved function.
-3. **Enterprise Mesh** validates and executes the function against the target system
-   (for example: Blue Yonder MOCA, SAP REST, Salesforce).
+Enterprise Mesh is **query-centric**:
+- No data copying or syncing  
+- Queries run directly on source systems  
+- Results are merged in real time  
 
-## What enterprise systems does Smart AI connect to?
+This reduces latency, complexity, and maintenance.
 
-Smart AI connects to any system that exposes an API, including:
-- **Blue Yonder WMS** (MOCA and REST)
-- **SAP ERP** (REST)
-- **Manhattan WMS** (REST)
-- **Salesforce CRM** (SOAP/REST)
-- **Snowflake** (SQL)
-- Any other system with a REST or proprietary API endpoint.
+---
 
+## Does Enterprise Mesh store or replicate data?
 
+No.  
+Enterprise Mesh does **not store or duplicate data**. It executes queries directly on source systems and returns results in real time.
 
-## How long does it take to add a new integration?
+---
 
-With the low-code approach, a new integration typically takes **4–8 hours** 
-(configure a JSON definition and upload the script to Git) compared to 
-2–4 weeks of custom development in a traditional approach.
+## How does Enterprise Mesh produce a single answer from multiple systems?
 
-## What deployment options are available?
+It combines several steps:
 
-Two deployment models are supported:
-- **On-premise:** The entire Intelligence Engine and hook layer run inside the 
-  internal network. No sensitive data crosses the firewall.
-- **Cloud (Azure):** The Intelligence Engine is hosted on Azure, accessible via 
-  the web app, with controlled API gateways and encryption.
+1. Runs **federated queries** across systems (ERP, WMS, TMS, etc.)  
+2. Performs **live aggregation** of responses  
+3. Applies **on-the-fly transformations** (filters, grouping, calculations)  
+4. Uses **business-defined reducer logic** to select the final result  
 
-## Can users follow up on a previous query?
+The outcome is a single, consistent answer.
 
-Yes. The Intelligence Engine maintains **session context** across a conversation, 
-so follow-up questions are interpreted in light of previous exchanges without 
-needing to repeat context.
+---
 
-## Can Smart AI generate charts and dashboards?
+## What is Smart Chat?
 
-Yes. Users can request visualizations (pie, line, bar, stacked, bubble) from any
-previously retrieved dataset with a plain-English follow-up. The system can also 
-**auto-generate an interactive dashboard** from the most recent dataset 
-automatically.
+Smart Chat is the **conversational interface of Smart AI** that lets users interact with enterprise systems using natural language.
 
-## How do we know what command ran behind the scenes?
+You can:
+- Retrieve live operational data  
+- Run approved workflows  
+- Ask follow-up questions  
+- Generate charts and dashboards  
 
-Users can ask *"What did you do?"* at any time to see the exact MOCA command 
-or API call that was generated and executed in response to their query.
+---
 
-## Who controls which functions users can access?
+## How is Smart Chat different from document-based chat (RAG)?
 
-Access is governed by a **centralized RBAC (role-based access control)** policy.
-Only pre-approved functions can be invoked, and users see only the data they are authorized to access.
-Administrators manage functions and permissions through **Smart FX** (backed by the Smart Functions repository).
+Smart Chat is **API-centric**, not document-based.
+
+| Feature | Document Chat | Smart Chat |
+|--------|--------------|-----------|
+| Data source | Static documents | Live systems |
+| Accuracy | Depends on documents | System-verified data |
+| Actions | Not supported | Supported (approved only) |
+| Freshness | Can be outdated | Real-time |
+
+---
+
+## Can Smart Chat trigger actions or workflows?
+
+Yes—but only if:
+- The function is **pre-approved**
+- The user has the required **permissions (RBAC)**
+
+No arbitrary or unsafe actions can be executed.
+
+---
+
+## What is a Smart Function?
+
+A Smart Function is an **approved capability** that Smart AI can execute, such as:
+- Fetching data (orders, inventory, shipments)  
+- Running workflows  
+- Calling APIs or system commands  
+
+Each function includes:
+- Implementation (code/script/API)
+- Metadata (inputs, outputs, description)
+
+---
+
+## What is Smart FX?
+
+Smart FX is the **builder studio** where teams create and manage Smart Functions.
+
+It provides:
+- Function definition (metadata + implementation)  
+- Connections to enterprise systems  
+- Evaluation tools (to test AI tool selection)  
+- Governance via Git  
+
+---
+
+## How does Smart AI turn a question into a system action?
+
+1. User asks a question in Smart Chat  
+2. LLM extracts **intent + parameters**  
+3. A matching **Smart Function** is selected  
+4. Enterprise Mesh validates permissions and inputs  
+5. The function executes on target systems  
+6. Results are returned in a user-friendly format  
+
+---
+
+## Is sensitive data sent to the LLM?
+
+No.
+
+- The LLM only receives **user query + metadata**  
+- **All execution happens inside your environment**  
+- **No raw business data is exposed externally**  
+
+For analytics:
+- Only column names (and optional small samples) may be used  
+- Full datasets remain internal  
+
+---
+
+## How is security enforced?
+
+Security is built-in at multiple levels:
+
+- **RBAC (role-based access control)**  
+- **Approved functions only** (no arbitrary execution)  
+- **Centralized validation and permissions**  
+- **Secure API layer**  
+
+Users can only access what they are authorized to see and run.
+
+---
+
+## Can users see what happened behind the scenes?
+
+Yes (if enabled).
+
+Users can:
+- View executed commands or API calls  
+- Understand how their request was processed  
+- Troubleshoot results  
+
+---
+
+## Can Smart Chat handle follow-up questions?
+
+Yes.
+
+Smart AI maintains **session context**, so users can:
+- Refine results  
+- Ask incremental questions  
+- Build on previous responses  
+
+---
+
+## Can Smart Chat generate charts and dashboards?
+
+Yes.
+
+From any dataset, users can:
+- Create charts (pie, bar, line, stacked, etc.)  
+- Generate dashboards automatically  
+- Analyze trends without manual setup  
+
+---
+
+## What systems can Enterprise Mesh connect to?
+
+Any system with an API, including:
+
+- WMS (e.g., Blue Yonder, Manhattan)  
+- ERP (e.g., SAP)  
+- CRM (e.g., Salesforce)  
+- Data platforms (e.g., Snowflake)  
+- Custom REST / SQL / proprietary systems  
+
+---
+
+## How is activity tracked and audited?
+
+Enterprise Mesh supports secure tracking, including:
+
+- Who made the request  
+- Which function was executed  
+- Execution timing and run IDs  
+- Masked parameters  
+
+Sensitive data is **never logged or exposed**.
+
+---
+
+## When should we use Enterprise Mesh?
+
+Use it when:
+- Data is spread across multiple systems  
+- Real-time answers are required  
+- Actions must be secure and governed  
+- A unified interface is needed  
+
+---
+
+## What makes Smart AI + Enterprise Mesh unique?
+
+- No ETL or data duplication  
+- Real-time, federated execution  
+- API-driven (not document-based)  
+- Built-in governance and security  
+- Low-code extensibility via Smart FX  
