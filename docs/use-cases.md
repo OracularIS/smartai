@@ -13,10 +13,10 @@ Below are common use cases written in a “why + how” style (similar to modern
 
 ## Order detail / status lookup (single system)
 
-### What you’re trying to do
+### What this does
 Answer a question like: “Show me details of order `12345`.”
 
-### Why Smart AI helps
+### Why this is better
 Instead of navigating multiple screens, users ask in natural language and Smart AI runs the approved order lookup tool.
 
 ### What you need (setup)
@@ -30,35 +30,12 @@ Instead of navigating multiple screens, users ask in natural language and Smart 
 
 ---
 
-## Cross-system order visibility (Enterprise Mesh)
-
-### What you’re trying to do
-Get a single trusted answer when data is split across systems:
-
-- ERP has the commercial status
-- WMS has pick/pack/ship progress
-- TMS has tracking events
-
-### Why Smart AI helps
-Enterprise Mesh can query multiple systems in parallel and merge results into a single response, using your organization’s approved precedence rules.
-
-### What you need (setup)
-- Approved cross-system functions (for example, “unified order status”)
-- Connections and credentials for each participating system
-
-### Example prompts
-- “Check order 12345 across the enterprise”
-- “Show delayed orders for system A and B”
-- “Which system is the source of the current status?” (if transparency is enabled)
-
----
-
 ## Inventory check (with follow-ups)
 
-### What you’re trying to do
+### What this does
 Ask “How many units of SKU `ABC` are in Warehouse `5`?” and then refine.
 
-### Why Smart AI helps
+### Why this is better
 Users can start broad, then narrow without running separate reports:
 
 - Filter, group, and summarize the last dataset
@@ -74,7 +51,7 @@ Users can start broad, then narrow without running separate reports:
 
 ## Operational lookups (areas, devices, work items)
 
-### What you’re trying to do
+### What this does
 Quickly retrieve operational entities that normally take multiple screens.
 
 ### Example prompts
@@ -86,10 +63,10 @@ Quickly retrieve operational entities that normally take multiple screens.
 
 ## Analytics, charts, dashboards, and transparency
 
-### What you’re trying to do
+### What this does
 Turn a dataset into something decision-ready.
 
-### Why Smart AI helps
+### Why this is better
 Once a tool returns a table/dataset, Smart AI can:
 
 - Create charts (pie/line/bar/stacked/bubble, based on availability)
@@ -104,13 +81,106 @@ Once a tool returns a table/dataset, Smart AI can:
 
 ---
 
+## Execute actions & update systems (Smart FX)
+
+### What this does
+Actually change data in live systems, not just read it. Safely run approved operations using natural language.
+
+### Why this is better
+No more opening 5 different screens to perform standard operations. All actions run through your approved functions with full governance, audit logging and permission checks enforced automatically.
+
+### What you need (setup)
+- Approved write/action functions with defined input schemas
+- Execution permissions configured for user roles
+- Optional approval gates configured for sensitive operations
+- Dry run / simulation mode enabled for testing
+
+### Example prompts
+- "Cancel order 12345 and send notification to customer"
+- "Adjust SKU ABC in warehouse 5 by +25 units"
+- "Assign work order 789 to user jsmith"
+- "Run daily inventory reconciliation for location west"
+- "Simulate cancelling order 4567 first before doing it for real"
+
+---
+
+## Enterprise Mesh (Cross system operations)
+
+### What this does
+Single source of truth across all your systems. Query data across platforms, run multi-step workflows, and safely execute distributed operations with guaranteed consistency.
+
+This handles both:
+**Unified visibility** - get one trusted answer when data exists in multiple places
+**Orchestrated actions** - run end to end workflows that update multiple systems
+
+Systems are never out of sync. If any step fails, everything automatically rolls back cleanly.
+
+### Why this is better
+No more checking 3 different screens for an order status. No more manually updating 5 systems and hoping you don't miss one.
+
+Enterprise Mesh:
+- Queries multiple systems in parallel
+- Merges results using your company's precedence rules
+- Runs entire transactional workflows
+- Automatically rolls back on failure
+- Maintains full audit trail for every operation
+- Shows you exactly which system provided each value
+
+### What you need (setup)
+- Approved cross-system functions and workflow definitions
+- Connections and credentials for each participating system
+- Transaction boundaries and rollback rules defined
+- Optional fallback systems configured for high availability
+
+### Example prompts
+- "Show me the complete status for order 12345 across all systems"
+- "Which system is the source of this status value?"
+- "Fulfill this order end to end"
+- "Update this customer's contact details everywhere"
+- "Show me exactly what steps will run if I cancel this order"
+- "Retry all failed operations from yesterday's batch"
+
+---
+
+## Bulk operations & batch processing
+
+### What this does
+Run operations across hundreds or thousands of records consistently.
+
+### Why this is better
+No more spreadsheet uploads, manual data entry or writing one-off scripts. Apply the same action to an entire filtered dataset with full validation and progress tracking.
+
+### Example prompts
+- "Mark all orders older than 90 days as completed"
+- "Update delivery date for all orders on this shipment"
+- "Send reminder notifications to all users with open work items"
+- "Export this entire filtered list as CSV"
+
+---
+
+## Exception handling & alert resolution
+
+### What this does
+Respond to operational alerts and resolve common issues automatically.
+
+### Why this is better
+Instead of just notifying you that something is broken, Smart AI can investigate the problem, run diagnostic tools, apply standard fixes and confirm resolution - all from the alert notification.
+
+### Example prompts
+- "This order is stuck, check what's wrong and fix it"
+- "Resolve the inventory discrepancy for SKU XYZ"
+- "Restart the failed import job"
+- "Apply the standard workaround for error 5002"
+
+---
+
 ## Use Smart AI tools inside other clients (MCP)
 
-### What you’re trying to do
-Use the same governed enterprise tools from a different AI client (for example, Claude Desktop).
+### What this does
+Use your approved enterprise tools directly inside other AI clients like Claude Desktop, Cursor, VS Code or any MCP-compatible assistant. All your existing governance, permissions and connections work exactly the same way.
 
-### Why Smart AI helps
-MCP exposes a curated tool catalog for a project/system so external clients can discover and call approved functions.
+### Why this is better
+Smart AI automatically exposes your curated tool catalog through MCP, so external clients can safely discover and call only your approved functions - no extra setup required per tool.
 
 ### What you need (setup)
 - Tools tested in Dev Console
@@ -120,4 +190,3 @@ MCP exposes a curated tool catalog for a project/system so external clients can 
 See:
 
 - [MCP (Model Context Protocol)](./mcp.md)
-
