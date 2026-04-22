@@ -1,6 +1,49 @@
 # Use Cases
 
-Smart AI is designed for **live operations**, not just document Q&A. Below are the most common things you can do.
+Smart AI combines Smart FX function development studio, Enterprise Mesh cross-system execution layer, and Smart Chat natural language interface to deliver a complete platform for enterprise operations powered with AI.
+
+---
+
+## Smart FX Studio
+
+Create, maintain and validate the smart functions that power Smart AI operations.
+
+- Define and update function metadata and implementations
+- Standardize vocabulary and schemas across your entire organization
+- Manage secure connections to external systems
+- Validate tool calling reliability with automated evaluations
+- Troubleshoot and debug function execution behaviour
+
+**Example:**
+- "Create a new function to look up shipment tracking status"
+- "Update the order schema to include new delivery priority field"
+- "Run evaluation test suite after updating inventory functions"
+- "Add new database connection for production environment"
+- "View debug trace for failed function execution"
+
+---
+
+## Enterprise Mesh (Cross system operations)
+
+Real-time federated execution layer that connects all your enterprise systems securely.
+
+- Query multiple systems in parallel without data replication
+- Get single unified answers when information exists in different places
+- Calculate real-time available-to-promise inventory across all locations
+- Run end to end workflows that update multiple systems atomically
+- Automatic rollback if any step in a multi-system operation fails
+- Enforce consistent RBAC permissions across all integrations
+- Full audit trail, provenance and execution tracking for every value
+- Zero raw business data leaves your internal network
+
+**Example prompts:**
+- "Show me the complete status for order 12345 across all systems"
+- "What is the total available inventory for SKU ABC including in-transit?"
+- "Which system is the source of this status value?"
+- "Fulfill this order end to end across ERP, WMS and TMS"
+- "Update this customer's contact details everywhere"
+- "Show me exactly what steps will run if I cancel this order"
+- "Retry all failed operations from yesterday's batch"
 
 ---
 
@@ -62,10 +105,10 @@ Turn raw datasets into something decision ready.
 - Export data in different formats
 
 **Example prompts:**
-- "Create a pie chart from this."
-- "Show a time-series chart by ship date."
-- "Build a dashboard for this dataset."
-- "What did you do?"
+- "Show order volume per hour for the last 12 hours as a line chart across all warehouses."
+- "Break down current on-hand inventory by zone and building as a stacked bar chart."
+- "Build a live dashboard showing today's picking productivity by user shift."
+- "Show me exactly which systems were queried and what functions executed for this result."
 
 ---
 
@@ -87,54 +130,11 @@ Actually change data in live systems, not just read it.
 
 ---
 
-## Smart FX Studio
-
-Create, maintain and validate the smart functions that power Smart AI operations.
-
-- Define and update function metadata and implementations
-- Standardize vocabulary and schemas across your entire organization
-- Manage secure connections to external systems
-- Validate tool calling reliability with automated evaluations
-- Troubleshoot and debug function execution behaviour
-
-**Example workflows:**
-- "Create a new function to look up shipment tracking status"
-- "Update the order schema to include new delivery priority field"
-- "Run evaluation test suite after updating inventory functions"
-- "Add new database connection for production environment"
-- "View debug trace for failed function execution"
-
----
-
-## Enterprise Mesh (Cross system operations)
-
-Real-time federated execution layer that connects all your enterprise systems securely.
-
-- Query multiple systems in parallel without data replication
-- Get single unified answers when information exists in different places
-- Calculate real-time available-to-promise inventory across all locations
-- Run end to end workflows that update multiple systems atomically
-- Automatic rollback if any step in a multi-system operation fails
-- Enforce consistent RBAC permissions across all integrations
-- Full audit trail, provenance and execution tracking for every value
-- Zero raw business data leaves your internal network
-
-**Example prompts:**
-- "Show me the complete status for order 12345 across all systems"
-- "What is the total available inventory for SKU ABC including in-transit?"
-- "Which system is the source of this status value?"
-- "Fulfill this order end to end across ERP, WMS and TMS"
-- "Update this customer's contact details everywhere"
-- "Show me exactly what steps will run if I cancel this order"
-- "Retry all failed operations from yesterday's batch"
-
----
-
 ## Use tools inside other clients (MCP)
 
 Use your approved enterprise tools directly inside other AI clients.
 
-- Works with Claude Desktop, Cursor, VS Code and any MCP compatible assistant
+- Works with Claude, Cursor, VS Code and any MCP compatible assistant
 - All governance, permissions and connections work exactly the same way
 - No extra setup required per tool
 - Safe discovery of only approved functions
