@@ -1,101 +1,84 @@
-# Use Cases (what you can do, and why Smart AI asks for setup)
+# Use Cases
 
-Smart AI is designed for **live operations**, not just document Q&A. That’s why the setup focuses on:
-
-- Connecting a **Smart Functions repository** (your approved tool catalog)
-- Defining **Meta** (inputs/outputs) so tools are callable
-- Creating **connections + credentials** so tools run against real systems
-- Using **tags/domains/collections** to keep the catalog consistent at scale
-
-Below are common use cases written in a “why + how” style (similar to modern developer docs).
+Smart AI is designed for **live operations**, not just document Q&A. Below are the most common things you can do.
 
 ---
 
-## Order detail / status lookup (single system)
+## Order detail / status lookup
 
-### What this does
-Answer a question like: “Show me details of order `12345`.”
+Look up order information using natural language, instead of navigating multiple application screens.
 
-### Why this is better
-Instead of navigating multiple screens, users ask in natural language and Smart AI runs the approved order lookup tool.
+- Get full order details, status and timeline
+- Filter for specific items, backorders or exceptions
+- See exactly when and where changes happened
 
-### What you need (setup)
-- An approved function like `get_order_details` or `get_order_status`
-- A working connection for the right environment (Dev/QA/Prod)
-
-### Example prompts
-- “Show me details of order 12345.”
-- “What is the current status and last update time?”
-- “Only show lines that are backordered.”
+**Example prompts:**
+- "Show me details of order 12345."
+- "What is the current status and last update time?"
+- "Only show lines that are backordered."
 
 ---
 
-## Inventory check (with follow-ups)
+## Inventory check
 
-### What this does
-Ask “How many units of SKU `ABC` are in Warehouse `5`?” and then refine.
+Query inventory levels and work with the results without running separate reports.
 
-### Why this is better
-Users can start broad, then narrow without running separate reports:
+- Check stock counts by SKU, location or warehouse
+- Filter, group and summarise results
+- Narrow down results with follow up questions
+- Generate charts directly from the dataset
 
-- Filter, group, and summarize the last dataset
-- Turn it into charts and dashboards
-
-### Example prompts
-- “How many units of SKU ABC are in Warehouse 5?”
-- “Group by location type.”
-- “Only show low-stock locations.”
-- “Create a bar chart by zone.”
+**Example prompts:**
+- "How many units of SKU ABC are in Warehouse 5?"
+- "Group by location type."
+- "Only show low-stock locations."
+- "Create a bar chart by zone."
 
 ---
 
-## Operational lookups (areas, devices, work items)
+## Operational lookups
 
-### What this does
-Quickly retrieve operational entities that normally take multiple screens.
+Quickly retrieve operational entities that normally take multiple steps to find.
 
-### Example prompts
-- “Show me area information for Building X.”
-- “Give me a list of all devices.”
-- “Show open work items for user jsmith.”
+- Area and location information
+- Device status and lists
+- Work items assigned to users or teams
+- Production line status and metrics
 
----
-
-## Analytics, charts, dashboards, and transparency
-
-### What this does
-Turn a dataset into something decision-ready.
-
-### Why this is better
-Once a tool returns a table/dataset, Smart AI can:
-
-- Create charts (pie/line/bar/stacked/bubble, based on availability)
-- Generate an interactive dashboard
-- Explain what it executed behind the scenes (when enabled)
-
-### Example prompts
-- “Create a pie chart from this.”
-- “Show a time-series chart by ship date.”
-- “Build a dashboard for this dataset.”
-- “What did you do?”
+**Example prompts:**
+- "Show me area information for Building X."
+- "Give me a list of all devices."
+- "Show open work items for user jsmith."
 
 ---
 
-## Execute actions & update systems (Smart FX)
+## Analytics, charts and dashboards
 
-### What this does
-Actually change data in live systems, not just read it. Safely run approved operations using natural language.
+Turn raw datasets into something decision ready.
 
-### Why this is better
-No more opening 5 different screens to perform standard operations. All actions run through your approved functions with full governance, audit logging and permission checks enforced automatically.
+- Generate standard chart types automatically
+- Build interactive dashboards
+- See transparency about exactly what was run
+- Export data in different formats
 
-### What you need (setup)
-- Approved write/action functions with defined input schemas
-- Execution permissions configured for user roles
-- Optional approval gates configured for sensitive operations
-- Dry run / simulation mode enabled for testing
+**Example prompts:**
+- "Create a pie chart from this."
+- "Show a time-series chart by ship date."
+- "Build a dashboard for this dataset."
+- "What did you do?"
 
-### Example prompts
+---
+
+## Execute actions & update systems
+
+Actually change data in live systems, not just read it.
+
+- Run approved operations using natural language
+- Full governance, audit logging and permission checks
+- Optional approval gates for sensitive operations
+- Dry run / simulation mode for testing changes
+
+**Example prompts:**
 - "Cancel order 12345 and send notification to customer"
 - "Adjust SKU ABC in warehouse 5 by +25 units"
 - "Assign work order 789 to user jsmith"
@@ -104,89 +87,54 @@ No more opening 5 different screens to perform standard operations. All actions 
 
 ---
 
+## Smart FX Studio
+
+Create, maintain and validate the smart functions that power Smart AI operations.
+
+- Define and update function metadata and implementations
+- Standardize vocabulary and schemas across your entire organization
+- Manage secure connections to external systems
+- Validate tool calling reliability with automated evaluations
+- Troubleshoot and debug function execution behaviour
+
+**Example workflows:**
+- "Create a new function to look up shipment tracking status"
+- "Update the order schema to include new delivery priority field"
+- "Run evaluation test suite after updating inventory functions"
+- "Add new database connection for production environment"
+- "View debug trace for failed function execution"
+
+---
+
 ## Enterprise Mesh (Cross system operations)
 
-### What this does
-Single source of truth across all your systems. Query data across platforms, run multi-step workflows, and safely execute distributed operations with guaranteed consistency.
+Real-time federated execution layer that connects all your enterprise systems securely.
 
-This handles both:
-**Unified visibility** - get one trusted answer when data exists in multiple places
-**Orchestrated actions** - run end to end workflows that update multiple systems
+- Query multiple systems in parallel without data replication
+- Get single unified answers when information exists in different places
+- Calculate real-time available-to-promise inventory across all locations
+- Run end to end workflows that update multiple systems atomically
+- Automatic rollback if any step in a multi-system operation fails
+- Enforce consistent RBAC permissions across all integrations
+- Full audit trail, provenance and execution tracking for every value
+- Zero raw business data leaves your internal network
 
-Systems are never out of sync. If any step fails, everything automatically rolls back cleanly.
-
-### Why this is better
-No more checking 3 different screens for an order status. No more manually updating 5 systems and hoping you don't miss one.
-
-Enterprise Mesh:
-- Queries multiple systems in parallel
-- Merges results using your company's precedence rules
-- Runs entire transactional workflows
-- Automatically rolls back on failure
-- Maintains full audit trail for every operation
-- Shows you exactly which system provided each value
-
-### What you need (setup)
-- Approved cross-system functions and workflow definitions
-- Connections and credentials for each participating system
-- Transaction boundaries and rollback rules defined
-- Optional fallback systems configured for high availability
-
-### Example prompts
+**Example prompts:**
 - "Show me the complete status for order 12345 across all systems"
+- "What is the total available inventory for SKU ABC including in-transit?"
 - "Which system is the source of this status value?"
-- "Fulfill this order end to end"
+- "Fulfill this order end to end across ERP, WMS and TMS"
 - "Update this customer's contact details everywhere"
 - "Show me exactly what steps will run if I cancel this order"
 - "Retry all failed operations from yesterday's batch"
 
 ---
 
-## Bulk operations & batch processing
+## Use tools inside other clients (MCP)
 
-### What this does
-Run operations across hundreds or thousands of records consistently.
+Use your approved enterprise tools directly inside other AI clients.
 
-### Why this is better
-No more spreadsheet uploads, manual data entry or writing one-off scripts. Apply the same action to an entire filtered dataset with full validation and progress tracking.
-
-### Example prompts
-- "Mark all orders older than 90 days as completed"
-- "Update delivery date for all orders on this shipment"
-- "Send reminder notifications to all users with open work items"
-- "Export this entire filtered list as CSV"
-
----
-
-## Exception handling & alert resolution
-
-### What this does
-Respond to operational alerts and resolve common issues automatically.
-
-### Why this is better
-Instead of just notifying you that something is broken, Smart AI can investigate the problem, run diagnostic tools, apply standard fixes and confirm resolution - all from the alert notification.
-
-### Example prompts
-- "This order is stuck, check what's wrong and fix it"
-- "Resolve the inventory discrepancy for SKU XYZ"
-- "Restart the failed import job"
-- "Apply the standard workaround for error 5002"
-
----
-
-## Use Smart AI tools inside other clients (MCP)
-
-### What this does
-Use your approved enterprise tools directly inside other AI clients like Claude Desktop, Cursor, VS Code or any MCP-compatible assistant. All your existing governance, permissions and connections work exactly the same way.
-
-### Why this is better
-Smart AI automatically exposes your curated tool catalog through MCP, so external clients can safely discover and call only your approved functions - no extra setup required per tool.
-
-### What you need (setup)
-- Tools tested in Dev Console
-- Connections + credentials configured
-- An MCP server generated for the correct project/system
-
-See:
-
-- [MCP (Model Context Protocol)](./mcp.md)
+- Works with Claude Desktop, Cursor, VS Code and any MCP compatible assistant
+- All governance, permissions and connections work exactly the same way
+- No extra setup required per tool
+- Safe discovery of only approved functions
