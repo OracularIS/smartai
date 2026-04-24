@@ -1,133 +1,82 @@
 # Use Cases
-
-Smart AI combines Smart FX function development studio, Enterprise Mesh cross-system execution layer, and Smart Chat natural language interface to deliver a complete platform for enterprise operations powered with AI.
-
 ---
 
 ## Smart FX Studio
 
-Create, maintain and validate the smart functions that power Smart AI operations.
+Create, maintain and validate enterprise smart functions with standardized schemas, secure system connections, automated reliability testing, and full debugging capabilities to power consistent AI operations across your organization.
 
-- Define and update function metadata and implementations
-- Standardize vocabulary and schemas across your entire organization
-- Manage secure connections to external systems
-- Validate tool calling reliability with automated evaluations
-- Troubleshoot and debug function execution behaviour
-
-**Example:**
-- "Create a new function to look up shipment tracking status"
-- "Update the order schema to include new delivery priority field"
-- "Run evaluation test suite after updating inventory functions"
-- "Add new database connection for production environment"
-- "View debug trace for failed function execution"
+```text
+- Create a new function to retrieve open orders for Warehouse B
+- Update function configuration to map REST API for order details
+- Run evaluation tests after modifying inventory query logic
+- Add new system integration using JSON-based configuration
+- View debug trace for failed API execution
+```
 
 ---
 
-## Enterprise Mesh (Cross system operations)
+## Collaborative Function Development & Versioning
+Enable multiple teams to collaboratively build, manage, and evolve business functions using Git-based version control, ensuring consistency, traceability, and organized development across environments.
 
-Real-time federated execution layer that connects all your enterprise systems securely.
+```text
+- Commit updates to inventory functions with version history tracking
+- Review and approve pull request for new order lookup function
+- Rollback to previous version of a function after failed deployment
+- Manage environment-specific configurations (dev, test, prod)
+- Track changes and contributors for each function
+```
+---
+## Enterprise Mesh
 
-- Query multiple systems in parallel without data replication
-- Get single unified answers when information exists in different places
-- Calculate real-time available-to-promise inventory across all locations
-- Run end to end workflows that update multiple systems atomically
-- Automatic rollback if any step in a multi-system operation fails
-- Enforce consistent RBAC permissions across all integrations
-- Full audit trail, provenance and execution tracking for every value
-- Zero raw business data leaves your internal network
+Secure real-time federated execution layer that unifies your enterprise systems, enabling cross-system queries, governed workflows, and complete audit tracking—all while keeping business data within your network.
 
-**Example prompts:**
-- "Show me the complete status for order 12345 across all systems"
-- "What is the total available inventory for SKU ABC including in-transit?"
-- "Which system is the source of this status value?"
-- "Fulfill this order end to end across ERP, WMS and TMS"
-- "Update this customer's contact details everywhere"
-- "Show me exactly what steps will run if I cancel this order"
-- "Retry all failed operations from yesterday's batch"
+```text
+- Show open orders for Warehouse B across all systems
+- Get inventory for Product X in Warehouse 5
+- Which system returned this order status?
+- Show me the steps executed for this request
+- Retry failed requests from previous execution
+```
 
 ---
 
-## Order detail / status lookup
+## Unified Operational Data Lookup
 
-Look up order information using natural language, instead of navigating multiple application screens.
+Access orders, inventory, and operational data through a single natural language interface—eliminating the need to navigate multiple systems or screens.
 
-- Get full order details, status and timeline
-- Filter for specific items, backorders or exceptions
-- See exactly when and where changes happened
-
-**Example prompts:**
-- "Show me details of order 12345."
-- "What is the current status and last update time?"
-- "Only show lines that are backordered."
-
----
-
-## Inventory check
-
-Query inventory levels and work with the results without running separate reports.
-
-- Check stock counts by SKU, location or warehouse
-- Filter, group and summarise results
-- Narrow down results with follow up questions
-- Generate charts directly from the dataset
-
-**Example prompts:**
-- "How many units of SKU ABC are in Warehouse 5?"
-- "Group by location type."
-- "Only show low-stock locations."
-- "Create a bar chart by zone."
-
----
-
-## Operational lookups
-
-Quickly retrieve operational entities that normally take multiple steps to find.
-
-- Area and location information
-- Device status and lists
-- Work items assigned to users or teams
-- Production line status and metrics
-
-**Example prompts:**
-- "Show me area information for Building X."
-- "Give me a list of all devices."
-- "Show open work items for user jsmith."
+```text
+- Show me details of order 12345
+- How many units of Product X are in Warehouse 5?
+- Show open orders for Warehouse B
+- Give me list of all devices
+- Show area information for Building 3PSTG
+```
 
 ---
 
 ## Analytics, charts and dashboards
 
-Turn raw datasets into something decision ready.
+Transform raw operational data into actionable insights with automatic chart generation and interactive dashboards.
 
-- Generate standard chart types automatically
-- Build interactive dashboards
-- See transparency about exactly what was run
-- Export data in different formats
-
-**Example prompts:**
-- "Show order volume per hour for the last 12 hours as a line chart across all warehouses."
-- "Break down current on-hand inventory by zone and building as a stacked bar chart."
-- "Build a live dashboard showing today's picking productivity by user shift."
-- "Show me exactly which systems were queried and what functions executed for this result."
+```text
+- Visualize order types by region
+- Generate a chart from the previous response
+- Show a bar chart of device data by warehouse
+- Create a dashboard from the last dataset
+```
 
 ---
 
-## Execute actions & update systems
+## Execute Actions & Schedule Workflows
+Trigger pre-approved, governed system workflows through natural language, with full transparency, auditability, and secure execution of underlying API calls. Automate recurring processes and notifications based on schedules or system events.
 
-Actually change data in live systems, not just read it.
-
-- Run approved operations using natural language
-- Full governance, audit logging and permission checks
-- Optional approval gates for sensitive operations
-- Dry run / simulation mode for testing changes
-
-**Example prompts:**
-- "Cancel order 12345 and send notification to customer"
-- "Adjust SKU ABC in warehouse 5 by +25 units"
-- "Assign work order 789 to user jsmith"
-- "Run daily inventory reconciliation for location west"
-- "Simulate cancelling order 4567 first before doing it for real"
-
+```text
+- Release order wave 123 for picking in Warehouse B
+- Run inventory lookup for Product X in Warehouse 5
+- Send alert when inventory for Product X falls below threshold
+- Schedule daily report of open orders at 6 AM
+- Update user contact information for warehouse manager
+```
 ---
 
 ## Use tools inside other clients (MCP)
