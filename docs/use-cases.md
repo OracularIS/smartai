@@ -6,69 +6,77 @@
 Create, maintain and validate enterprise smart functions with standardized schemas, secure system connections, automated reliability testing, and full debugging capabilities to power consistent AI operations across your organization.
 
 ```text
-- Create a new function to look up shipment tracking status
-- Update the order schema to include new delivery priority field
-- Run evaluation test suite after updating inventory functions
-- Add new database connection for production environment
-- View debug trace for failed function execution
+- Create a new function to retrieve open orders for Warehouse B
+- Update function configuration to map REST API for order details
+- Run evaluation tests after modifying inventory query logic
+- Add new system integration using JSON-based configuration
+- View debug trace for failed API execution
 ```
 
 ---
 
-## Enterprise Mesh
-Secure real-time federated execution layer that unifies your enterprise systems, enabling parallel queries, atomic cross-system workflows with automatic rollback, and complete audit tracking—all while keeping business data within your network. Gain unified answers and execute operations seamlessly across platforms without data replication.
+## Collaborative Function Development & Versioning
+Enable multiple teams to collaboratively build, manage, and evolve business functions using Git-based version control, ensuring consistency, traceability, and organized development across environments.
 
 ```text
-- Show me the complete status for order 12345 across all systems
-- What is the total available inventory for SKU ABC including in-transit?
-- Which system is the source of this status value?
-- Fulfill this order end to end across ERP, WMS and TMS
-- Update this customer's contact details everywhere
-- Show me exactly what steps will run if I cancel this order
-- Retry all failed operations from yesterday's batch
+- Commit updates to inventory functions with version history tracking
+- Review and approve pull request for new order lookup function
+- Rollback to previous version of a function after failed deployment
+- Manage environment-specific configurations (dev, test, prod)
+- Track changes and contributors for each function
+```
+---
+## Enterprise Mesh
+
+Secure real-time federated execution layer that unifies your enterprise systems, enabling cross-system queries, governed workflows, and complete audit tracking—all while keeping business data within your network.
+
+```text
+- Show open orders for Warehouse B across all systems
+- Get inventory for Product X in Warehouse 5
+- Which system returned this order status?
+- Show me the steps executed for this request
+- Retry failed requests from previous execution
 ```
 
 ---
 
 ## Unified Operational Data Lookup
 
-Access orders, inventory, and operational data through a single natural language interface—eliminating the need to navigate multiple systems or screens. Retrieve detailed insights, filter results dynamically, and drill down into exceptions or trends in real time. This enables faster decision-making and a seamless workflow across enterprise operations.
+Access orders, inventory, and operational data through a single natural language interface—eliminating the need to navigate multiple systems or screens.
 
 ```text
-- Show me details of order 12345 and highlight any delays.
-- How many units of SKU ABC are available across all warehouses?
-- List all low-stock locations grouped by warehouse.
-- Show open work items assigned to user jsmith.
-- Give me device status across Building X.
+- Show me details of order 12345
+- How many units of Product X are in Warehouse 5?
+- Show open orders for Warehouse B
+- Give me list of all devices
+- Show area information for Building 3PSTG
 ```
 
 ---
 
 ## Analytics, charts and dashboards
 
-Transform raw operational data into actionable insights with automatic chart generation, interactive dashboards, and full transparency over executed operations. Export results in multiple formats to support reporting and decision workflows.
+Transform raw operational data into actionable insights with automatic chart generation and interactive dashboards.
 
 ```text
-- Show order volume per hour for the last 12 hours as a line chart across all warehouses.
-- Break down current on-hand inventory by zone and building as a stacked bar chart.
-- Build a live dashboard showing today's picking productivity by user shift.
-- Show me exactly which systems were queried and what functions executed for this result.
+- Visualize order types by region
+- Generate a chart from the previous response
+- Show a bar chart of device data by warehouse
+- Create a dashboard from the last dataset
 ```
 
 ---
 
-## Execute actions & update systems
-
-Execute approved operations and modify live system data securely using natural language, with full governance, audit logging, permission controls, optional approval workflows, and safe simulation mode for testing changes before production execution.
+## Execute Actions & Schedule Workflows
+Trigger pre-approved, governed system workflows through natural language, with full transparency, auditability, and secure execution of underlying API calls. Automate recurring processes and notifications based on schedules or system events.
 
 ```text
-- Cancel order 12345 and send notification to customer
-- Adjust SKU ABC in warehouse 5 by +25 units
-- Assign work order 789 to user jsmith
-- Run daily inventory reconciliation for location west
-- Simulate cancelling order 4567 first before doing it for real
+- Release order wave 123 for picking in Warehouse B
+- Run inventory lookup for Product X in Warehouse 5
+- Send alert when inventory for Product X falls below threshold
+- Schedule daily report of open orders at 6 AM
+- Update user contact information for warehouse manager
 ```
-
 ---
 
 ## Use tools inside other clients (MCP)
