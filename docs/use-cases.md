@@ -77,6 +77,21 @@ Trigger pre-approved, governed system workflows through natural language, with f
 - Schedule daily report of open orders at 6 AM
 - Update user contact information for warehouse manager
 ```
+
+---
+## Visibility & AI Logic Observability
+Gain full control and transparency over system operations and AI-generated logic. View underlying commands, understand how natural language queries are interpreted, and audit all decision-making processes.
+
+```text
+- Show me the exact command generated for this request
+- Display the AI interpretation of my natural language query
+- View execution trace and logic steps for this request
+- Simulate this operation and show all changes before running
+- Show me the exact MOCA/API command that will execute
+- Display governance rules applied to this operation
+- View audit trail and who approved this action
+- Show system performance metrics for this request
+```
 ---
 
 ## Use tools inside other clients (MCP)
