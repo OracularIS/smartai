@@ -57,7 +57,7 @@ Smart AI is built on three tightly integrated components. Each one has a distinc
 ### Define capabilities
 Smart FX is the workbench where builders and integrators define what Smart AI can do. Every capability in Smart Chat exists because someone built a Function (also called an Intent) in Smart FX. This is where business logic lives — clearly defined, versioned, and reusable.
 
-<img src=".attachments/smartfx-flow.png" style="border-radius: 20px; width: 100%;" width="900" height="300">
+<img src=".attachments/smartfx-flow.png" style="border-radius: 20px; width: 100%;">
 
 ## Pillar 2: Enterprise Mesh
 ### Secure execution
