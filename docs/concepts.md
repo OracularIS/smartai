@@ -12,17 +12,17 @@ Think of it as a universal interpreter for your enterprise. Instead of logging i
 
 # The fragmentation problem
 
-### Multiple systems, zero integration
-ERP handles orders and financials. WMS owns inventory and logistics. TMS manages transportation and tracking. CRM tracks customers. Each system has part of the answer — but no system has all of it.
+#### Multiple systems, zero integration
+> ERP handles orders and financials. WMS owns inventory and logistics. TMS manages transportation and tracking. CRM tracks customers. Each system has part of the answer — but no system has all of it.
 
-### Repeated manual queries
-A single business question — "where is this order?" — requires querying 3 or more systems, then manually reconciling the results. Teams do this dozens of times a day, every day.
+#### Repeated manual queries
+> A single business question — "where is this order?" — requires querying 3 or more systems, then manually reconciling the results. Teams do this dozens of times a day, every day.
 
-### Business logic trapped in dashboards
-Custom dashboards and reports exist because the systems can't talk to each other. But dashboards go stale, break silently, and require constant maintenance as systems change.
+#### Business logic trapped in dashboards
+> Custom dashboards and reports exist because the systems can't talk to each other. But dashboards go stale, break silently, and require constant maintenance as systems change.
 
-### Decision delays from data lag
-By the time teams pull reports, reconcile data across systems, and distribute answers, the underlying situation may already have changed. Slow answers mean slower decisions.
+#### Decision delays from data lag
+> By the time teams pull reports, reconcile data across systems, and distribute answers, the underlying situation may already have changed. Slow answers mean slower decisions.
 
 
 #### The Smart AI Solution
@@ -53,7 +53,35 @@ This is the most common cross-system query in any fulfilment operation. Here's h
 
 Smart AI is built on three tightly integrated components. Each one has a distinct role. Together, they form a complete system — from how you ask questions, to how capabilities are defined, to how queries are safely executed.
 
-## Pillar 1: Smart Chat
+## Pillar 1: Smart FX
+### Define capabilities
+Smart FX is the workbench where builders and integrators define what Smart AI can do. Every capability in Smart Chat exists because someone built a Function (also called an Intent) in Smart FX. This is where business logic lives — clearly defined, versioned, and reusable.
+
+<img src=".attachments/smartfx-flow.png" style="border-radius: 20px; width: 100%;" width="900" height="300">
+
+## Pillar 2: Enterprise Mesh
+### Secure execution
+Enterprise Mesh is the execution engine that actually talks to your systems. When Smart Chat identifies which function to run, Enterprise Mesh validates the request, dispatches queries to each connected system in parallel, and applies the reducer logic to merge results into a single coherent response.
+
+What happens during a query:
+
+1. The request is validated against the user's role (RBAC) and the function's allowed inputs
+2. Queries are dispatched simultaneously to all relevant systems — ERP via SQL, WMS via MOCA, TMS via REST API
+3. Results are merged using precedence rules defined in the function's reducer
+4. A single unified result is returned to Smart Chat — and the user
+5. All activity is logged with masked sensitive data for audit compliance
+
+Core capabilities of Enterprise Mesh:
+
+- **Federation** <br> Run the same logical query across multiple systems simultaneously <br> *ERP + WMS + TMS in one call*
+- **Aggregation** <br> Combine live data from multiple sources into a single result set <br> *Available-to-promise inventory*
+- **RBAC enforcement** <br> Every query is scoped to what the requesting role is permitted to see <br> *Role-based data views*
+- **Reducer logic** <br> Intelligent merging with source-of-truth precedence rules <br> *Delay detection across sources*
+
+#### Inventory proof — how aggregation works
+WMS reports 500 units on-hand. TMS reports 150 units in transit. ERP reports 200 units on order. Enterprise Mesh aggregates all three into a live ATP (Available-to-Promise) table — without any data movement or ETL pipeline.
+
+## Pillar 3: Smart Chat
 ### How you interact
 Smart Chat is the conversational interface where end users and business teams interact with their data. You ask questions in plain English — it handles the rest. You can ask follow-up questions, request visualisations, and set up automated workflows, all from the same interface.
 
@@ -82,60 +110,6 @@ What you can do in Smart Chat:
 ### Security by design
 Smart Chat only executes approved functions. Every query is validated against the user's role and permissions. Data never leaves your network. Every interaction is logged for audit.
 
-## Pillar 2: Smart FX
-### Define capabilities
-Smart FX is the workbench where builders and integrators define what Smart AI can do. Every capability in Smart Chat exists because someone built a Function (also called an Intent) in Smart FX. This is where business logic lives — clearly defined, versioned, and reusable.
-
-#### Anatomy of a Smart FX function:
-
-**Example function — get_order_status**
-```
-// Function: get_order_status
-// Description: Get full order status across ERP, WMS, and TMS
-
-Input:
-  order_id   string   // required — the order identifier
-  include_history  boolean  // optional — return history
-
-Output:
-  status    enum   pending | packed | in_transit | delivered
-  delayed   boolean
-  reason    string?
-
-Implementation:
-  parallel_query([ERP.sql, WMS.moca, TMS.rest])
-  → reducer(precedence: TMS > WMS > ERP)
-  → return merged_result
-```
-
-Key concepts in Smart FX:
-
-- **Tags** — Organise functions by domain (e.g. `#order-management`, `#inventory`). Smart Chat uses tags to select the right function for each question.
-- **Domains** — Reusable data definitions shared across functions (e.g. a standard `order_id` format used by all order-related functions).
-- **Connections** — Secure, configured links to your actual enterprise systems — ERP, WMS, TMS, and others.
-- **Eval** — A testing framework to validate that Smart Chat selects the correct function for a given question. Measure accuracy before deploying a new function.
-
-## Pillar 3: Enterprise Mesh
-### Secure execution
-Enterprise Mesh is the execution engine that actually talks to your systems. When Smart Chat identifies which function to run, Enterprise Mesh validates the request, dispatches queries to each connected system in parallel, and applies the reducer logic to merge results into a single coherent response.
-
-What happens during a query:
-
-1. The request is validated against the user's role (RBAC) and the function's allowed inputs
-2. Queries are dispatched simultaneously to all relevant systems — ERP via SQL, WMS via MOCA, TMS via REST API
-3. Results are merged using precedence rules defined in the function's reducer
-4. A single unified result is returned to Smart Chat — and the user
-5. All activity is logged with masked sensitive data for audit compliance
-
-Core capabilities of Enterprise Mesh:
-
-- **Federation** <br> Run the same logical query across multiple systems simultaneously <br> *ERP + WMS + TMS in one call*
-- **Aggregation** <br> Combine live data from multiple sources into a single result set <br> *Available-to-promise inventory*
-- **RBAC enforcement** <br> Every query is scoped to what the requesting role is permitted to see <br> *Role-based data views*
-- **Reducer logic** <br> Intelligent merging with source-of-truth precedence rules <br> *Delay detection across sources*
-
-#### Inventory proof — how aggregation works
-WMS reports 500 units on-hand. TMS reports 150 units in transit. ERP reports 200 units on order. Enterprise Mesh aggregates all three into a live ATP (Available-to-Promise) table — without any data movement or ETL pipeline.
 
 ---
 
