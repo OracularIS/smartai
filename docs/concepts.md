@@ -14,21 +14,21 @@ Think of it as a universal interpreter for your enterprise. Instead of logging i
 
 <table style="width:100%; border-collapse:collapse;">
   <tr>
-    <td style="width:50%; padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#000000;">
+    <td style="width:50%; padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#2c3e50;">
       <span style="font-size:1.1rem; font-weight:700;">Multiple systems, zero integration</span><br><br>
       ERP handles orders and financials. WMS owns inventory and logistics. TMS manages transportation and tracking. CRM tracks customers. Each system has part of the answer — but no system has all of it.
     </td>
-    <td style="width:50%; padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#000000;">
+    <td style="width:50%; padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#2c3e50;">
       <span style="font-size:1.1rem; font-weight:700;">Repeated manual queries</span><br><br>
       A single business question — "where is this order?" — requires querying 3 or more systems, then manually reconciling the results. Teams do this dozens of times a day, every day.
     </td>
   </tr>
   <tr>
-    <td style="padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#000000;">
+    <td style="padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#2c3e50;">
       <span style="font-size:1.1rem; font-weight:700;">Business logic trapped in dashboards</span><br><br>
       Custom dashboards and reports exist because the systems can't talk to each other. But dashboards go stale, break silently, and require constant maintenance as systems change.
     </td>
-    <td style="padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#000000;">
+    <td style="padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#2c3e50;">
       <span style="font-size:1.1rem; font-weight:700;">Decision delays from data lag</span><br><br>
       By the time teams pull reports, reconcile data across systems, and distribute answers, the underlying situation may already have changed. Slow answers mean slower decisions.
     </td>
