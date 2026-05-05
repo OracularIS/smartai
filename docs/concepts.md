@@ -14,27 +14,26 @@ Think of it as a universal interpreter for your enterprise. Instead of logging i
 
 <table style="width:100%; border-collapse:collapse;">
   <tr>
-    <td style="width:50%; padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top;">
+    <td style="width:50%; padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#000000;">
       <strong>Multiple systems, zero integration</strong><br><br>
       ERP handles orders and financials. WMS owns inventory and logistics. TMS manages transportation and tracking. CRM tracks customers. Each system has part of the answer — but no system has all of it.
     </td>
-    <td style="width:50%; padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top;">
+    <td style="width:50%; padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#000000;">
       <strong>Repeated manual queries</strong><br><br>
       A single business question — "where is this order?" — requires querying 3 or more systems, then manually reconciling the results. Teams do this dozens of times a day, every day.
     </td>
   </tr>
   <tr>
-    <td style="padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top;">
+    <td style="padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#000000;">
       <strong>Business logic trapped in dashboards</strong><br><br>
       Custom dashboards and reports exist because the systems can't talk to each other. But dashboards go stale, break silently, and require constant maintenance as systems change.
     </td>
-    <td style="padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top;">
+    <td style="padding:1.5rem; text-align:center; border:1px solid #ccc; vertical-align:top; background-color:#ffffff; color:#000000;">
       <strong>Decision delays from data lag</strong><br><br>
       By the time teams pull reports, reconcile data across systems, and distribute answers, the underlying situation may already have changed. Slow answers mean slower decisions.
     </td>
   </tr>
 </table>
-
 
 #### The Smart AI Solution
 # One Question. Every system. Real time
