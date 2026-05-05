@@ -12,17 +12,11 @@ Think of it as a universal interpreter for your enterprise. Instead of logging i
 
 # The fragmentation problem
 
-#### Multiple systems, zero integration
-> ERP handles orders and financials. WMS owns inventory and logistics. TMS manages transportation and tracking. CRM tracks customers. Each system has part of the answer — but no system has all of it.
-
-#### Repeated manual queries
-> A single business question — "where is this order?" — requires querying 3 or more systems, then manually reconciling the results. Teams do this dozens of times a day, every day.
-
-#### Business logic trapped in dashboards
-> Custom dashboards and reports exist because the systems can't talk to each other. But dashboards go stale, break silently, and require constant maintenance as systems change.
-
-#### Decision delays from data lag
-> By the time teams pull reports, reconcile data across systems, and distribute answers, the underlying situation may already have changed. Slow answers mean slower decisions.
+| **Multiple systems, zero integration** | **Repeated manual queries** |
+|---|---|
+| ERP handles orders and financials. WMS owns inventory and logistics. TMS manages transportation and tracking. CRM tracks customers. Each system has part of the answer — but no system has all of it. | A single business question — "where is this order?" — requires querying 3 or more systems, then manually reconciling the results. Teams do this dozens of times a day, every day. |
+| **Business logic trapped in dashboards** | **Decision delays from data lag** |
+| Custom dashboards and reports exist because the systems can't talk to each other. But dashboards go stale, break silently, and require constant maintenance as systems change. | By the time teams pull reports, reconcile data across systems, and distribute answers, the underlying situation may already have changed. Slow answers mean slower decisions. |
 
 
 #### The Smart AI Solution
