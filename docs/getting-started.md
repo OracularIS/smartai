@@ -332,7 +332,7 @@ Smart Chat is the secure conversational interface of Smart AI, letting you inter
 > _A live demo of querying a connected enterprise system in natural language and receiving instant results and visualisations._
 
 <video controls width="800">
-  <source src=".attachments/getting_started_.mp4" type="video/mp4">
+  <source src=".attachments/getting_started__.mp4" type="video/mp4">
 </video>
 
 ### Example
