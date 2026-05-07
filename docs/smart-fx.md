@@ -1,6 +1,6 @@
 # Smart FX (SmartFX Studio)
 
-Smart FX is the studio where your team **builds and maintains fexecutes approved logic from Functions unctions** (tools) that power Smart AI.
+Smart FX is the studio where your team **builds and maintains functions** (tools) that power Smart AI.
 In simple terms: Smart FX is the workbench used to define what the AI is allowed to do, keep those capabilities consistent, and validate that tool calling stays reliable as things evolve.
 
 ## What is a function in SmartFx?

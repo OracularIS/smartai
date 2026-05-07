@@ -9,7 +9,7 @@ Smart AI is an intelligent platform that allows you to connect to enterprise sys
 Before getting started, make sure you have:
 
 1. A valid account (SSO / Email login)
-2. A Git repository URL for your Functions (your tool catalog)
+2. A Git repository URL for your functions (your tool catalog)
 3. A Personal Access Token (PAT) with repo access (if required by your Git provider)
 
 ---
