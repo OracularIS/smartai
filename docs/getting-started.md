@@ -35,7 +35,7 @@ Your functions live in a Git repository — that's what you'll set up next. Once
 
 ---
 
-## Prepare your Functions repository
+## Prepare your functions repository
 
 Before adding a project in Smart FX, set up a Git repository to store your functions.
 
