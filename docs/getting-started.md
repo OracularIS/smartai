@@ -324,6 +324,8 @@ This mode is useful during development when validating that functions behave cor
 
 Use **Live Test** mode to interact with the LLM in real time using your connected functions.
 
+> It creates a temporary MCP server and exposes your functions/data to the LLM for testing within an isolated session.
+
 This simulates a real production conversation where the model automatically selects and invokes the appropriate function based on natural language queries.
 
 For example, you can ask:

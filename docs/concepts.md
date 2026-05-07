@@ -178,8 +178,7 @@ Smart AI is designed to serve every stakeholder in the enterprise — from busin
 |---|---|---|
 | **Admins** | Build and manage Smart Functions, Manage users, configure enterprise connections, control integrations, and govern how Smart AI securely interacts with enterprise systems. | Smart AI
 | **Power Users** | Define new functions in Smart FX Studio. Write function metadata, implement queries, tag domains, and validate accuracy using Eval. | Smart FX Studio |
-| **Users** | Just ask your question in Smart Chat and instantly get answers, charts, and automated reports — no technical knowledge needed. | Smart Chat |
-
+| **Users** | Designed for business users to interact directly with AI and execute their business operations through simple conversations. | Smart Chat |
 
 ---
 
