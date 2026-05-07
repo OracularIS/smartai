@@ -9,7 +9,7 @@ Smart AI is an intelligent platform that allows you to connect to enterprise sys
 Before getting started, make sure you have:
 
 1. A valid account (SSO / Email login)
-2. A Git repository URL for your Smart Functions (your tool catalog)
+2. A Git repository URL for your functions (your tool catalog)
 3. A Personal Access Token (PAT) with repo access (if required by your Git provider)
 
 ---
@@ -27,17 +27,17 @@ By the end, you will have:
 
 ---
 
-## What is a Smart Function?
+## What is a function in SmartFx?
 
-A Smart Function is a named, documented capability that tells Smart AI what your enterprise system can do. Think of it as a card that says: "Here's what this action is called, what it needs as input, and what it returns."
+A function is a named, documented capability that tells Smart AI what your enterprise system can do. Think of it as a card that says: "Here's what this action is called, what it needs as input, and what it returns."
 
 Your functions live in a Git repository — that's what you'll set up next. Once connected, Smart AI can discover and call them through natural language in Secure Chat.
 
 ---
 
-## Prepare your Smart Functions repository
+## Prepare your functions repository
 
-Before adding a project in Smart FX, set up a Git repository to store your Smart Functions.
+Before adding a project in Smart FX, set up a Git repository to store your functions.
 
 ## Quick Setup
 
@@ -176,9 +176,9 @@ Credentials are stored securely in the platform and never committed to your Git 
 
 ## Configure Your Project Workspace
 
-### 1. Smart Function Editor
+### 1. Code Editor
  
-A Smart Function is an enterprise intent — a named, documented capability that tells the AI what your system can do and how to do it. Each function includes a plain-English description, defined inputs, and defined outputs.
+A function is an enterprise intent — a named, documented capability that tells the AI what your system can do and how to do it. Each function includes a plain-English description, defined inputs, and defined outputs.
 
 Smart FX provides an integrated environment to define, document, and publish these intents, regardless of implementation. Under the hood, functions are built using Python, SQL, or MOCA.
 

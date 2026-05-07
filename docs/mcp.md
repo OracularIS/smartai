@@ -2,7 +2,7 @@
 
 MCP (Model Context Protocol) is a standard way for AI clients (like Claude Desktop) to discover and call **tools**.
 
-In Smart AI, an MCP server exposes a curated set of **approved Smart Functions** from a specific **project + system** so external clients can:
+In Smart AI, an MCP server exposes a curated set of **approved functions** from a specific **project + system** so external clients can:
 
 - List the tools you published (names, descriptions, input schema)
 - Call those tools with validated parameters
@@ -20,7 +20,7 @@ MCP acts as a standard protocol layer between external AI clients and Smart AI's
 
 1.  **Discovery**: AI clients automatically discover available tools with complete schema metadata
 2.  **Validation**: All tool calls pass through Smart AI's existing governance, permissions, and validation layers
-3.  **Execution**: MCP routes requests to the appropriate Smart Function with configured connections
+3.  **Execution**: MCP routes requests to the appropriate function with configured connections
 4.  **Response**: Structured results are returned in a standardized format compatible with all MCP clients
 
 All existing enterprise controls, audit logging, and security policies apply identically to MCP calls.
@@ -33,7 +33,7 @@ Use MCP when you want Smart AI’s governed enterprise tools to be available **o
 
 - **Run enterprise lookups from a desktop AI client** (e.g., check order status without switching apps)
 - **Standardize access**: one governed tool catalog for multiple clients (desktop, IDE, agents)
-- **Enable automation**: compose Smart Functions inside larger agent workflows
+- **Enable automation**: compose functions inside larger agent workflows
 
 If your goal is only “chat with enterprise systems”, Smart Chat is usually the fastest path. MCP is best when you need **tool access in another client**.
 
@@ -43,8 +43,8 @@ If your goal is only “chat with enterprise systems”, Smart Chat is usually t
 
 Before generating an MCP server, make sure these are already done:
 
-1. **Project is connected to a Smart Functions repository**
-   - This is where your Smart Functions (code + metadata) live and are versioned.
+1. **Project is connected to a functions repository**
+   - This is where your functions (code + metadata) live and are versioned.
 2. **Functions are in a usable state**
    - Good descriptions, correct inputs/outputs, and tested in Dev Console.
    - (Recommended) An Eval run looks good for the functions you plan to expose.
@@ -66,7 +66,7 @@ After generation, open the MCP server link to view details:
 
 - **Server URL**
 - **Connections** bound to this server/system
-- The **tool list** (your Smart Functions) that clients will discover and call
+- The **tool list** (your functions) that clients will discover and call
 
 ---
 

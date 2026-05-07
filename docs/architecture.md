@@ -12,7 +12,7 @@ This page provides a high-level overview of how Smart AI transforms a user-defin
 
 ### [Smart FX](./smart-fx.md)
 
-**Smart FX is the Smart Functions workbench where your team builds and maintains the approved capabilities that Smart AI can execute.**
+**Smart FX is a workbench where your team builds and maintains the approved functions that Smart AI can execute.**
 
 In simple terms, Smart FX defines **what Smart AI is allowed to do** and ensures those capabilities are **clear, consistent, reviewable, and safely deployed through your existing release process**.
 
@@ -32,7 +32,7 @@ It:
 
 - orchestrates requests across enterprise systems (WMS, ERP, CRM)  
 - validates inputs and enforces permissions (RBAC) before execution  
-- executes approved logic from Smart Functions  
+- executes approved logic from functions  
 - aggregates and transforms results into a single, trusted response  
 
 ---
@@ -45,7 +45,7 @@ It allows users to interact with enterprise systems using natural language while
 
 Smart Chat:
 
-- translates natural language into approved Smart Functions (secure API calls)  
+- translates natural language into approved functions (secure API calls)  
 - retrieves live operational data from connected enterprise systems  
 - supports follow-up questions with full conversation context  
 - formats results as tables, summaries, charts, or dashboards  
@@ -57,7 +57,7 @@ Smart Chat is designed for **execution, not just document search**, enabling rea
 ## End-to-end request flow
 
 1. **User request:** A user asks a question in Smart Chat (e.g., “Show me details of order 123”)
-2. **Intent extraction:** Smart AI interprets the request into a Smart Function + parameters
+2. **Intent extraction:** Smart AI interprets the request into a function + parameters
 3. **Validation:** Enterprise Mesh validates function existence, inputs, and user permissions
 4. **Execution:** Approved logic runs against enterprise systems (MOCA, REST, SQL, etc.)
 5. **Aggregation:** Results from multiple systems are merged if needed
@@ -67,7 +67,7 @@ Smart Chat is designed for **execution, not just document search**, enabling rea
 
 ## Security model (high level)
 
-- **Approved functions only:** Only published Smart Functions can be executed
+- **Approved functions only:** Only published functions can be executed
 - **Role-based access (RBAC):** Users only access what their role allows
 - **Data protection:** Execution stays inside your controlled environment
 - **Minimal LLM exposure:** Only intent-related metadata is used for interpretation

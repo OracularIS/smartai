@@ -65,7 +65,7 @@ Smart AI is built on three tightly integrated components. Each one has a distinc
 
 ## Pillar 1: Smart FX
 ### Define capabilities
-Smart FX is the workbench where builders and integrators define what Smart AI can do. Every capability in Smart Chat exists because someone built a Function (also called an Intent) in Smart FX. This is where business logic lives — clearly defined, versioned, and reusable.
+Smart FX is the workbench where builders and integrators define what Smart AI can do. Every capability in Smart Chat exists because someone built a function (also called an Intent) in Smart FX. This is where business logic lives — clearly defined, versioned, and reusable.
 
 <img src=".attachments/smartfx-flow.png" style="border-radius: 20px; width: 100%;">
 
@@ -176,7 +176,7 @@ Smart AI is designed to serve every stakeholder in the enterprise — from busin
 
 | Role | Responsibility | Primary interface |
 |---|---|---|
-| **Admins** | Build and manage Smart Functions, Manage users, configure enterprise connections, control integrations, and govern how Smart AI securely interacts with enterprise systems. | Smart AI
+| **Admins** | Build and manage functions, Manage users, configure enterprise connections, control integrations, and govern how Smart AI securely interacts with enterprise systems. | Smart AI
 | **Power Users** | Define new functions in Smart FX Studio. Write function metadata, implement queries, tag domains, and validate accuracy using Eval. | Smart FX Studio |
 | **Users** | Designed for business users to interact directly with AI and execute their business operations through simple conversations. | Smart Chat |
 
