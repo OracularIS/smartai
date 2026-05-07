@@ -3,7 +3,7 @@
 
 ## Smart FX Studio
 
-Create, maintain and validate enterprise smart functions with standardized schemas, secure system connections, automated reliability testing, and full debugging capabilities to power consistent AI operations across your organization.
+Create, maintain and validate enterprise functions with standardized schemas, secure system connections, automated reliability testing, and full debugging capabilities to power consistent AI operations across your organization.
 
 ```text
 - Create a new function to retrieve open orders for Warehouse B

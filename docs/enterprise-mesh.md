@@ -41,7 +41,7 @@ The diagram below shows how queries are executed in parallel and combined into a
 - **Routes requests** to the correct system (WMS, ERP, CRM) using native protocols  
 - **Validates inputs** (required parameters, formats, allowed values) before execution  
 - **Enforces permissions (RBAC)** so users can only execute approved actions  
-- **Executes approved logic** from the Smart Functions Git repository  
+- **Executes approved logic** from the Functions Git repository  
 - **Standardizes access** so different systems behave consistently in Smart Chat  
 
 ---

@@ -75,9 +75,9 @@ No arbitrary or unsafe actions can be executed.
 
 ---
 
-## What is a Smart Function?
+## What is a Function?
 
-A Smart Function is an **approved capability** that Smart AI can execute, such as:
+A Function is an **approved capability** that Smart AI can execute, such as:
 - Fetching data (orders, inventory, shipments)  
 - Running workflows  
 - Calling APIs or system commands  
@@ -90,7 +90,7 @@ Each function includes:
 
 ## What is Smart FX?
 
-Smart FX is the **builder studio** where teams create and manage Smart Functions.
+Smart FX is the **builder studio** where teams create and manage Functions.
 
 It provides:
 - Function definition (metadata + implementation)  
@@ -104,7 +104,7 @@ It provides:
 
 1. User asks a question in Smart Chat  
 2. LLM extracts **intent + parameters**  
-3. A matching **Smart Function** is selected  
+3. A matching **Function** is selected  
 4. Enterprise Mesh validates permissions and inputs  
 5. The function executes on target systems  
 6. Results are returned in a user-friendly format  

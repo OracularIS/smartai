@@ -1,11 +1,11 @@
 # Smart FX (SmartFX Studio)
 
-Smart FX is the studio where your team **builds and maintains Smart Functions** (tools) that power Smart AI.
+Smart FX is the studio where your team **builds and maintains Functions** (tools) that power Smart AI.
 In simple terms: Smart FX is the workbench used to define what the AI is allowed to do, keep those capabilities consistent, and validate that tool calling stays reliable as things evolve.
 
-## What is a Smart Function?
+## What is a Function?
 
-A Smart Function is an approved capability that Smart AI can use at runtime, such as:
+A Function is an approved capability that Smart AI can use at runtime, such as:
 
 - Looking up operational data (orders, inventory, shipments, devices, etc.)
 - Running an approved action or workflow (when allowed)
@@ -58,14 +58,14 @@ Smart FX focuses on a few core areas:
 
 ## Common use cases
 
-- **Developers/builders**: create or update Smart Functions (metadata + implementation).
+- **Developers/builders**: create or update Functions (metadata + implementation).
 - **Platform owners**: keep tags/domains/collections consistent across teams.
 - **Integrations engineers**: manage connections used by functions.
 - **QA/test teams**: run Eval to validate tool selection after changes.
 
 ## Typical workflow
 
-1. Open a project (connect Smart FX to your Smart Functions repository).
+1. Open a project (connect Smart FX to your Functions repository).
 2. Select a system and choose a function to create/update.
 3. Update the function metadata (description, arguments, response) and implementation as needed.
 4. Update tags/domains/collections if your change introduces new fields or categories.
