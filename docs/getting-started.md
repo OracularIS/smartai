@@ -27,9 +27,9 @@ By the end, you will have:
 
 ---
 
-## What is a Function?
+## What is a function in SmartFx?
 
-A Function is a named, documented capability that tells Smart AI what your enterprise system can do. Think of it as a card that says: "Here's what this action is called, what it needs as input, and what it returns."
+A function is a named, documented capability that tells Smart AI what your enterprise system can do. Think of it as a card that says: "Here's what this action is called, what it needs as input, and what it returns."
 
 Your functions live in a Git repository — that's what you'll set up next. Once connected, Smart AI can discover and call them through natural language in Secure Chat.
 
@@ -37,7 +37,7 @@ Your functions live in a Git repository — that's what you'll set up next. Once
 
 ## Prepare your Functions repository
 
-Before adding a project in Smart FX, set up a Git repository to store your Functions.
+Before adding a project in Smart FX, set up a Git repository to store your functions.
 
 ## Quick Setup
 

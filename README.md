@@ -8,7 +8,7 @@ Replace custom screens, static reports and one-off integrations with a single un
 
 ## Smart FX (SmartFX Studio)
 
-Smart FX is the admin workbench for building, maintaining and validating approved Functions that define what the AI is allowed to execute.
+Smart FX is the admin workbench for building, maintaining and validating approved functions that define what the AI is allowed to execute.
 
 ## Enterprise Mesh
 

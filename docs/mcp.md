@@ -43,8 +43,8 @@ If your goal is only “chat with enterprise systems”, Smart Chat is usually t
 
 Before generating an MCP server, make sure these are already done:
 
-1. **Project is connected to a Functions repository**
-   - This is where your Functions (code + metadata) live and are versioned.
+1. **Project is connected to a functions repository**
+   - This is where your functions (code + metadata) live and are versioned.
 2. **Functions are in a usable state**
    - Good descriptions, correct inputs/outputs, and tested in Dev Console.
    - (Recommended) An Eval run looks good for the functions you plan to expose.
@@ -66,7 +66,7 @@ After generation, open the MCP server link to view details:
 
 - **Server URL**
 - **Connections** bound to this server/system
-- The **tool list** (your Functions) that clients will discover and call
+- The **tool list** (your functions) that clients will discover and call
 
 ---
 

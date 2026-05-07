@@ -92,7 +92,7 @@ Workflows run securely inside your environment with full audit history and role-
 When you ask something in Smart Chat, Smart AI typically:
 
 1. Understands your request (what you want + key details like order number, warehouse, SKU).
-2. Matches it to an **approved Function** (a pre-defined capability your organization allows).
+2. Matches it to an **approved function** (a pre-defined capability your organization allows).
 3. Validates it (required inputs, allowed values, and permission checks).
 4. Sends the request to the right system(s) and gathers results.
 5. Returns the answer in a user-friendly format (table, summary, chart, dashboard).
