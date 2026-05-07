@@ -178,7 +178,7 @@ Credentials are stored securely in the platform and never committed to your Git 
 
 ### 1. Code Editor
  
-A Function is an enterprise intent — a named, documented capability that tells the AI what your system can do and how to do it. Each function includes a plain-English description, defined inputs, and defined outputs.
+A function is an enterprise intent — a named, documented capability that tells the AI what your system can do and how to do it. Each function includes a plain-English description, defined inputs, and defined outputs.
 
 Smart FX provides an integrated environment to define, document, and publish these intents, regardless of implementation. Under the hood, functions are built using Python, SQL, or MOCA.
 
