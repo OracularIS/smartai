@@ -12,7 +12,7 @@ This page provides a high-level overview of how Smart AI transforms a user-defin
 
 ### [Smart FX](./smart-fx.md)
 
-**Smart FX is a workbench where your team builds and maintains the approved capabilities that Smart AI can execute.**
+**Smart FX is a workbench where your team builds and maintains the approved functions that Smart AI can execute.**
 
 In simple terms, Smart FX defines **what Smart AI is allowed to do** and ensures those capabilities are **clear, consistent, reviewable, and safely deployed through your existing release process**.
 
