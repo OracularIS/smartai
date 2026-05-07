@@ -296,6 +296,56 @@ Eval validates that your functions will be correctly identified and called by AI
 
 ---
 
+### 6. Try It & Live Test
+
+Try It and Live Test help validate your functions and connector behavior before production deployment. These modes allow you to test individual functions directly and verify real-time AI orchestration using natural language interactions.
+
+> *Watch a full testing workflow: invoking functions in Try It mode, interacting with the LLM in Live Test mode, and validating real-time connector responses.*
+
+<video controls width="800">
+  <source src=".attachments/try_it_and_live_test.mp4" type="video/mp4">
+</video>
+
+#### Try It Mode
+
+Use **Try It** mode to connect directly to the connector and test the functions you have already created before deployment.
+
+From here, you can:
+
+* Invoke any specific function individually
+* Validate request and response behavior
+* Inspect returned results immediately
+* Verify authentication and connector integration
+* Test function inputs and output structure
+
+This mode is useful during development when validating that functions behave correctly before exposing them to the LLM.
+
+#### Live Test Mode
+
+Use **Live Test** mode to interact with the LLM in real time using your connected functions.
+
+This simulates a real production conversation where the model automatically selects and invokes the appropriate function based on natural language queries.
+
+For example, you can ask:
+
+* "Show me work items"
+* "Get open tickets assigned to me"
+* "Fetch shipment details for order 1024"
+
+The system automatically identifies the correct function, executes it against the live connector, and returns real-time results.
+
+This helps validate:
+
+* End-to-end orchestration
+* Function selection accuracy
+* Real-time connector behavior
+* Natural language interaction flow
+* Live response handling
+
+Both testing modes run directly against connected systems, allowing you to safely validate function behavior and integrations before committing changes.
+
+---
+
 ## Configure MCP Server for Your Functions (optional)
 
 MCP (Model Context Protocol) allows your business functions to be used across external systems like Claude, OpenAI, and Copilot.

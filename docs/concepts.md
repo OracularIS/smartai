@@ -176,9 +176,10 @@ Smart AI is designed to serve every stakeholder in the enterprise — from busin
 
 | Role | Responsibility | Primary interface |
 |---|---|---|
-| **Business users** | Ask questions in plain English via Smart Chat. Get live answers, charts, and automated reports. No technical knowledge required. | Smart Chat |
-| **Power Users** | Define new capabilities in Smart FX Studio. Write function metadata, implement queries, tag domains, and validate accuracy using Eval. | Smart FX Studio |
-| **Admins** | Configure secure Connections to enterprise systems. Implement SQL, MOCA, and REST query logic inside functions. Bridge existing systems to the Smart AI platform. | Smart AI
+| **Admins** | Build and manage Smart Functions, Manage users, configure enterprise connections, control integrations, and govern how Smart AI securely interacts with enterprise systems. | Smart AI
+| **Power Users** | Define new functions in Smart FX Studio. Write function metadata, implement queries, tag domains, and validate accuracy using Eval. | Smart FX Studio |
+| **Users** | Just ask your question in Smart Chat and instantly get answers, charts, and automated reports — no technical knowledge needed. | Smart Chat |
+
 
 ---
 
