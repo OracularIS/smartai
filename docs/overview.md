@@ -2,7 +2,7 @@
 
 ## What is SmartForge?
 
-SmartForge is an enterprise AI solutions suite that enables teams to interact with and operate across enterprise systems using natural language.
+SmartForge is an enterprise intelligence layer that sits on top of your existing systems. You ask a question in natural language. SmartForge understands what you're looking for, fetches live data from all your enterprise systems in parallel, merges the results intelligently, and returns a single trusted answer — all in seconds.
 
 It combines multiple components that work together to deliver **real-time, actionable operations**. Users can ask questions or request actions, and SmartForge transforms them into **secure, validated system operations** across platforms like WMS, ERP, and CRM—without needing to know MOCA, REST APIs, or system-specific interfaces.  
 
