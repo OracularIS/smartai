@@ -1,6 +1,4 @@
-# SmartForge Nexes
-
-![SmartForge Nexes icon](assets/smartforge/icons/smartforge-nexes-120.svg)
+# <img class="sf-doc-icon" src="assets/smartforge/icons/smartforge-nexes-naked.svg" alt=""> SmartForge Nexes
 
 **SmartForge Nexes is the secure execution layer of SmartForge.**  
 It connects SmartForge Cortex requests to approved enterprise systems and returns a single, trusted answer—safely, consistently, and in real time.

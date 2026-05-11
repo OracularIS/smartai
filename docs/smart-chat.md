@@ -1,6 +1,4 @@
-# SmartForge Cortex
-
-![SmartForge Cortex icon](assets/smartforge/icons/smartforge-cortex-120.svg)
+# <img class="sf-doc-icon" src="assets/smartforge/icons/smartforge-cortex-naked.svg" alt=""> SmartForge Cortex
 
 SmartForge Cortex is the secure conversational interface of SmartForge that helps you interact with connected enterprise systems.
 

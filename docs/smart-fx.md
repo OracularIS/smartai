@@ -1,6 +1,4 @@
-# SmartForge Studio
-
-![SmartForge Studio icon](assets/smartforge/icons/smartforge-studio-120.svg)
+# <img class="sf-doc-icon" src="assets/smartforge/icons/smartforge-studio-naked.svg" alt=""> SmartForge Studio
 
 SmartForge Studio is the studio where your team **builds and maintains functions** (tools) that power SmartForge.
 In simple terms: SmartForge Studio is the workbench used to define what the AI is allowed to do, keep those capabilities consistent, and validate that tool calling stays reliable as things evolve.
