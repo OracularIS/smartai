@@ -1,6 +1,7 @@
-![logo](.attachments/SmartAI-081.png)
+![SmartForge](assets/smartforge/icons/smartforge-parent-120.svg)
 
-- Smart AI brings your enterprise systems together in one intelligent platform; connect your data, manage business logic, and execute operations with security, visibility, and control.
+- SmartForge brings your enterprise systems together in one intelligent platform; connect your data, manage business logic, and execute operations with security, visibility, and control.
 
 [Documentation](./overview.md)
+
 

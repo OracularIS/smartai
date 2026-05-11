@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" role="img" aria-label="SmartForge Cortex">
+  <rect x="0" y="0" width="28" height="28" rx="6" fill="#e2e1dc" stroke="#d4d3ce" stroke-width="1"/>
+  <path d="M14 4 C8 4 4 8 4 13 C4 18 8 21 13 22 L12 26 L17 22 C22 21 24 18 24 13 C24 8 20 4 14 4 Z" fill="none" stroke="#E07B2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="11" cy="13" r="1.4" fill="#E07B2A"/>
+  <circle cx="14" cy="13" r="1.4" fill="#E07B2A"/>
+  <circle cx="17" cy="13" r="1.4" fill="#E07B2A"/>
+</svg>
+

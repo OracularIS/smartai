@@ -2,13 +2,13 @@
 
 MCP (Model Context Protocol) is a standard way for AI clients (like Claude Desktop) to discover and call **tools**.
 
-In Smart AI, an MCP server exposes a curated set of **approved functions** from a specific **project + system** so external clients can:
+In SmartForge, an MCP server exposes a curated set of **approved functions** from a specific **project + system** so external clients can:
 
 - List the tools you published (names, descriptions, input schema)
 - Call those tools with validated parameters
-- Receive structured results back (tables/JSON), just like Smart Chat
+- Receive structured results back (tables/JSON), just like SmartForge Cortex
 
-This page stays intentionally short on “what is MCP” and focuses on **what it does in Smart AI** and **how to use it end-to-end**.
+This page stays intentionally short on “what is MCP” and focuses on **what it does in SmartForge** and **how to use it end-to-end**.
 
 ---
 
@@ -16,10 +16,10 @@ This page stays intentionally short on “what is MCP” and focuses on **what i
 
 <img src=".attachments/mcp_architecture.png" width="900" height="500"/>
 
-MCP acts as a standard protocol layer between external AI clients and Smart AI's governed enterprise functions:
+MCP acts as a standard protocol layer between external AI clients and SmartForge's governed enterprise functions:
 
 1.  **Discovery**: AI clients automatically discover available tools with complete schema metadata
-2.  **Validation**: All tool calls pass through Smart AI's existing governance, permissions, and validation layers
+2.  **Validation**: All tool calls pass through SmartForge's existing governance, permissions, and validation layers
 3.  **Execution**: MCP routes requests to the appropriate function with configured connections
 4.  **Response**: Structured results are returned in a standardized format compatible with all MCP clients
 
@@ -27,15 +27,15 @@ All existing enterprise controls, audit logging, and security policies apply ide
 
 ---
 
-## When you should use MCP with Smart AI
+## When you should use MCP with SmartForge
 
-Use MCP when you want Smart AI’s governed enterprise tools to be available **outside** the Smart AI UI:
+Use MCP when you want SmartForge’s governed enterprise tools to be available **outside** the SmartForge UI:
 
 - **Run enterprise lookups from a desktop AI client** (e.g., check order status without switching apps)
 - **Standardize access**: one governed tool catalog for multiple clients (desktop, IDE, agents)
 - **Enable automation**: compose functions inside larger agent workflows
 
-If your goal is only “chat with enterprise systems”, Smart Chat is usually the fastest path. MCP is best when you need **tool access in another client**.
+If your goal is only “chat with enterprise systems”, SmartForge Cortex is usually the fastest path. MCP is best when you need **tool access in another client**.
 
 ---
 
@@ -54,7 +54,7 @@ Before generating an MCP server, make sure these are already done:
 
 ---
 
-## Create an MCP server in Smart FX
+## Create an MCP server in SmartForge Studio
 
 1. Go to **MCP Servers**
 2. Click **Generate New MCP Server Link**
@@ -106,4 +106,5 @@ The **Export** section is the safest source of truth for client setup. It typica
 </video>
 
 ---
+
 

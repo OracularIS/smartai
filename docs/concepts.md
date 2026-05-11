@@ -1,14 +1,14 @@
 #### OVERVIEW
 
-# What is Smart AI?
+# What is SmartForge?
 
-Smart AI is an enterprise intelligence layer that sits on top of your existing systems. You ask a question in natural language. Smart AI understands what you're looking for, fetches live data from all your enterprise systems in parallel, merges the results intelligently, and returns a single trusted answer — all in seconds.
+SmartForge is an enterprise intelligence layer that sits on top of your existing systems. You ask a question in natural language. SmartForge understands what you're looking for, fetches live data from all your enterprise systems in parallel, merges the results intelligently, and returns a single trusted answer — all in seconds.
 
 Think of it as a universal interpreter for your enterprise. Instead of logging into four different systems to answer one business question, you ask once — and get a complete, accurate answer built from every relevant source simultaneously.
 
 ---
 
-#### Why Smart AI Exists
+#### Why SmartForge Exists
 
 # The fragmentation problem
 
@@ -35,24 +35,24 @@ Think of it as a universal interpreter for your enterprise. Instead of logging i
   </tr>
 </table>
 
-#### The Smart AI Solution
+#### The SmartForge Solution
 # One Question. Every system. Real time
 
-Smart AI solves fragmentation at the source. Instead of forcing humans to manually query and reconcile data across systems, Smart AI sends questions directly to each system simultaneously — and combines the results into a single, trustworthy answer.
+SmartForge solves fragmentation at the source. Instead of forcing humans to manually query and reconcile data across systems, SmartForge sends questions directly to each system simultaneously — and combines the results into a single, trustworthy answer.
 
-- No data is ever copied between systems. Smart AI queries your systems directly — your data stays where it lives.
+- No data is ever copied between systems. SmartForge queries your systems directly — your data stays where it lives.
 - All queries run in parallel. A question that previously took a person 10 minutes across 3 systems is answered in seconds.
-- Business logic is encoded once in Smart AI, not scattered across dozens of custom dashboards.
+- Business logic is encoded once in SmartForge, not scattered across dozens of custom dashboards.
 - Every answer is role-aware. Users see only the data they're permitted to see — no more, no less.
 - Every query is audited. There is a complete log of what was asked, what systems were queried, and what was returned.
 
 ## Real-world example: Order status visibility
-This is the most common cross-system query in any fulfilment operation. Here's how the same question is answered before and after Smart AI.
+This is the most common cross-system query in any fulfilment operation. Here's how the same question is answered before and after SmartForge.
 
-| # | Without Smart AI | With Smart AI |
+| # | Without SmartForge | With SmartForge |
 |---|---|---|
 | 1 | Log into ERP → search order 12345 → check order status | User types: <br>*"Where is order 12345?"* |
-| 2 | Log into WMS → find the order → check fulfilment status | Smart AI queries ERP, WMS, and TMS simultaneously |
+| 2 | Log into WMS → find the order → check fulfilment status | SmartForge queries ERP, WMS, and TMS simultaneously |
 | 3 | Log into TMS → locate shipment → find tracking number | Results are merged and validated automatically |
 | 4 | Manually reconcile all three results into one answer | **Response:** <br>"Packed and ready for pickup at Warehouse 5. Scheduled delivery: 2:00 PM tomorrow." |
 | | **Outcome:** <br> Avg. 8–12 minutes per query <br> 3 systems involved <br> Manual reconciliation required | **Outcome:** <br> Under 3 seconds <br> All 3 systems connected <br> Zero manual steps |
@@ -61,27 +61,27 @@ This is the most common cross-system query in any fulfilment operation. Here's h
 
 # The Three Pillars
 
-Smart AI is built on three tightly integrated components. Each one has a distinct role. Together, they form a complete system — from how you ask questions, to how capabilities are defined, to how queries are safely executed.
+SmartForge is built on three tightly integrated components. Each one has a distinct role. Together, they form a complete system — from how you ask questions, to how capabilities are defined, to how queries are safely executed.
 
-## Pillar 1: Smart FX
+## Pillar 1: SmartForge Studio
 ### Define capabilities
-Smart FX is the workbench where builders and integrators define what Smart AI can do. Every capability in Smart Chat exists because someone built a function (also called an Intent) in Smart FX. This is where business logic lives — clearly defined, versioned, and reusable.
+SmartForge Studio is the workbench where builders and integrators define what SmartForge can do. Every capability in SmartForge Cortex exists because someone built a function (also called an Intent) in SmartForge Studio. This is where business logic lives — clearly defined, versioned, and reusable.
 
-<img src=".attachments/smartfx-flow.png" style="border-radius: 20px; width: 100%;">
+<img src=".attachments/SmartForge Studio-flow.png" style="border-radius: 20px; width: 100%;">
 
-## Pillar 2: Enterprise Mesh
+## Pillar 2: SmartForge Nexes
 ### Secure execution
-Enterprise Mesh is the execution engine that actually talks to your systems. When Smart Chat identifies which function to run, Enterprise Mesh validates the request, dispatches queries to each connected system in parallel, and applies the reducer logic to merge results into a single coherent response.
+SmartForge Nexes is the execution engine that actually talks to your systems. When SmartForge Cortex identifies which function to run, SmartForge Nexes validates the request, dispatches queries to each connected system in parallel, and applies the reducer logic to merge results into a single coherent response.
 
 What happens during a query:
 
 1. The request is validated against the user's role (RBAC) and the function's allowed inputs
 2. Queries are dispatched simultaneously to all relevant systems — ERP via SQL, WMS via MOCA, TMS via REST API
 3. Results are merged using precedence rules defined in the function's reducer
-4. A single unified result is returned to Smart Chat — and the user
+4. A single unified result is returned to SmartForge Cortex — and the user
 5. All activity is logged with masked sensitive data for audit compliance
 
-Core capabilities of Enterprise Mesh:
+Core capabilities of SmartForge Nexes:
 
 - **Federation** <br> Run the same logical query across multiple systems simultaneously <br> *ERP + WMS + TMS in one call*
 - **Aggregation** <br> Combine live data from multiple sources into a single result set <br> *Available-to-promise inventory*
@@ -89,13 +89,13 @@ Core capabilities of Enterprise Mesh:
 - **Reducer logic** <br> Intelligent merging with source-of-truth precedence rules <br> *Delay detection across sources*
 
 #### Inventory proof — how aggregation works
-WMS reports 500 units on-hand. TMS reports 150 units in transit. ERP reports 200 units on order. Enterprise Mesh aggregates all three into a live ATP (Available-to-Promise) table — without any data movement or ETL pipeline.
+WMS reports 500 units on-hand. TMS reports 150 units in transit. ERP reports 200 units on order. SmartForge Nexes aggregates all three into a live ATP (Available-to-Promise) table — without any data movement or ETL pipeline.
 
-## Pillar 3: Smart Chat
+## Pillar 3: SmartForge Cortex
 ### How you interact
-Smart Chat is the conversational interface where end users and business teams interact with their data. You ask questions in plain English — it handles the rest. You can ask follow-up questions, request visualisations, and set up automated workflows, all from the same interface.
+SmartForge Cortex is the conversational interface where end users and business teams interact with their data. You ask questions in plain English — it handles the rest. You can ask follow-up questions, request visualisations, and set up automated workflows, all from the same interface.
 
-What you can do in Smart Chat:
+What you can do in SmartForge Cortex:
 
 - Ask live data questions:
   `"How many orders were delayed today?"`
@@ -107,9 +107,9 @@ What you can do in Smart Chat:
   `"Send this as a weekly email report"`
 - Trigger actions directly within connected systems
 
-#### Smart Chat vs. traditional document chat
+#### SmartForge Cortex vs. traditional document chat
 
-| Feature | Document Chat | Smart Chat |
+| Feature | Document Chat | SmartForge Cortex |
 |---|---|---|
 | Data source | Static PDF / uploaded files | Live enterprise systems |
 | Data freshness | Stale at upload time | Real-time, always current |
@@ -118,14 +118,14 @@ What you can do in Smart Chat:
 | Role-based access | No | Yes — enforced per query |
 
 ### Security by design
-Smart Chat only executes approved functions. Every query is validated against the user's role and permissions. Data never leaves your network. Every interaction is logged for audit.
+SmartForge Cortex only executes approved functions. Every query is validated against the user's role and permissions. Data never leaves your network. Every interaction is logged for audit.
 
 
 ---
 
 ## Real Example
 ### Seeing it all come together
-Here's what happens under the hood when a logistics manager asks Smart Chat a question. This example shows the full round-trip from question to answer.
+Here's what happens under the hood when a logistics manager asks SmartForge Cortex a question. This example shows the full round-trip from question to answer.
 
 **Live scenario — Order status query**
 
@@ -171,24 +171,25 @@ Found 7 delayed orders in the Southeast today. Top reason: carrier delay (5 orde
 ---
 
 ## Who uses what
-### Smart AI by role
-Smart AI is designed to serve every stakeholder in the enterprise — from business users who just need answers, to IT and security teams who need governance and auditability.
+### SmartForge by role
+SmartForge is designed to serve every stakeholder in the enterprise — from business users who just need answers, to IT and security teams who need governance and auditability.
 
 | Role | Responsibility | Primary interface |
 |---|---|---|
-| **Admins** | Build and manage functions, Manage users, configure enterprise connections, control integrations, and govern how Smart AI securely interacts with enterprise systems. | Smart AI
-| **Power Users** | Define new functions in Smart FX Studio. Write function metadata, implement queries, tag domains, and validate accuracy using Eval. | Smart FX Studio |
-| **Users** | Designed for business users to interact directly with AI and execute their business operations through simple conversations. | Smart Chat |
+| **Admins** | Build and manage functions, Manage users, configure enterprise connections, control integrations, and govern how SmartForge securely interacts with enterprise systems. | SmartForge
+| **Power Users** | Define new functions in SmartForge Studio. Write function metadata, implement queries, tag domains, and validate accuracy using Eval. | SmartForge Studio |
+| **Users** | Designed for business users to interact directly with AI and execute their business operations through simple conversations. | SmartForge Cortex |
 
 ---
 
 # Summary
 
-Smart AI solves the fundamental fragmentation problem of enterprise data: the fact that no single system holds the full answer to any meaningful business question.
+SmartForge solves the fundamental fragmentation problem of enterprise data: the fact that no single system holds the full answer to any meaningful business question.
 
 It does this through three tightly integrated components:
-- **Smart Chat** (how you interact) 
-- **Smart FX** (how capabilities are defined)
-- **Enterprise Mesh** (how queries are securely executed across systems).
+- **SmartForge Cortex** (how you interact) 
+- **SmartForge Studio** (how capabilities are defined)
+- **SmartForge Nexes** (how queries are securely executed across systems).
 
 Together, they deliver real-time, governed, trustworthy answers from all your systems — through a single conversational interface.
+
