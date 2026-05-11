@@ -16,7 +16,72 @@ section.cover .cover-main li {
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-section.cover .cover-main img[alt="logo"] {
-  width: 350px;
-  height: auto;
+section.cover .cover-main .sf-cover-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 14px 0;
+}
+
+section.cover .cover-main .sf-cover-mark {
+  width: 84px;
+  height: 84px;
+}
+
+section.cover .cover-main .sf-cover-title {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.5px;
+}
+
+section.cover .cover-main .sf-cover-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 4px 0 18px 0;
+}
+
+section.cover .cover-main .sf-cover-product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+section.cover .cover-main .sf-cover-product-mark {
+  width: 28px;
+  height: 28px;
+}
+
+section.cover .cover-main .sf-cover-product-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+/* Inline product icons in docs pages (e.g., "# <img ...> SmartForge Cortex") */
+.sf-doc-icon {
+  width: 28px;
+  height: 28px;
+  vertical-align: -6px;
+  margin-right: 10px;
+}
+
+@media (max-width: 560px) {
+  section.cover .cover-main .sf-cover-title {
+    font-size: 36px;
+  }
+  section.cover .cover-main .sf-cover-mark {
+    width: 72px;
+    height: 72px;
+  }
 }
