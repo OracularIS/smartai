@@ -1,6 +1,6 @@
-﻿# Getting Started with Smart AI
+# Getting Started with SmartForge
 
-Smart AI is an intelligent platform that allows you to connect to enterprise systems, add and manage your business logic, and interact with your data using simple, natural language. You can trigger business workflows, retrieve insights, and leverage AI-powered analysis through easy, conversational commands—making complex operations simple and accessible.
+SmartForge is an intelligent platform that allows you to connect to enterprise systems, add and manage your business logic, and interact with your data using simple, natural language. You can trigger business workflows, retrieve insights, and leverage AI-powered analysis through easy, conversational commands—making complex operations simple and accessible.
 
 ---
 
@@ -18,7 +18,7 @@ Before getting started, make sure you have:
 
 By the end, you will have:
 
-- A Smart FX project connected to your Git repository
+- A SmartForge Studio project connected to your Git repository
 - A working connection + credentials for a target system/environment (Dev/QA/Prod)
 - At least one function you can run in Dev Console (with validated inputs/outputs)
 - An Eval run that checks tool-calling readiness
@@ -27,23 +27,23 @@ By the end, you will have:
 
 ---
 
-## What is a function in SmartFx?
+## What is a function in SmartForge Studio?
 
-A function is a named, documented capability that tells Smart AI what your enterprise system can do. Think of it as a card that says: "Here's what this action is called, what it needs as input, and what it returns."
+A function is a named, documented capability that tells SmartForge what your enterprise system can do. Think of it as a card that says: "Here's what this action is called, what it needs as input, and what it returns."
 
-Your functions live in a Git repository — that's what you'll set up next. Once connected, Smart AI can discover and call them through natural language in Secure Chat.
+Your functions live in a Git repository — that's what you'll set up next. Once connected, SmartForge can discover and call them through natural language in Secure Chat.
 
 ---
 
 ## Prepare your functions repository
 
-Before adding a project in Smart FX, set up a Git repository to store your functions.
+Before adding a project in SmartForge Studio, set up a Git repository to store your functions.
 
 ## Quick Setup
 
 1. Create a new Git repository (Azure DevOps, GitHub, etc.)
 2. Create a folder for your system (e.g., `Enterprise`, `Snowflake`, `Bugzilla`)  
-   - This folder name becomes your system name in Smart FX
+   - This folder name becomes your system name in SmartForge Studio
 3. Inside it, add a `base` folder
    
    ```
@@ -65,7 +65,7 @@ Before adding a project in Smart FX, set up a Git repository to store your funct
 
 Go to: https://smartfunctions.smart-is.com/
 
-![Smart FX Login Page](.attachments/01_smartfx_login_page.png)
+![SmartForge Studio Login Page](.attachments/01_SmartForge Studio_login_page.png)
 
 Click **Get Started Free** or **Sign In**.
 
@@ -85,7 +85,7 @@ Login using:
 
 ## Create Your Project/Repository
 
-A project connects Smart FX to your Git repository — this is where your functions live, get versioned, and become available across Smart Chat, Eval, and MCP. Once linked, any changes you push to the repo are automatically reflected in the platform.
+A project connects SmartForge Studio to your Git repository — this is where your functions live, get versioned, and become available across SmartForge Cortex, Eval, and MCP. Once linked, any changes you push to the repo are automatically reflected in the platform.
  
 After logging in, fill in your:
  
@@ -119,7 +119,7 @@ Once you open a project, the **Project Workspace** appears. Work through the sec
 
 ## Connections Setup
 
-A connection tells Smart AI where to send requests and how to authenticate for a given environment (Dev, QA, or Prod). Each function must be linked to one so it knows which system and environment to run against.
+A connection tells SmartForge where to send requests and how to authenticate for a given environment (Dev, QA, or Prod). Each function must be linked to one so it knows which system and environment to run against.
 
 If a connection for your system/environment already exists, you can reuse it. Otherwise:
 
@@ -180,7 +180,7 @@ Credentials are stored securely in the platform and never committed to your Git 
  
 A function is an enterprise intent — a named, documented capability that tells the AI what your system can do and how to do it. Each function includes a plain-English description, defined inputs, and defined outputs.
 
-Smart FX provides an integrated environment to define, document, and publish these intents, regardless of implementation. Under the hood, functions are built using Python, SQL, or MOCA.
+SmartForge Studio provides an integrated environment to define, document, and publish these intents, regardless of implementation. Under the hood, functions are built using Python, SQL, or MOCA.
 
 All functions are stored in your Git repository, giving you version control, pull requests, rollback, and auditability out of the box.
  
@@ -207,7 +207,7 @@ All functions are stored in your Git repository, giving you version control, pul
 
 ### 2. Tags
 
-Tags help Smart AI choose the right function when similar tools exist, preventing misrouting (like returning shipping data for an orders query). They also create a consistent shared vocabulary as your catalog grows.
+Tags help SmartForge choose the right function when similar tools exist, preventing misrouting (like returning shipping data for an orders query). They also create a consistent shared vocabulary as your catalog grows.
 
 In the Tags section, you can:
 
@@ -374,7 +374,7 @@ MCP (Model Context Protocol) allows your business functions to be used across ex
 ---
 ## Secure Chat
 
-Smart Chat is the secure conversational interface of Smart AI, letting you interact with enterprise systems without exposing actual data to the LLM.
+SmartForge Cortex is the secure conversational interface of SmartForge, letting you interact with enterprise systems without exposing actual data to the LLM.
 
 - Execute functions, schedule workflows, and analyze data using natural language
 - Uses code generation in an isolated environment, sharing only metadata for insights (charts, filtering, etc.)
@@ -405,3 +405,4 @@ You will receive:
 This is the primary way to interact with your system using natural language outside the project configuration.
 
 ---
+

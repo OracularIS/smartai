@@ -1,12 +1,12 @@
-# Why Smart AI
+# Why SmartForge
 
-Smart AI provides a single, unified platform to connect, integrate, test, and interact with enterprise systems using natural language instead of complex tools or APIs. It simplifies how users access and operate across systems like ERP, WMS, and CRM, making enterprise faster and easier to manage from one place.
+SmartForge provides a single, unified platform to connect, integrate, test, and interact with enterprise systems using natural language instead of complex tools or APIs. It simplifies how users access and operate across systems like ERP, WMS, and CRM, making enterprise faster and easier to manage from one place.
 
 At the same time, it enables safe and seamless AI interaction by securely translating user intent into approved actions, ensuring everything is governed, auditable, and aligned with permissions. This reduces complexity, improves productivity, and allows organizations to confidently use AI within their operations.
 
 ## Key Capabilities  
 
-- **Smart Chat Interface**  
+- **SmartForge Cortex Interface**  
   Interact with enterprise systems using natural language and instantly perform real business operations with context-aware understanding.
 
 - **Intent-to-Execution Automation**  
@@ -32,8 +32,8 @@ At the same time, it enables safe and seamless AI interaction by securely transl
 
 ## Core Components
 
-The Smart AI ecosystem combines Smart FX, Enterprise Mesh, and Smart Chat into a unified system that enables building functions, executing secure real-time operations, and interacting with enterprise data through natural language.
+The SmartForge ecosystem combines SmartForge Studio, SmartForge Nexes, and SmartForge Cortex into a unified system that enables building functions, executing secure real-time operations, and interacting with enterprise data through natural language.
 
-- [Smart FX](./smart-fx.md)  
-- [Enterprise Mesh](./enterprise-mesh.md)  
-- [Smart Chat](./smart-chat.md)
+- [SmartForge Studio](./smart-fx.md)  
+- [SmartForge Nexes](./enterprise-mesh.md)  
+- [SmartForge Cortex](./smart-chat.md)

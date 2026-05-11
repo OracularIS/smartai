@@ -1,24 +1,26 @@
-# Smart FX (SmartFX Studio)
+# SmartForge Studio
 
-Smart FX is the studio where your team **builds and maintains functions** (tools) that power Smart AI.
-In simple terms: Smart FX is the workbench used to define what the AI is allowed to do, keep those capabilities consistent, and validate that tool calling stays reliable as things evolve.
+![SmartForge Studio icon](assets/smartforge/icons/smartforge-studio-120.svg)
 
-## What is a function in SmartFx?
+SmartForge Studio is the studio where your team **builds and maintains functions** (tools) that power SmartForge.
+In simple terms: SmartForge Studio is the workbench used to define what the AI is allowed to do, keep those capabilities consistent, and validate that tool calling stays reliable as things evolve.
 
-A function is an approved capability that Smart AI can use at runtime, such as:
+## What is a function in SmartForge Studio?
+
+A function is an approved capability that SmartForge can use at runtime, such as:
 
 - Looking up operational data (orders, inventory, shipments, devices, etc.)
 - Running an approved action or workflow (when allowed)
 - Calling an enterprise integration (API, command, or script) behind the scenes
 
-In Smart FX, a function is treated as a combination of:
+In SmartForge Studio, a function is treated as a combination of:
 
 - **Implementation** (the code or script that runs)
 - **Metadata** (the description, typed inputs, and expected output shape that the AI uses to choose and call it)
 
 ## Concept
 
-Smart FX focuses on a few core areas:
+SmartForge Studio focuses on a few core areas:
 
 - **Functions**: define and maintain tool behavior (metadata + implementation).
 - **Metadata**: keep function definitions understandable and callable (arguments/response shape, descriptions).
@@ -27,7 +29,7 @@ Smart FX focuses on a few core areas:
 - **Eval**: measure whether the AI selects the right tools and arguments after changes.
 - **Dev console**: troubleshoot builder and tool-calling behavior.
 
-## Features (Smart FX scope)
+## Features (SmartForge Studio scope)
 
 ### Functions (metadata + implementation)
 
@@ -65,9 +67,10 @@ Smart FX focuses on a few core areas:
 
 ## Typical workflow
 
-1. Open a project (connect Smart FX to your functions repository).
+1. Open a project (connect SmartForge Studio to your functions repository).
 2. Select a system and choose a function to create/update.
 3. Update the function metadata (description, arguments, response) and implementation as needed.
 4. Update tags/domains/collections if your change introduces new fields or categories.
 5. Ensure the function is wired to the correct connection (if it calls external systems).
 6. Run Eval to validate tool selection and argument filling before releasing the change.
+

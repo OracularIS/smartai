@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" role="img" aria-label="SmartForge">
+  <rect x="0" y="0" width="72" height="72" rx="14" fill="#eeede8"/>
+  <circle cx="36" cy="36" r="11" fill="#E07B2A"/>
+  <line x1="36" y1="21" x2="36" y2="15" stroke="#E07B2A" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="46" y1="25" x2="50" y2="20" stroke="#E07B2A" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="26" y1="25" x2="22" y2="20" stroke="#E07B2A" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
+

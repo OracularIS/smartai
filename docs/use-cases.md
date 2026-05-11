@@ -1,7 +1,7 @@
 # Use Cases
 ---
 
-## Smart FX Studio
+## SmartForge Studio
 
 Create, maintain and validate enterprise functions with standardized schemas, secure system connections, automated reliability testing, and full debugging capabilities to power consistent AI operations across your organization.
 
@@ -26,7 +26,7 @@ Enable multiple teams to collaboratively build, manage, and evolve business func
 - Track changes and contributors for each function
 ```
 ---
-## Enterprise Mesh
+## SmartForge Nexes
 
 Secure real-time federated execution layer that unifies your enterprise systems, enabling cross-system queries, governed workflows, and complete audit tracking—all while keeping business data within your network.
 

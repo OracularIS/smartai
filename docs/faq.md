@@ -1,17 +1,17 @@
 # FAQ
 
-## What is Enterprise Mesh?
+## What is SmartForge Nexes?
 
-Enterprise Mesh is the **secure execution layer of Smart AI**.  
-It connects Smart Chat requests to approved enterprise systems, executes them in real time, and returns a **single, trusted answer**.
+SmartForge Nexes is the **secure execution layer of SmartForge**.  
+It connects SmartForge Cortex requests to approved enterprise systems, executes them in real time, and returns a **single, trusted answer**.
 
 ---
 
-## How is Enterprise Mesh different from traditional integrations?
+## How is SmartForge Nexes different from traditional integrations?
 
 Traditional integrations rely on data replication (ETL) and point-to-point connections.
 
-Enterprise Mesh is **query-centric**:
+SmartForge Nexes is **query-centric**:
 - No data copying or syncing  
 - Queries run directly on source systems  
 - Results are merged in real time  
@@ -20,14 +20,14 @@ This reduces latency, complexity, and maintenance.
 
 ---
 
-## Does Enterprise Mesh store or replicate data?
+## Does SmartForge Nexes store or replicate data?
 
 No.  
-Enterprise Mesh does **not store or duplicate data**. It executes queries directly on source systems and returns results in real time.
+SmartForge Nexes does **not store or duplicate data**. It executes queries directly on source systems and returns results in real time.
 
 ---
 
-## How does Enterprise Mesh produce a single answer from multiple systems?
+## How does SmartForge Nexes produce a single answer from multiple systems?
 
 It combines several steps:
 
@@ -40,9 +40,9 @@ The outcome is a single, consistent answer.
 
 ---
 
-## What is Smart Chat?
+## What is SmartForge Cortex?
 
-Smart Chat is the **conversational interface of Smart AI** that lets users interact with enterprise systems using natural language.
+SmartForge Cortex is the **conversational interface of SmartForge** that lets users interact with enterprise systems using natural language.
 
 You can:
 - Retrieve live operational data  
@@ -52,11 +52,11 @@ You can:
 
 ---
 
-## How is Smart Chat different from document-based chat (RAG)?
+## How is SmartForge Cortex different from document-based chat (RAG)?
 
-Smart Chat is **API-centric**, not document-based.
+SmartForge Cortex is **API-centric**, not document-based.
 
-| Feature | Document Chat | Smart Chat |
+| Feature | Document Chat | SmartForge Cortex |
 |--------|--------------|-----------|
 | Data source | Static documents | Live systems |
 | Accuracy | Depends on documents | System-verified data |
@@ -65,7 +65,7 @@ Smart Chat is **API-centric**, not document-based.
 
 ---
 
-## Can Smart Chat trigger actions or workflows?
+## Can SmartForge Cortex trigger actions or workflows?
 
 Yes—but only if:
 - The function is **pre-approved**
@@ -75,9 +75,9 @@ No arbitrary or unsafe actions can be executed.
 
 ---
 
-## What is a function in SmartFx?
+## What is a function in SmartForge Studio?
 
-A function is an **approved capability** that Smart AI can execute, such as:
+A function is an **approved capability** that SmartForge can execute, such as:
 - Fetching data (orders, inventory, shipments)  
 - Running workflows  
 - Calling APIs or system commands  
@@ -88,9 +88,9 @@ Each function includes:
 
 ---
 
-## What is Smart FX?
+## What is SmartForge Studio?
 
-Smart FX is the **builder studio** where teams create and manage functions.
+SmartForge Studio is the **builder studio** where teams create and manage functions.
 
 It provides:
 - function definition (metadata + implementation)  
@@ -100,12 +100,12 @@ It provides:
 
 ---
 
-## How does Smart AI turn a question into a system action?
+## How does SmartForge turn a question into a system action?
 
-1. User asks a question in Smart Chat  
+1. User asks a question in SmartForge Cortex  
 2. LLM extracts **intent + parameters**  
 3. A matching **function** is selected  
-4. Enterprise Mesh validates permissions and inputs  
+4. SmartForge Nexes validates permissions and inputs  
 5. The function executes on target systems  
 6. Results are returned in a user-friendly format  
 
@@ -149,18 +149,18 @@ Users can:
 
 ---
 
-## Can Smart Chat handle follow-up questions?
+## Can SmartForge Cortex handle follow-up questions?
 
 Yes.
 
-Smart AI maintains **session context**, so users can:
+SmartForge maintains **session context**, so users can:
 - Refine results  
 - Ask incremental questions  
 - Build on previous responses  
 
 ---
 
-## Can Smart Chat generate charts and dashboards?
+## Can SmartForge Cortex generate charts and dashboards?
 
 Yes.
 
@@ -171,7 +171,7 @@ From any dataset, users can:
 
 ---
 
-## What systems can Enterprise Mesh connect to?
+## What systems can SmartForge Nexes connect to?
 
 Any system with an API, including:
 
@@ -185,7 +185,7 @@ Any system with an API, including:
 
 ## How is activity tracked and audited?
 
-Enterprise Mesh supports secure tracking, including:
+SmartForge Nexes supports secure tracking, including:
 
 - Who made the request  
 - Which function was executed  
@@ -196,7 +196,7 @@ Sensitive data is **never logged or exposed**.
 
 ---
 
-## When should we use Enterprise Mesh?
+## When should we use SmartForge Nexes?
 
 Use it when:
 - Data is spread across multiple systems  
@@ -206,10 +206,11 @@ Use it when:
 
 ---
 
-## What makes Smart AI + Enterprise Mesh unique?
+## What makes SmartForge + SmartForge Nexes unique?
 
 - No ETL or data duplication  
 - Real-time, federated execution  
 - API-driven (not document-based)  
 - Built-in governance and security  
-- Low-code extensibility via Smart FX  
+- Low-code extensibility via SmartForge Studio  
+
