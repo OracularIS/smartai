@@ -11,11 +11,6 @@ In SmartForge, an MCP server exposes a curated set of **approved functions** fro
 This page stays intentionally short on “what is MCP” and focuses on **what it does in SmartForge** and **how to use it end-to-end**.
 
 ---
-
-## Architecture
-
-<img src=".attachments/mcp_architecture.png" width="900" height="500"/>
-
 MCP acts as a standard protocol layer between external AI clients and SmartForge's governed enterprise functions:
 
 1.  **Discovery**: AI clients automatically discover available tools with complete schema metadata
