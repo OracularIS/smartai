@@ -1,22 +1,20 @@
-# Smart AI
+# SmartForge
 
-**Smart IS Conversational API Framework**
-
-Smart AI enables teams to securely interact with enterprise systems using natural language. It converts conversational requests into validated, permission-controlled API calls across WMS, ERP, CRM and other operational systems.
+SmartForge enables teams to securely interact with enterprise systems using natural language. It converts conversational requests into validated, permission-controlled API calls across WMS, ERP, CRM and other operational systems.
 
 Replace custom screens, static reports and one-off integrations with a single unified interface built on three core components:
 
-## Smart FX (SmartFX Studio)
+## SmartForge Studio
 
-Smart FX is the admin workbench for building, maintaining and validating approved functions that define what the AI is allowed to execute.
+SmartForge Studio is the admin workbench for building, maintaining and validating approved functions that define what the AI is allowed to execute.
 
-## Enterprise Mesh
+## SmartForge Nexes
 
-Enterprise Mesh is the secure execution layer that routes requests, enforces permissions and runs approved functions against connected enterprise systems in real time.
+SmartForge Nexes is the secure execution layer that routes requests, enforces permissions and runs approved functions against connected enterprise systems in real time.
 
-## Smart Chat
+## SmartForge Cortex
 
-Smart Chat is the end-user conversational interface that turns natural language questions into secure API calls and returns actionable live results.
+SmartForge Cortex is the end-user conversational interface that turns natural language questions into secure API calls and returns actionable live results.
 
 ## Key capabilities
 
