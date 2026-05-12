@@ -1,6 +1,6 @@
 # Getting Started with SmartForge
 
-SmartForge is an intelligent platform that allows you to connect to enterprise systems, add and manage your business logic, and interact with your data using simple, natural language. You can trigger business workflows, retrieve insights, and leverage AI-powered analysis through easy, conversational commands—making complex operations simple and accessible.
+SmartForge is an AI-powered intelligent platform that allows you to connect to enterprise systems, add and manage your business logic, and interact with your data using simple, natural language. You can trigger business workflows, retrieve insights, and leverage AI-powered analysis through easy, conversational commands—making complex operations simple and accessible.
 
 ---
 
@@ -374,7 +374,7 @@ MCP (Model Context Protocol) allows your business functions to be used across ex
 ---
 ## Secure Chat
 
-SmartForge Cortex is the secure conversational interface of SmartForge, letting you interact with enterprise systems without exposing actual data to the LLM.
+SmartForge Cortex is the secure AI-powered conversational interface of SmartForge, letting you interact with enterprise systems without exposing actual data to the LLM.
 
 - Execute functions, schedule workflows, and analyze data using natural language
 - Uses code generation in an isolated environment, sharing only metadata for insights (charts, filtering, etc.)

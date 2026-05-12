@@ -67,7 +67,7 @@ SmartForge is built on three tightly integrated components. Each one has a disti
 ### Define capabilities
 SmartForge Studio is the workbench where builders and integrators define what SmartForge can do. Every capability in SmartForge Cortex exists because someone built a function (also called an Intent) in SmartForge Studio. This is where business logic lives — clearly defined, versioned, and reusable.
 
-<img src=".attachments/SmartForge Studio-flow.png" style="border-radius: 20px; width: 100%;">
+<img src=".attachments/smartfx-flow.png" style="border-radius: 20px; width: 100%;">
 
 ## Pillar 2: SmartForge Nexes
 ### Secure execution
@@ -93,7 +93,7 @@ WMS reports 500 units on-hand. TMS reports 150 units in transit. ERP reports 200
 
 ## Pillar 3: SmartForge Cortex
 ### How you interact
-SmartForge Cortex is the conversational interface where end users and business teams interact with their data. You ask questions in plain English — it handles the rest. You can ask follow-up questions, request visualisations, and set up automated workflows, all from the same interface.
+SmartForge Cortex is an AI-powered conversational interface where end users and business teams interact with their data. You ask questions in plain English — it handles the rest. You can ask follow-up questions, request visualisations, and set up automated workflows, all from the same interface.
 
 What you can do in SmartForge Cortex:
 
