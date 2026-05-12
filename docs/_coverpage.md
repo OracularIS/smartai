@@ -18,7 +18,7 @@
   </div>
 </div>
 
-- SmartForge brings your enterprise systems together in one intelligent platform; connect your data, manage business logic, and execute operations with security, visibility, and control.
+- SmartForge brings your enterprise systems together in one  AI-powered intelligent platform; connect your data, manage business logic, and execute operations with security, visibility, and control.
 
 [Documentation](./overview.md)
 

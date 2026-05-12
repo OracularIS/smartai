@@ -1,6 +1,6 @@
 # <img class="sf-doc-icon" src="assets/smartforge/icons/smartforge-cortex-naked.svg" alt=""> SmartForge Cortex
 
-SmartForge Cortex is the secure conversational interface of SmartForge that helps you interact with connected enterprise systems.
+SmartForge Cortex is the AI-powered secure conversational interface of SmartForge that helps you interact with connected enterprise systems.
 
 ## What you can do in SmartForge Cortex
 
@@ -67,7 +67,7 @@ SmartForge identifies key fields and data types and generates charts/metrics to 
 
 <img src=".attachments/auto_dashboard.png" alt="Auto-generated Dashboard Example" width="750">
 
-Dashboards are created automatically without any manual configuration, with intelligent chart type selection based on your data patterns. You get:
+Create powerful charts and dashboards simply by describing what you need — fully automated and configuration-free.
 - Automatic trend detection
 - Relevant metric cards
 - Filterable interactive views

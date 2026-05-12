@@ -42,7 +42,7 @@ The outcome is a single, consistent answer.
 
 ## What is SmartForge Cortex?
 
-SmartForge Cortex is the **conversational interface of SmartForge** that lets users interact with enterprise systems using natural language.
+SmartForge Cortex is the **intelligent conversational interface of SmartForge** that lets users interact with enterprise systems using natural language.
 
 You can:
 - Retrieve live operational data  

@@ -1,6 +1,6 @@
 # Architecture
 
-This page provides a high-level overview of how SmartForge transforms a user-defined business intent—created in SmartForge Studio—into actionable outcomes. It shows how SmartForge Nexes acts as a data orchestration layer, unifying and coordinating data across systems, and how users can then interact with this intelligence through natural language chat or via tools exposed through an MCP server.
+This page provides a high-level overview of how SmartForge transforms a user-defined business intent—created in SmartForge Studio into actionable outcomes. It shows how SmartForge Nexes acts as a data orchestration layer, unifying and coordinating data across systems, and how users can then interact with this intelligence through natural language chat or via tools exposed through an MCP server.
 
 > _Build approved functions in SmartForge Studio → execute securely via SmartForge Nexes → deliver results in SmartForge Cortex or via MCP._
 
@@ -39,7 +39,7 @@ It:
 
 ### [SmartForge Cortex](./smart-chat.md)
 
-SmartForge Cortex is the **secure conversational interface of SmartForge**.
+SmartForge Cortex is the ** AI-powered secure conversational interface of SmartForge**.
 
 It allows users to interact with enterprise systems using natural language while ensuring only **approved functions, actions, and data access** are executed.
 

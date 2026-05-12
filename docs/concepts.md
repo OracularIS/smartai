@@ -67,7 +67,7 @@ SmartForge is built on three tightly integrated components. Each one has a disti
 ### Define capabilities
 SmartForge Studio is the workbench where builders and integrators define what SmartForge can do. Every capability in SmartForge Cortex exists because someone built a function (also called an Intent) in SmartForge Studio. This is where business logic lives — clearly defined, versioned, and reusable.
 
-<img src=".attachments/SmartForge Studio-flow.png" style="border-radius: 20px; width: 100%;">
+<img src=".attachments/smartfx-flow.png" style="border-radius: 20px; width: 100%;">
 
 ## Pillar 2: SmartForge Nexes
 ### Secure execution
