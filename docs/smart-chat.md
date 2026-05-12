@@ -67,7 +67,7 @@ SmartForge identifies key fields and data types and generates charts/metrics to 
 
 <img src=".attachments/auto_dashboard.png" alt="Auto-generated Dashboard Example" width="750">
 
-Dashboards are created automatically without any manual configuration, with AI-powered intelligent chart type selection based on your data patterns. You get:
+Dashboards are created automatically using natural language no manual configuration required. You get:
 - Automatic trend detection
 - Relevant metric cards
 - Filterable interactive views

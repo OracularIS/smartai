@@ -7,7 +7,7 @@ At the same time, it enables safe and seamless AI interaction by securely transl
 ## Key Capabilities  
 
 - **SmartForge Cortex Interface**  
-  Interact with enterprise systems using natural language and instantly perform real business operations with context-aware AI understanding.
+  Interact with enterprise systems using natural language and instantly perform real business operations with context-aware understanding.
 
 - **Intent-to-Execution Automation**  
   Seamlessly convert user requests into secure, validated actions across ERP, WMS, TMS, and other enterprise systems in real time.

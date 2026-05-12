@@ -16,6 +16,6 @@ SmartForge is organized into three major components:
 
 - **SmartForge Nexes**: The secure connectivity and governance layer that routes requests to the correct system, enforces permissions, and validates parameters before execution. It executes federated queries directly on source systems in real time without replicating or storing business data.  
 
-- **SmartForge Cortex**: The AI-powered conversational platform that lets users interact with enterprise systems and trigger approved actions, including follow-ups, queries, and on-demand visualizations. Users can generate visualizations, create automated workflows, and request follow-up actions without leaving the conversation.
+- **SmartForge Cortex**: The intelligent conversational platform that lets users interact with enterprise systems and trigger approved actions, including follow-ups, queries, and on-demand visualizations. Users can generate visualizations, create automated workflows, and request follow-up actions without leaving the conversation.
 
 

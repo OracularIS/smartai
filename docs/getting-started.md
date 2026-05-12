@@ -374,7 +374,7 @@ MCP (Model Context Protocol) allows your business functions to be used across ex
 ---
 ## Secure Chat
 
-SmartForge Cortex is the secure AI-powered conversational interface of SmartForge, letting you interact with enterprise systems without exposing actual data to the LLM.
+SmartForge Cortex is the secure conversational interface of SmartForge, letting you interact with enterprise systems without exposing actual data to the LLM.
 
 - Execute functions, schedule workflows, and analyze data using natural language
 - Uses code generation in an isolated environment, sharing only metadata for insights (charts, filtering, etc.)
