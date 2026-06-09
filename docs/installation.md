@@ -1,176 +1,179 @@
-# Installation (AI Apps Platform)
+# AI Apps - Installation & Running the Platform
 
-This page covers:
-
-- First-time install (prereqs + `.env`)
-- Running on `localhost` or a server IP (no domain required)
-- SSL certificate setup (local dev or real domain)
-- Updating the platform (new images)
+This guide explains how to install prerequisites and run the **AI Apps** platform using the provided startup scripts.
 
 ---
 
 ## Prerequisites
 
-- **Docker Desktop installed (recommended)**  
-  Install guides:
+Before starting the platform, ensure the following are available:
+
+- **Docker Desktop installed (recommended)**
   - Windows: https://docs.docker.com/desktop/setup/install/windows-install/
   - macOS: https://docs.docker.com/desktop/setup/install/mac-install/
   - Linux: https://docs.docker.com/desktop/setup/install/linux/
 - **Docker Compose** (included with Docker Desktop)
-- **Optional alternative**: Podman + Podman Compose
-- **Registry access** to pull container images
-- **SSL certificate files present** (required):
+- **Alternative (optional)**: Podman + Podman Compose
+- **SSL certificate files present**
   - `nginx/certs/server.crt`
   - `nginx/certs/server.key`
-- **Environment config updated**: project root `.env` (everything is configured in `.env`)
+- **Environment config updated**: project root `.env`
+- **Registry access** to pull images
 
-> Required container images are pulled automatically the first time you start the platform.
+> Required container images are pulled automatically when you start the platform for the first time.
 
----
-
-## 1) Configure `.env`
-
-Edit `.env` in the project root.
-
-Example (no domain, local machine):
-
-```env
-SERVER_NAME=localhost
-SSL_CERT=./nginx/certs/server.crt
-SSL_KEY=./nginx/certs/server.key
-```
-
-| Variable    | Description                         |
-| ----------- | ----------------------------------- |
-| SERVER_NAME | Hostname or IP used by the platform |
-| SSL_CERT    | Path to SSL certificate             |
-| SSL_KEY     | Path to SSL private key             |
-
----
-
-## 2) Run on localhost (no domain)
-
-### Same machine
-
-Set `SERVER_NAME=localhost`, start the platform, then open:
-
-```text
-https://localhost
-```
-
-### Other machines on your network (server IP)
-
-1) Find your work machine IP address:
-
-- **Windows (domain-joined work machine)**: `ipconfig` (use the `IPv4 Address`)
-- **macOS**: `ipconfig getifaddr en0`
-- **Linux**: `hostname -I`
-
-2) Set:
-
-```env
-SERVER_NAME=<YOUR_SERVER_IP>
-```
-
-3) Start the platform and open:
-
-```text
-https://<YOUR_SERVER_IP>
-```
-
-> Ensure port `443` is reachable (firewall/VPN/network rules may apply).
-
----
-
-## 3) SSL certificates (required)
-
-You have two common options. Pick one:
-
-### Option A: Local development (no domain) - mkcert (recommended)
-
-Walkthrough: https://github.com/FiloSottile/mkcert
-
-Generate certs into the expected paths:
-
-```bash
-mkcert -install
-mkcert -key-file nginx/certs/server.key -cert-file nginx/certs/server.crt localhost 127.0.0.1
-```
-
-If you use `SERVER_NAME=<YOUR_SERVER_IP>`, include the IP too:
-
-```bash
-mkcert -key-file nginx/certs/server.key -cert-file nginx/certs/server.crt localhost 127.0.0.1 <YOUR_SERVER_IP>
-```
-
-### Option B: You own a real domain - Let's Encrypt
-
-This requires a public domain pointing to your server and inbound access to ports **80** and **443**.
-
-- Linux (Certbot): https://certbot.eff.org/
-- Windows (win-acme): https://www.win-acme.com/
-
-After generating the certificate, configure `SSL_CERT`/`SSL_KEY` to point to it (or copy the files into `nginx/certs/` as `server.crt` and `server.key`).
-
----
-
-## 4) Start / stop / update
-
-### First-time start (pulls images)
-
-**macOS / Linux**
-
-```bash
-./ai-apps.sh start
-```
-
-**Windows (PowerShell)**
-
-```powershell
-.\ai-apps.ps1 start
-```
-
-Typically starts:
+Images typically included:
 
 - `oogy-api`
 - `chat-api`
 - `enterprise-mesh-api`
 - `smart-functions-ui`
 
-### Stop
+---
+
+## 1) Configure environment
+
+Edit the `.env` file in the project root.
+
+Example:
+
+```env
+SERVER_NAME=ai-apps.domain-name.com
+SSL_CERT=./nginx/certs/server.crt
+SSL_KEY=./nginx/certs/server.key
+```
+
+### Environment variables
+
+| Variable    | Description                         |
+| ----------- | ----------------------------------- |
+| SERVER_NAME | Domain name used by the application |
+| SSL_CERT    | Path to SSL certificate             |
+| SSL_KEY     | Path to SSL private key             |
+
+---
+
+## 2) DNS / hosts setup
+
+Choose one approach based on how you will access the platform.
+
+### Option A) Local testing (hosts file)
+
+If you are running the stack locally and want your browser to reach the containers, map the same hostname as `SERVER_NAME` (and `NEXTAUTH_URL`, if used) to `127.0.0.1`.
+
+**Windows**
+
+- Hosts file: `C:\Windows\System32\drivers\etc\hosts`
+- Add:
+
+```text
+127.0.0.1 ai-apps.domain-name.com
+```
 
 **macOS / Linux**
+
+- Hosts file: `/etc/hosts`
+- Add:
+
+```text
+127.0.0.1 ai-apps.domain-name.com
+```
+
+> You typically need Administrator (Windows) / sudo (macOS/Linux) to edit the hosts file.
+
+### Option B) Public IP + public DNS
+
+If you are using a public IP and public DNS, add the public IP of your device/VM in your DNS provider.
+
+Example:
+
+- IP of VM or device: `192.168.1.2`
+- DNS provider record:
+  - Record Type: `A`
+  - Host: `ai-apps`
+  - Value: `192.168.1.2`
+
+---
+
+## 3) Start the AI Apps
+
+Run the startup script from the project root.
+
+### macOS / Linux
+
+```bash
+./ai-apps.sh start
+```
+
+### Windows (PowerShell)
+
+```powershell
+.\ai-apps.ps1 start
+```
+
+The script will:
+
+- Load environment variables
+- Validate SSL configuration
+- Pull latest images (first time)
+- Start all containers
+
+---
+
+## 4) Access the application
+
+Open:
+
+```text
+https://<SERVER_NAME>
+```
+
+Example:
+
+```text
+https://ai-apps.domain-name.com
+```
+
+---
+
+## 5) Stop the application
+
+### macOS / Linux
 
 ```bash
 ./ai-apps.sh stop
 ```
 
-**Windows (PowerShell)**
+### Windows (PowerShell)
 
 ```powershell
 .\ai-apps.ps1 stop
 ```
 
-### Update the platform (pull newer images)
+---
 
-If you also track this repo with Git:
+## 6) Update the platform
+
+Use this when you want to pull newer images (and optionally newer repo changes).
+
+### Update repo (optional)
 
 ```bash
 git pull
 ```
 
-Then:
-
-**macOS / Linux**
-
-```bash
-./ai-apps.sh update
-```
+### Update images
 
 **Windows (PowerShell)**
 
 ```powershell
 .\ai-apps.ps1 update
+```
+
+**macOS / Linux**
+
+```bash
+./ai-apps.sh update
 ```
 
 Restart after an update:
@@ -183,7 +186,7 @@ stop -> start
 
 ## Commands (cheatsheet)
 
-**Windows (PowerShell)**
+### Windows (PowerShell)
 
 ```powershell
 .\ai-apps.ps1 start
@@ -193,7 +196,7 @@ stop -> start
 .\ai-apps.ps1 update
 ```
 
-**macOS / Linux**
+### macOS / Linux
 
 ```bash
 ./ai-apps.sh start
@@ -205,7 +208,74 @@ stop -> start
 
 ---
 
+## How to generate SSL certificates
+
+To enable HTTPS without browser security warnings, a valid SSL certificate is required.
+
+### Option 1) Use an existing SSL certificate
+
+If you already have an SSL certificate for your domain, provide:
+
+- Certificate file (`.crt` or full chain certificate)
+- Private key file (`.key`)
+
+Place them at:
+
+- `nginx/certs/server.crt`
+- `nginx/certs/server.key`
+
+Or update `.env` to point `SSL_CERT`/`SSL_KEY` to the correct paths.
+
+### Option 2) Generate a free Let's Encrypt certificate
+
+#### Prerequisites
+
+- You own the domain name.
+- The domain's DNS records point to your server.
+- Ports **80** and **443** are accessible from the internet.
+
+#### Linux: Certbot
+
+Walkthrough: https://certbot.eff.org/
+
+Ubuntu/Debian:
+
+```bash
+sudo apt update
+sudo apt install certbot
+```
+
+Generate the certificate:
+
+```bash
+sudo certbot certonly --standalone -d yourdomain.com -d www.yourdomain.com
+```
+
+Certificate location:
+
+```text
+/etc/letsencrypt/live/yourdomain.com/fullchain.pem
+/etc/letsencrypt/live/yourdomain.com/privkey.pem
+```
+
+Renewal:
+
+```bash
+sudo certbot renew
+```
+
+#### Windows: win-acme
+
+Walkthrough: https://www.win-acme.com/
+
+1. Download and extract win-acme.
+2. Run `wacs.exe` as Administrator.
+3. Create a new certificate and enter your domain name(s) (for example `example.com`, `www.example.com`).
+4. Export or copy the resulting certificate/key to the locations used by your `.env`.
+
+---
+
 ## Notes
 
-- If you change `.env`, restart the containers.
-- Certificates must match `SERVER_NAME` (localhost vs IP vs domain).
+- Ensure SSL certificate files exist at the paths configured in `.env`.
+- Changes to `.env` require restarting the containers.
