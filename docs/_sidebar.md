@@ -2,6 +2,7 @@
 - [Overview](./overview.md)
 - [Concepts](./concepts.md)
 - [Why SmartForge](./why-smart-ai.md)
+- [Installation](./installation.md)
 - [Getting Started](./getting-started.md)
 - [Architecture](./architecture.md)
 - [MCP](./mcp.md)
