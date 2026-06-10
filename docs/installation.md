@@ -154,7 +154,7 @@ https://ai-apps.domain-name.com
 
 ## 6) Update the platform
 
-Use this when you want to pull newer images (and optionally newer repo changes).
+Use this when you want to pull newer images.
 
 ### Update images
 
@@ -183,6 +183,7 @@ stop -> start
 ### Windows (PowerShell)
 
 ```powershell
+.\ai-apps.ps1 --help
 .\ai-apps.ps1 start
 .\ai-apps.ps1 stop
 .\ai-apps.ps1 status
@@ -193,6 +194,7 @@ stop -> start
 ### macOS / Linux
 
 ```bash
+./ai-apps.sh --help
 ./ai-apps.sh start
 ./ai-apps.sh stop
 ./ai-apps.sh status
