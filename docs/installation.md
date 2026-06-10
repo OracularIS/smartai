@@ -156,12 +156,6 @@ https://ai-apps.domain-name.com
 
 Use this when you want to pull newer images (and optionally newer repo changes).
 
-### Update repo (optional)
-
-```bash
-git pull
-```
-
 ### Update images
 
 **Windows (PowerShell)**
