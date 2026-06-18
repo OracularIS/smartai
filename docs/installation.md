@@ -8,17 +8,31 @@ This guide explains how to install prerequisites and run the **AI Apps** platfor
 
 Before starting the platform, ensure the following are available:
 
+- **Operating System Requirements**
+  - Windows: Win10 or Win11
+  - Linux: Ubuntu, Redhat, MacOS
+
+- **Resources**:
+  - vCPU    4 Core
+  - RAM   8 GB
+  - Storage   50 GB SSD
+  - OS    Ubuntu 22.04 LTS or Above
+  - Docker    Docker CE + Compose
+  - Network   Public IP + DNS
+
+These are the minimum requirements. The optimal number would depend on number of concurrent users. The API traffic based on AI usage, and the number of requests sent through the system
+
 - **Docker Desktop installed (recommended)**
   - Windows: https://docs.docker.com/desktop/setup/install/windows-install/
   - macOS: https://docs.docker.com/desktop/setup/install/mac-install/
   - Linux: https://docs.docker.com/desktop/setup/install/linux/
 - **Docker Compose** (included with Docker Desktop)
-- **Alternative (optional)**: Podman + Podman Compose
+- **Domain name / ServerName** configured and resolvable (e.g., `ai-apps.yourcompanyname.com`)
+- **AI Apps package** (Installation script provided on request) containing `downloadscript.sh` and `downloadscript.ps1`
 - **SSL certificate files present**
   - `nginx/certs/server.crt`
   - `nginx/certs/server.key`
 - **Environment config updated**: project root `.env`
-- **Registry access** to pull images
 
 > Required container images are pulled automatically when you start the platform for the first time.
 
