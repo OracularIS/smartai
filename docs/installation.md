@@ -10,7 +10,8 @@ Before starting the platform, ensure the following are available:
 
 - **Operating System Requirements**
   - Windows: Win10 or Win11
-  - Linux: Ubuntu, Redhat, MacOS
+  - Linux: Ubuntu, Redhat
+  - MacOS
 
 - **Resources**:
   - vCPU    4 Core
