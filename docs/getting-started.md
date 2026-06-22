@@ -41,31 +41,17 @@ Before adding a project in SmartForge Studio, set up a Git repository to store y
 
 ## Quick Setup
 
-1. Create a new Git repository (Azure DevOps, GitHub, etc.)
-2. Create a folder for your system (e.g., `Enterprise`, `Snowflake`, `Bugzilla`)  
-   - This folder name becomes your system name in SmartForge Studio
-3. Inside it, add a `base` folder
-   
-   ```
-    Enterprise/
-    └── base/
-    Snowflake/
-    └── base/
-    Bugzilla/
-    └── base/
-   ```
-
-4. **Push your initial repository** to the remote Git platform
-
-**Why this matters:** Many deployments expect functions to live under a consistent base folder so the platform can discover them reliably. If your organization uses a different structure/template, follow your internal standard.
+1. Create a new Git repository in your Git provider (Azure DevOps, GitHub, etc.). The repository name can be anything.
+2. Push an initial commit (for example, a `README.md`) so SmartForge Studio can clone the repo.
+3. Copy the repository URL - you'll paste it when you create your project in SmartForge Studio.
 
 ---
 
 ## Access the Portal
 
-Go to: https://smartfunctions.smart-is.com/
+Go to: https://forge.smart-is.ai/
 
-![SmartForge Studio Login Page](.attachments/01_SmartForge Studio_login_page.png)
+![SmartForge Studio Login Page](.attachments/01_smartfx_login_page.png)
 
 Click **Get Started Free** or **Sign In**.
 
