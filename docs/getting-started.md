@@ -392,3 +392,45 @@ This is the primary way to interact with your system using natural language outs
 
 ---
 
+## Dashboard
+
+You can create different charts and figures in SmartForge Cortex using natural language and add them to your personal dashboard. Simply use phrases like "add to dashboard" or "add this to dashboard", or click the Add to Dashboard button above the figure providing a title and description for the chart. Your dashboard gives you a centralized view of all your saved visualizations.
+
+![Dashboard Page](.attachments/dashboard_page.png)
+
+### Example
+
+1. Create a chart or figure using natural language in Secure Chat (e.g., "Create a bar chart of top 3 users")  
+2. Add the chart to your dashboard by typing "add to dashboard" or clicking the button above the figure
+3. Provide a title and description
+4. View all your saved charts on the Dashboard page  
+
+You can:
+
+- Create various chart types (bar, line, pie, etc.) using natural language  
+- Add visualizations to your dashboard with simple commands  
+- View and manage all your charts in one centralized location  
+
+---
+
+## Scheduled Alerts
+
+SmartForge Cortex allows you to create alerts using natural language commands or through the **Create Alerts** button. Based on the configured settings, you will receive notifications via the provided email address. All created alerts can be viewed in the **Scheduled Alerts** page, where you can manage them as needed.
+
+![Scheduled Alerts Page](.attachments/scheduled_alerts.png)
+
+### Example
+
+1. Open Secure Chat and connect to a system  
+2. Use natural language to create an alert (e.g., "Email me this data daily at 10 AM")  
+3. Configure alert settings and provide an email address  
+4. View all your alerts in the Scheduled Alerts page  
+5. Manage your alerts — pause, resume, delete, or update workflows as needed  
+
+You can:
+
+- **Pause / Resume** — Temporarily suspend or reactivate an alert  
+- **Delete** — Remove an alert permanently  
+- **Update** — Modify alert conditions, frequency, or notification settings  
+
+---
