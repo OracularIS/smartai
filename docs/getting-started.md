@@ -394,7 +394,7 @@ This is the primary way to interact with your system using natural language outs
 
 ## Dashboard
 
-You can create different charts and figures in SmartForge Cortex using natural language and add them to your personal dashboard. Simply use phrases like "add to dashboard" or "add this to dashboard", or click the Add to Dashboard button above the figure providing a title and description for the chart. Your dashboard gives you a centralized view of all your saved visualizations.
+The Dashboard feature lets you save and organize charts and visualizations generated through natural language in a single, personalized workspace. Whenever you create a figure, simply write "add to dashboard" or "add this to dashboard", or click the Add to Dashboard button and provide a title and description. The selected visualization is then saved to your personal dashboard, giving you a centralized place to access, review, and manage all of your important charts and insights without having to recreate them.
 
 ![Dashboard Page](.attachments/dashboard_page.png)
 
