@@ -206,6 +206,36 @@ Use it when:
 
 ---
 
+## What is ForgeView?
+
+ForgeView is a **capability publishing model for visual experiences**. It allows organizations to create operational screens by composing existing intents into grids, charts, detail panels, and actions — without traditional application development.
+
+---
+
+## How is ForgeView different from a screen builder or low-code platform?
+
+ForgeView is not a screen builder or low-code platform. It is a **capability publishing model**. The visual experience emerges from capabilities that already exist as operationalized intents. No new integrations, APIs, or business logic are required.
+
+---
+
+## What is Screen Forge?
+
+Screen Forge is the **visual screen editor within SmartForge Studio** where users can create and edit operational screens. It allows you to map existing intents to visual constructs like grids, tabs, detail panels, and action buttons — all through configuration rather than coding.
+
+---
+
+## Do I need to create new functions for ForgeView screens?
+
+No. ForgeView uses **existing operationalized intents** as its building blocks. If a capability already exists as an intent, it can be immediately consumed in a visual workspace without new development.
+
+---
+
+## Can ForgeView screens use intents from different systems?
+
+Yes. ForgeView is system-agnostic. An intent from SAP can be displayed alongside an intent from JD Edwards, Blue Yonder, or a custom application — all in the same screen. The underlying capability layer handles the orchestration.
+
+---
+
 ## What makes SmartForge + SmartForge Nexes unique?
 
 - No ETL or data duplication  

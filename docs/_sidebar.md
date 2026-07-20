@@ -5,6 +5,7 @@
 - [Installation](./installation.md)
 - [Getting Started](./getting-started.md)
 - [Architecture](./architecture.md)
+- [ForgeView](./forgeview.md)
 - [MCP](./mcp.md)
 - [Use Cases](./use-cases.md)
 - [FAQ](./faq.md)
