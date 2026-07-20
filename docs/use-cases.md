@@ -94,6 +94,36 @@ Gain full control and transparency over system operations and AI-generated logic
 ```
 ---
 
+## ForgeView
+
+Create visual operational workspaces by composing existing intents into grids, charts, detail panels, and actions — without writing a single line of code.
+
+```
+- Build an operational workspace for order management without writing code
+- Configure a grid to display live order data from SAP
+- Add detail panels that show inventory and transportation information
+- Attach context-sensitive actions to selected records
+- Create a unified screen from intents across SAP, JD Edwards, and Blue Yonder
+- Publish a screen to end users without a development project
+```
+
+---
+
+## Screen Forge
+
+Create and edit visual screens directly within your SmartForge Studio project by mapping existing intents to visual constructs.
+
+```
+- Create a new screen to monitor warehouse fulfillment exceptions
+- Configure tabs to show orders, inventory, and shipments in one view
+- Add action buttons for reserve inventory, push order, cancel order
+- Edit an existing screen to update its data source (intent)
+- Organize related data views into a single screen with tabs
+- Publish a screen to make it available to end users
+```
+
+---
+
 ## Use tools inside other clients (MCP)
 
 Use your approved enterprise tools directly inside other AI clients.
