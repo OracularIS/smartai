@@ -49,7 +49,7 @@ Before adding a project in SmartForge Studio, set up a Git repository to store y
 
 ## Access the Portal
 
-Go to: https://forge.smart-is.ai/
+Go to your SmartForge address: `https://<SERVER_NAME>`, the domain set as `SERVER_NAME` during [Installation](./installation.md) (for example `https://ai-apps.domain-name.com`).
 
 ![SmartForge Studio Login Page](.attachments/01_smartfx_login_page.png)
 
